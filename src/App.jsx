@@ -7,6 +7,7 @@ import SurveyScreen from './pages/SurveyScreen'
 import ThankYouScreen from './pages/ThankYouScreen'
 import AdminLogin from './pages/AdminLoginScreen'
 import Dashboard from './pages/DashboardScreen'
+import LibraryScreen from './pages/LibraryScreen'
 import { AuthProvider, useAuth } from './contexts/AuthContext'
 
 function PrivateRoute({ children }) {
@@ -54,25 +55,17 @@ function AppContent() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<LoginScreen />} />
+          <Route path="/library" element={<LibraryScreen />} />
+          <Route path="/instructions" element={<Navigate to="/library" replace />} />
+          <Route path="/instructions/:id" element={<InstructionsScreen />} />
           <Route path="/identify" element={
-            <PrivateRoute>
               <IdentificationScreen />
-            </PrivateRoute>
-          } />
-          <Route path="/instructions" element={
-            <PrivateRoute>
-              <InstructionsScreen />
-            </PrivateRoute>
           } />
           <Route path="/survey" element={
-            <PrivateRoute>
               <SurveyScreen />
-            </PrivateRoute>
           } />
           <Route path="/thank-you" element={
-            <PrivateRoute>
               <ThankYouScreen />
-            </PrivateRoute>
           } />
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/dashboard" element={

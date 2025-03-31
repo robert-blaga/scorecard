@@ -1,0 +1,49 @@
+{
+    "id": "innovation-capability",
+    "title": "Innovation Capability Assessment",
+    "subtitle": "Evaluate your organization's innovation readiness and potential",
+    "instructions": {
+        "title": "How to Complete This Assessment",
+        "steps": [
+            "Rate each dimension on a scale of 1-5",
+            "Be honest and objective in your evaluation",
+            "Consider both current capabilities and future potential",
+            "Provide specific examples where possible"
+        ]
+    },
+    "columns": [
+      {
+        "title": "Innovation Dimensions",
+        "content": "Key areas that determine innovation success"
+      },
+      {
+        "title": "Assessment Criteria",
+        "points": [
+          {
+            "icon": "lightbulb",
+            "text": "Creative Culture & Mindset",
+            "description": "Evaluate how well your organization encourages creative thinking and new ideas"
+          },
+          {
+            "icon": "cog",
+            "text": "Process & Infrastructure",
+            "description": "Assess your systems and processes for managing innovation"
+          },
+          {
+            "icon": "users",
+            "text": "Talent & Skills",
+            "description": "Rate your team's innovation capabilities and expertise"
+          },
+          {
+            "icon": "chart-line",
+            "text": "Strategy & Leadership",
+            "description": "Measure leadership commitment and strategic alignment to innovation"
+          }
+        ]
+      }
+    ],
+    "consentText": "I understand that this assessment will help identify areas for improving innovation capabilities",
+    "buttonText": "Submit Assessment",
+    "nextRoute": "/innovation-results"
+  }
+  

@@ -1,19 +1,65 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import scorecardsData from '../data/index.json';
+import { getScorecard } from '../utils/scorecardUtils';
 
 export default function InstructionsScreen() {
   const navigate = useNavigate();
+  const { id } = useParams();
   const [hasReadInstructions, setHasReadInstructions] = useState(false);
+  const [scorecard, setScorecard] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchScorecard = async () => {
+      try {
+        const scorecardIndex = scorecardsData.scorecards.find(
+          (sc) => sc.id === id
+        );
+        
+        if (!scorecardIndex) {
+          console.error('Scorecard not found in index');
+          setLoading(false);
+          return;
+        }
+
+        const scorecardData = await getScorecard(id);
+        setScorecard(scorecardData);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error loading scorecard:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchScorecard();
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-gray-600">Loading...</div>
+      </div>
+    );
+  }
+
+  if (!scorecard) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-red-600">Scorecard not found</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="w-full max-w-4xl">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-serif text-gray-900 mb-2">
-            Studiu de Angajament Optiblu
+            {scorecard.title}
           </h1>
           <p className="text-gray-600">
-            Opinia ta contează pentru noi
+            {scorecard.subtitle}
           </p>
         </div>
 
@@ -21,55 +67,46 @@ export default function InstructionsScreen() {
           {/* Left Column */}
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <h2 className="text-xl font-medium text-gray-900 mb-4">
-              Despre acest chestionar
+              {scorecard.columns[0].title}
             </h2>
             <p className="text-gray-600 text-sm">
-              Acest studiu face parte din inițiativa noastră continuă de a îmbunătăți mediul de lucru și experiența angajaților Optiblu. Răspunsurile tale ne vor ajuta să identificăm zonele în care excelăm și cele în care putem aduce îmbunătățiri.
+              {scorecard.columns[0].content}
             </p>
+            {/* Instructions Section */}
+            <div className="mt-6">
+              <h3 className="text-lg font-medium text-gray-900 mb-3">
+                {scorecard.instructions.title}
+              </h3>
+              <ul className="list-disc pl-5 space-y-2">
+                {scorecard.instructions.steps.map((step, index) => (
+                  <li key={index} className="text-gray-600 text-sm">
+                    {step}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Right Column */}
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <h2 className="text-xl font-medium text-gray-900 mb-3">
-              Câteva aspecte importante
+              {scorecard.columns[1].title}
             </h2>
             
             <div className="space-y-2">
-              <div className="flex items-start gap-3 bg-deep-purple/5 p-3 rounded-lg">
-                <div className="w-7 h-7 rounded-lg bg-deep-purple/10 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-deep-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              {scorecard.columns[1].points.map((point, index) => (
+                <div key={index} className="flex items-start gap-3 bg-deep-purple/5 p-3 rounded-lg">
+                  <div className="w-7 h-7 rounded-lg bg-deep-purple/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-deep-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="text-gray-600 text-sm">
+                    <div className="font-medium mb-0.5">{point.text}</div>
+                    <div className="text-gray-500">{point.description}</div>
+                  </div>
                 </div>
-                <p className="text-gray-600 text-sm">Pentru fiecare întrebare, selectează <strong>un singur răspuns</strong> care reflectă cel mai bine opinia ta.</p>
-              </div>
-
-              <div className="flex items-start gap-3 bg-deep-purple/5 p-3 rounded-lg">
-                <div className="w-7 h-7 rounded-lg bg-deep-purple/10 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-deep-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-                  </svg>
-                </div>
-                <p className="text-gray-600 text-sm">Studiul este <strong>complet anonim</strong>. Răspunsurile tale nu pot fi asociate cu identitatea ta.</p>
-              </div>
-
-              <div className="flex items-start gap-3 bg-deep-purple/5 p-3 rounded-lg">
-                <div className="w-7 h-7 rounded-lg bg-deep-purple/10 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-deep-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <p className="text-gray-600 text-sm">Completarea chestionarului durează aproximativ <strong>10-15 minute</strong>.</p>
-              </div>
-
-              <div className="flex items-start gap-3 bg-deep-purple/5 p-3 rounded-lg">
-                <div className="w-7 h-7 rounded-lg bg-deep-purple/10 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-deep-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <p className="text-gray-600 text-sm">Răspunsurile sincere ne ajută să luăm decizii mai bune pentru îmbunătățirea mediului de lucru.</p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -82,11 +119,11 @@ export default function InstructionsScreen() {
               onChange={(e) => setHasReadInstructions(e.target.checked)}
               className="w-4 h-4 rounded border-gray-300 text-deep-purple focus:ring-deep-purple"
             />
-            Am citit instrucțiunile
+            {scorecard.consentText}
           </label>
           
           <button
-            onClick={() => navigate('/survey')}
+            onClick={() => navigate(scorecard.nextRoute)}
             disabled={!hasReadInstructions}
             className={`w-full px-6 py-2.5 rounded-lg font-medium transition-colors ${
               hasReadInstructions
@@ -94,7 +131,7 @@ export default function InstructionsScreen() {
                 : 'bg-gray-100 text-gray-400 cursor-not-allowed'
             }`}
           >
-            Începe chestionarul
+            {scorecard.buttonText}
           </button>
         </div>
       </div>

@@ -1,0 +1,31 @@
+{
+  "scorecards": [
+    {
+      "id": "leadership-assessment-2024",
+      "scorecardInfo": {
+        "title": "Leadership Assessment 2024",
+        "shortDescription": "Comprehensive evaluation of leadership capabilities and management style",
+        "category": "Leadership",
+        "visibility": false
+      }
+    },
+    {
+      "id": "team-performance-metrics",
+      "scorecardInfo": {
+        "title": "Team Performance Metrics",
+        "shortDescription": "Key performance indicators for team effectiveness and collaboration",
+        "category": "Team Performance",
+        "visibility": true
+      }
+    },
+    {
+      "id": "innovation-capability",
+      "scorecardInfo": {
+        "title": "Innovation Capability Assessment",
+        "shortDescription": "Measure of organizational innovation and creative problem-solving",
+        "category": "Innovation",
+        "visibility": true
+      }
+    }
+  ]
+} 

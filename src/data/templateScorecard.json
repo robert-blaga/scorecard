@@ -1,0 +1,51 @@
+{
+  "id": "[unique identifier for the scorecard]",
+  "title": "[Main title of the survey]",
+  "subtitle": "[Supporting text that appears below the title]",
+  "columns": [
+    {
+      "title": "[Title for the information column]",
+      "content": "[Detailed explanation text for this section]"
+    },
+    {
+      "title": "[Title for the instructions column]",
+      "points": [
+        {
+          "icon": "[Icon name - available options: check, anonymous, time, insight]",
+          "text": "[First instruction point]"
+        },
+        {
+          "icon": "[Icon name - available options: check, anonymous, time, insight]",
+          "text": "[Second instruction point]"
+        },
+        {
+          "icon": "[Icon name - available options: check, anonymous, time, insight]",
+          "text": "[Third instruction point]"
+        },
+        {
+          "icon": "[Icon name - available options: check, anonymous, time, insight]",
+          "text": "[Fourth instruction point]"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "[unique question identifier]",
+      "category": "[Category/section name for grouping questions]",
+      "text": "[The actual question text]",
+      "number": "[Question number for ordering - integer]",
+      "type": "[Question type - available options: single_choice]",
+      "options": [
+        { "text": "[Option text]", "scores": {} },
+        { "text": "[Option text]", "scores": {} },
+        { "text": "[Option text]", "scores": {} },
+        { "text": "[Option text]", "scores": {} },
+        { "text": "[Option text]", "scores": {} }
+      ]
+    }
+  ],
+  "consentText": "[Text for the consent checkbox that users must agree to]",
+  "buttonText": "[Text to display on the action button]",
+  "nextRoute": "[Route path to navigate to after form submission]"
+}
