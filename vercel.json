@@ -1,0 +1,15 @@
+{
+  "routes": [
+    { "handle": "filesystem" },
+    { 
+      "src": "/auth/callback",
+      "dest": "/",
+      "status": 200
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/",
+      "status": 200
+    }
+  ]
+} 
