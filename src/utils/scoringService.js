@@ -18,19 +18,12 @@ export function calculateScores(responses, scorecard) {
     return { error: 'Invalid responses or scorecard data' };
   }
 
-  // Debug logging
-  console.log('Calculating scores with responses:', responses);
-  console.log('Scorecard config:', scorecard.scoring);
-
   // Initialize scores object to track all score categories
   const scores = {};
   const answers = {};
   
   // Process each question response
   Object.entries(responses).forEach(([questionId, scoreData]) => {
-    // Debug logging
-    console.log('Processing question:', questionId, 'with scores:', scoreData);
-    
     // Store the original answer
     answers[questionId] = scoreData;
     
@@ -40,18 +33,11 @@ export function calculateScores(responses, scorecard) {
         scores[category] = 0;
       }
       scores[category] += Number(value);
-      
-      // Debug logging
-      console.log('Added score for category:', category, 'value:', value, 'total:', scores[category]);
     });
   });
 
-  // Debug logging
-  console.log('Final accumulated scores:', scores);
-
   // Get primary category from scoring config
   const primaryCategory = scorecard.scoring?.primaryCategory;
-  console.log('Primary category:', primaryCategory);
   
   if (!primaryCategory) {
     return { error: 'No primary scoring category defined in scorecard' };
@@ -64,9 +50,6 @@ export function calculateScores(responses, scorecard) {
   // Calculate percentage score
   const maxPossible = calculateMaxPossibleScore(scorecard, primaryCategory);
   const percentage = (scores[primaryCategory] / maxPossible) * 100;
-
-  console.log('Max possible score:', maxPossible);
-  console.log('Calculated percentage:', percentage);
 
   // Get need level based on thresholds
   const needLevel = getNeedLevel(percentage, scorecard.scoring.thresholds.needLevel);
@@ -90,9 +73,6 @@ export function calculateScores(responses, scorecard) {
     },
     recommendationLevel
   };
-
-  // Debug logging
-  console.log('Final result:', result);
 
   return result;
 }
@@ -231,11 +211,11 @@ function getNeedLevel(percentage, needLevelThresholds) {
   }
   
   // Fallback to default thresholds if configuration is invalid
-  if (percentage >= 75) return 'Very High Need';
-  if (percentage >= 60) return 'High Need';
-  if (percentage >= 40) return 'Moderate Need';
-  if (percentage >= 25) return 'Low Need';
-  return 'Very Low Need';
+  if (percentage >= 75) return 'very-high';
+  if (percentage >= 60) return 'high';
+  if (percentage >= 40) return 'medium';
+  if (percentage >= 25) return 'low';
+  return 'very-low';
 }
 
 /**

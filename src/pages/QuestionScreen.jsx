@@ -59,36 +59,23 @@ export default function SurveyScreen() {
   }, [scorecardId]);
 
   const handleSelect = (questionId, value) => {
-    console.log('Selected answer:', { questionId, value });
-    
     setAnswers(prev => {
       const newAnswers = {
         ...prev,
         [questionId]: value
       };
-      console.log('Updated answers:', newAnswers);
       return newAnswers;
     });
   };
 
   const handleNext = async () => {
-    console.log('handleNext called', {
-      currentQuestionIndex,
-      totalQuestions: scorecard?.questions?.items?.length,
-      isLastQuestion: currentQuestionIndex === (scorecard?.questions?.items?.length - 1)
-    });
-
     if (currentQuestionIndex < scorecard.questions.items.length - 1) {
       setCurrentQuestionIndex(prev => prev + 1);
     } else {
       try {
-        console.log('Preparing to navigate to results...', { answers });
-
         // Clear stored survey data
         localStorage.removeItem(`${scorecardId}_${SURVEY_ANSWERS_KEY}`);
         localStorage.removeItem(`${scorecardId}_${SURVEY_CURRENT_QUESTION_KEY}`);
-        
-        console.log('Navigating to results screen...');
         
         // Navigate to results screen with the answers
         navigate(`/scorecard/${scorecardId}`, { 

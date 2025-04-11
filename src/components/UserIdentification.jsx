@@ -197,8 +197,6 @@ export default function UserIdentification({ onComplete, sessionData }) {
 
     if (formData.gdprConsent) {
       try {
-        console.log('Starting submission process...', { sessionData });
-
         // Prepare the survey answers JSONB structure with safety checks
         const surveyData = {
           surveys: {
@@ -220,8 +218,6 @@ export default function UserIdentification({ onComplete, sessionData }) {
             }
           }
         };
-
-        console.log('Saving user data with survey answers:', surveyData);
 
         // Create user profile
         const { data: userData, error: userError } = await supabase
@@ -278,11 +274,8 @@ export default function UserIdentification({ onComplete, sessionData }) {
         }
         
         // Call the completion handler with the form data
-        console.log('Calling completion handler...');
         onComplete(formData);
-        console.log('Submission process completed successfully');
       } catch (error) {
-        console.error('Error saving user data:', error);
         setErrors(prev => ({
           ...prev,
           submitError: error.message || 'An unexpected error occurred. Please try again.'

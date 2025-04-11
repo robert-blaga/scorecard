@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useParams, Link, useLocation, useNavigate } from 'react-router-dom';
 import useScorecard from '../hooks/useScorecard';
 import ScorecardResults from '../components/ScorecardResults';
@@ -6,8 +6,9 @@ import { calculateScores, generateReport } from '../utils/scoringService';
 
 /**
  * Page component for displaying scorecard results after survey completion
+ * Combines functionality from ResultsScreen and ScorecardResults pages
  */
-const ScorecardPage = () => {
+const ResultsScreen = () => {
   const { scorecardId } = useParams();
   const location = useLocation();
   const surveyAnswers = location.state?.answers;
@@ -20,8 +21,8 @@ const ScorecardPage = () => {
     saveResults
   } = useScorecard(scorecardId);
 
-  // Calculate results if we have survey answers
-  const getResults = () => {
+  // Memoized calculation of results to prevent unnecessary recalculations
+  const calculatedResults = useMemo(() => {
     if (!surveyAnswers || !scorecard) return null;
     
     // Convert answers from index-based to score-based using the scorecard configuration
@@ -29,23 +30,12 @@ const ScorecardPage = () => {
     Object.entries(surveyAnswers).forEach(([questionId, selectedIndex]) => {
       const question = scorecard.questions.items.find(q => q.id === questionId);
       if (question && question.options[selectedIndex]) {
-        // Get the scores object directly from the selected option
         const selectedOption = question.options[selectedIndex];
-        // Only include the scores, not the selected index
         scoredAnswers[questionId] = selectedOption.scores || {};
-        
-        // Debug logging
-        console.log('Question:', questionId);
-        console.log('Selected Index:', selectedIndex);
-        console.log('Selected Option:', selectedOption);
-        console.log('Scores:', selectedOption.scores);
       }
     });
     
-    // Debug logging
-    console.log('Final Scored Answers:', scoredAnswers);
-    
-    // Calculate scores using the scoring configuration from the scorecard
+    // Calculate scores using the scoring configuration
     const results = calculateScores(scoredAnswers, scorecard);
     if (!results || results.error) {
       console.error('Error calculating results:', results?.error);
@@ -55,7 +45,7 @@ const ScorecardPage = () => {
     // Add the original answers to the results
     results.answers = surveyAnswers;
 
-    // Generate detailed report using the scorecard's recommendations and thresholds
+    // Generate detailed report
     const report = generateReport(results, scorecard);
     if (!report || report.error) {
       console.error('Error generating report:', report?.error);
@@ -75,11 +65,26 @@ const ScorecardPage = () => {
       results,
       report
     };
+  }, [surveyAnswers, scorecard, scorecardId]);
+
+  // Handle extended report navigation
+  const handleExtendedReport = () => {
+    if (!calculatedResults) return;
+    
+    const surveyData = {
+      scorecardId,
+      answers: surveyAnswers,
+      results: calculatedResults.results,
+      report: calculatedResults.report
+    };
+    
+    navigate('/identify', {
+      state: surveyData,
+      replace: true
+    });
   };
 
-  const calculatedResults = getResults();
-
-  // Loading state
+  // Loading state with improved skeleton UI
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 p-6 flex items-center justify-center">
@@ -97,7 +102,7 @@ const ScorecardPage = () => {
     );
   }
 
-  // Error state
+  // Error state with improved error handling
   if (error) {
     return (
       <div className="min-h-screen bg-gray-50 p-6 flex flex-col items-center justify-center">
@@ -148,32 +153,19 @@ const ScorecardPage = () => {
     );
   }
 
-  const handleExtendedReport = () => {
-    const surveyData = {
-      scorecardId,
-      answers: surveyAnswers,
-      results: calculatedResults.results,
-      report: calculatedResults.report
-    };
-    
-    navigate('/identify', {
-      state: surveyData,
-      replace: true
-    });
-  };
-
-  // Show results
+  // Main results display
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScorecardResults 
           results={calculatedResults.results} 
           report={calculatedResults.report} 
-          scorecardId={scorecardId} 
+          scorecardId={scorecardId}
+          scorecard={scorecard}
         />
       </div>
     </div>
   );
 };
 
-export default ScorecardPage; 
+export default ResultsScreen; 

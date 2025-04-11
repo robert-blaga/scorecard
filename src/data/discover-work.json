@@ -386,31 +386,31 @@
         "Practice active listening techniques to better understand different communication preferences",
         "Develop adaptability in your approach to different work and communication styles"
       ],
-      "Very High Need": [
+      "very-high": [
         "Complete a comprehensive DISC training program with your team",
         "Identify your primary DISC style and understand how it influences your work approach",
         "Learn specific strategies to communicate effectively with each DISC style",
         "Create team agreements for communication based on different style needs"
       ],
-      "High Need": [
+      "high": [
         "Participate in a focused DISC workshop with your team members",
         "Develop a style-based communication plan for your team",
         "Practice recognizing different behavioral styles in workplace interactions",
         "Set up regular reflection sessions to improve style adaptability"
       ],
-      "Moderate Need": [
+      "medium": [
         "Refresh your understanding of DISC principles through targeted resources",
         "Practice adapting your communication approach with different team members",
         "Identify specific situations where style conflicts occur and develop strategies",
         "Create opportunities to leverage diverse styles on your team"
       ],
-      "Low Need": [
+      "low": [
         "Fine-tune your already effective style adaptation techniques",
         "Help others on your team recognize and adapt to different styles",
         "Apply advanced DISC concepts to complex team situations",
         "Document best practices for style-based communication in your team"
       ],
-      "Very Low Need": [
+      "very-low": [
         "Mentor others in recognizing and adapting to different behavioral styles",
         "Explore advanced applications of DISC in challenging workplace scenarios",
         "Lead style-based communication improvement initiatives",
@@ -706,23 +706,28 @@
       "needLevel": [
         {
           "threshold": 75,
-          "label": "There is a very high chance your team could benefit from DISC training"
+          "label": "very-high",
+          "displayText": "There is a very high chance your team could benefit from DISC training"
         },
         {
           "threshold": 60,
-          "label": "There is a high chance your team could benefit from DISC training"
+          "label": "high",
+          "displayText": "There is a high chance your team could benefit from DISC training"
         },
         {
           "threshold": 40,
-          "label": "There is a moderate chance your team could benefit from DISC training"
+          "label": "medium",
+          "displayText": "There is a moderate chance your team could benefit from DISC training"
         },
         {
           "threshold": 25,
-          "label": "There is a low chance your team could benefit from DISC training"
+          "label": "low",
+          "displayText": "There is a low chance your team could benefit from DISC training"
         },
         {
           "threshold": 0,
-          "label": "There is a very low chance your team could benefit from DISC training"
+          "label": "very-low",
+          "displayText": "There is a very low chance your team could benefit from DISC training"
         }
       ],
       "recommendationLevel": [

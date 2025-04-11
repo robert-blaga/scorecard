@@ -7,12 +7,6 @@ import { Link } from 'react-router-dom';
  * A component to display scorecard assessment results
  */
 const ScorecardResults = ({ results, report, scorecardId, scorecard }) => {
-  // Debug logs to troubleshoot missing specific recommendations
-  console.log('ScorecardResults - report:', report);
-  console.log('ScorecardResults - specificRecommendations:', report?.specificRecommendations);
-  console.log('ScorecardResults - specificRecommendations length:', report?.specificRecommendations?.length);
-  console.log('ScorecardResults - scorecard:', scorecard);
-  
   if (!results || !report) {
     return (
       <div className="p-6 bg-gray-50 rounded-lg shadow-sm">
@@ -36,12 +30,6 @@ const ScorecardResults = ({ results, report, scorecardId, scorecard }) => {
 
   const primaryCategory = getPrimaryScoreCategory();
   const primaryScore = primaryCategory ? results.interpretation[primaryCategory] : null;
-
-  // Additional debug logs
-  console.log('ScorecardResults - primaryCategory:', primaryCategory);
-  console.log('ScorecardResults - primaryScore:', primaryScore);
-  console.log('ScorecardResults - primaryScore needLevel:', primaryScore?.needLevel);
-  console.log('ScorecardResults - scorecard.scoring.recommendations:', scorecard?.scoring?.recommendations);
 
   // Determine recommendation badge color
   const getRecommendationColor = () => {
