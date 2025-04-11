@@ -1,9 +1,10 @@
 /**
  * Utility functions for working with scorecards
  */
+import scorecardsData from '../data/index.json';
 
 /**
- * Loads a scorecard by ID from any file in the data directory
+ * Loads a scorecard by ID from the data directory structure
  * @param {string} id - The ID of the scorecard to load
  * @returns {Promise<object|null>} - The scorecard data or null if not found
  */
@@ -11,23 +12,36 @@ export async function getScorecard(id) {
   if (!id) return null;
   
   try {
-    // Get the list of all scorecard files excluding the index and template
-    const scorecardModules = import.meta.glob('../data/*.json', { eager: true });
+    // Get metadata from index.json
+    const scorecardMetadata = scorecardsData.scorecards.find(sc => sc.id === id);
+    if (!scorecardMetadata) {
+      console.error(`No scorecard metadata found for ID: ${id}`);
+      return null;
+    }
+
+    // Use Vite's import.meta.glob to load all JSON files in the data directory and subdirectories
+    const modules = import.meta.glob('../data/**/*.json', { eager: true });
     
-    // Filter out the index and template files
-    const excludeFiles = ['scorecardsIndex.json', 'templateScorecard.json'];
+    // First check for direct file match (most reliable)
+    const directFilePath = `../data/${id}.json`;
+    if (modules[directFilePath]) {
+      // Merge metadata with scorecard data
+      return {
+        ...modules[directFilePath],
+        scorecardInfo: scorecardMetadata.scorecardInfo
+      };
+    }
     
-    // Search through all files to find one with a matching ID
-    for (const path in scorecardModules) {
-      const scorecard = scorecardModules[path];
+    // If no direct match, search through all JSON files to find one with the matching ID
+    for (const path in modules) {
+      const fileData = modules[path];
       
-      // Skip index and template files
-      const filename = path.split('/').pop();
-      if (excludeFiles.includes(filename)) continue;
-      
-      // If the scorecard has the matching ID, return it
-      if (scorecard && scorecard.id === id) {
-        return scorecard;
+      // If the file has the matching ID, return it merged with metadata
+      if (fileData && fileData.id === id) {
+        return {
+          ...fileData,
+          scorecardInfo: scorecardMetadata.scorecardInfo
+        };
       }
     }
     

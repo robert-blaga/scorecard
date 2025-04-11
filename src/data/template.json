@@ -68,40 +68,40 @@
         "number": 1,
         "type": "single_choice",
         "options": [
-          {
-            "text": "${Replace with option text}",
+          { 
+            "text": "${Replace with option text}", 
             "scores": {
-              "Category Name": 1,
+              "Category Name": 1, 
               "${primaryCategory}": 1
-            }
+            } 
           },
-          {
-            "text": "${Replace with option text}",
+          { 
+            "text": "${Replace with option text}", 
             "scores": {
-              "Category Name": 2,
+              "Category Name": 2, 
               "${primaryCategory}": 2
-            }
+            } 
           },
-          {
-            "text": "${Replace with option text}",
+          { 
+            "text": "${Replace with option text}", 
             "scores": {
-              "Category Name": 3,
+              "Category Name": 3, 
               "${primaryCategory}": 3
-            }
+            } 
           },
-          {
-            "text": "${Replace with option text}",
+          { 
+            "text": "${Replace with option text}", 
             "scores": {
-              "Category Name": 4,
+              "Category Name": 4, 
               "${primaryCategory}": 4
-            }
+            } 
           },
-          {
-            "text": "${Replace with option text}",
+          { 
+            "text": "${Replace with option text}", 
             "scores": {
-              "Category Name": 5,
+              "Category Name": 5, 
               "${primaryCategory}": 5
-            }
+            } 
           }
         ]
       }
@@ -327,53 +327,18 @@
     },
     "thresholds": {
       "needLevel": [
-        {
-          "threshold": 75,
-          "label": "There is a very high chance your team could benefit from this training"
-        },
-        {
-          "threshold": 60,
-          "label": "There is a high chance your team could benefit from this training"
-        },
-        {
-          "threshold": 40,
-          "label": "There is a moderate chance your team could benefit from this training"
-        },
-        {
-          "threshold": 25,
-          "label": "There is a low chance your team could benefit from this training"
-        },
-        {
-          "threshold": 0,
-          "label": "There is a very low chance your team could benefit from this training"
-        }
+        { "threshold": 75, "label": "There is a very high chance your team could benefit from this training" },
+        { "threshold": 60, "label": "There is a high chance your team could benefit from this training" },
+        { "threshold": 40, "label": "There is a moderate chance your team could benefit from this training" },
+        { "threshold": 25, "label": "There is a low chance your team could benefit from this training" },
+        { "threshold": 0, "label": "There is a very low chance your team could benefit from this training" }
       ],
       "recommendationLevel": [
-        {
-          "threshold": 75,
-          "label": "very-high",
-          "displayText": "High Priority"
-        },
-        {
-          "threshold": 60,
-          "label": "high",
-          "displayText": "Medium Priority"
-        },
-        {
-          "threshold": 40,
-          "label": "medium",
-          "displayText": "Moderate Priority"
-        },
-        {
-          "threshold": 25,
-          "label": "low",
-          "displayText": "Low Priority"
-        },
-        {
-          "threshold": 0,
-          "label": "very-low",
-          "displayText": "Very Low Priority"
-        }
+        { "threshold": 75, "label": "very-high", "displayText": "High Priority" },
+        { "threshold": 60, "label": "high", "displayText": "Medium Priority" },
+        { "threshold": 40, "label": "medium", "displayText": "Moderate Priority" },
+        { "threshold": 25, "label": "low", "displayText": "Low Priority" },
+        { "threshold": 0, "label": "very-low", "displayText": "Very Low Priority" }
       ]
     },
     "summaries": [
@@ -405,61 +370,5 @@
     "nextSteps": "",
     "buttonText": "",
     "buttonLink": ""
-  },
-  "scorecards": [
-    {
-      "id": "discover-work",
-      "scorecardInfo": {
-        "title": "Discover Work",
-        "shortDescription": "Evaluate if DISC training would benefit your team's communication and collaboration",
-        "category": "Communication",
-        "visibility": true
-      }
-    },
-    {
-      "id": "team-performance-metrics",
-      "scorecardInfo": {
-        "title": "Team Performance Metrics",
-        "shortDescription": "Key performance indicators for team effectiveness and collaboration",
-        "category": "Team Performance",
-        "visibility": true
-      }
-    },
-    {
-      "id": "innovation-capability",
-      "scorecardInfo": {
-        "title": "Innovation Capability Assessment",
-        "shortDescription": "Measure of organizational innovation and creative problem-solving",
-        "category": "Innovation",
-        "visibility": true
-      }
-    },
-    {
-      "id": "neuro-leadership",
-      "scorecardInfo": {
-        "title": "Neuro-Leadership Assessment",
-        "shortDescription": "Evaluate if your leadership team would benefit from neuroscience-based leadership training",
-        "category": "Leadership Development",
-        "visibility": true
-      }
-    },
-    {
-      "id": "conflict-views",
-      "scorecardInfo": {
-        "title": "Conflict Views",
-        "shortDescription": "Evaluate if your team would benefit from conflict resolution training and mediation techniques",
-        "category": "Workplace Communication",
-        "visibility": true
-      }
-    },
-    {
-      "id": "agile-leadership",
-      "scorecardInfo": {
-        "title": "Agile Leadership",
-        "shortDescription": "Master the mindset and practices needed to lead in fast-paced, constantly changing environments",
-        "category": "Leadership Development",
-        "visibility": true
-      }
-    }
-  ]
-}
+  }
+} 

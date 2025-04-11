@@ -1,0 +1,668 @@
+{
+  "id": "innovation-capability",
+  "sync_test": {
+    "version": "1.0.2",
+    "timestamp": "2024-04-04",
+    "description": "Final sync test",
+    "status": "active",
+    "test_nested": {
+      "field1": "value1",
+      "field2": "value2"
+    }
+  },
+  "test_sync": "This field should be added to all JSONs",
+  "_setup_instructions": "IMPORTANT SETUP INSTRUCTIONS: 1. Replace all placeholder values marked with ${...}. 2. For each question in your assessment, add a corresponding category in questionRecommendations. 3. Ensure primaryCategory is set to your main scoring category. 4. Use the question's category name exactly as it appears in the questions section. 5. Each question should contribute to both its own category score and the primaryCategory score. 6. The paths in nextRoute should include the assessment ID (e.g., '/survey/your-assessment-id'). 7. Remove this _setup_instructions field when done.",
+  "intro": {
+    "title": "Innovation Capability Assessment",
+    "subtitle": "Evaluate your organization's innovation readiness and identify improvement opportunities",
+    "instructions": {
+      "title": "How to Complete This Assessment",
+      "steps": [
+        "Answer each question based on observed organizational practices",
+        "Consider patterns across different departments and teams",
+        "Focus on innovation processes and outcomes",
+        "Select the option that best reflects current capabilities"
+      ]
+    },
+    "columns": [
+      {
+        "title": "Innovation Framework",
+        "content": "Measuring and enhancing organizational innovation capabilities"
+      },
+      {
+        "title": "Assessment Areas",
+        "points": [
+          {
+            "icon": "lightbulb",
+            "text": "Innovation Culture",
+            "description": "How well the organization supports creative thinking"
+          },
+          {
+            "icon": "process",
+            "text": "Innovation Process",
+            "description": "Effectiveness of idea generation to implementation"
+          },
+          {
+            "icon": "resources",
+            "text": "Resource Allocation",
+            "description": "How resources support innovation initiatives"
+          },
+          {
+            "icon": "chart",
+            "text": "Innovation Outcomes",
+            "description": "Measurable results of innovation efforts"
+          }
+        ]
+      }
+    ],
+    "consentText": "I understand this assessment will help identify areas for improving innovation capabilities",
+    "buttonText": "Start Assessment",
+    "nextRoute": "/survey/innovation-capability"
+  },
+  "questions": {
+    "items": [
+      {
+        "id": "question-1",
+        "category": "Innovation Culture",
+        "text": "How would you describe your organization's approach to new ideas?",
+        "number": 1,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "New ideas are rarely encouraged or implemented",
+            "scores": {
+              "innovation_capability": 5
+            }
+          },
+          {
+            "text": "New ideas are considered but rarely acted upon",
+            "scores": {
+              "innovation_capability": 4
+            }
+          },
+          {
+            "text": "Some new ideas are supported with limited resources",
+            "scores": {
+              "innovation_capability": 3
+            }
+          },
+          {
+            "text": "New ideas are often encouraged and sometimes implemented",
+            "scores": {
+              "innovation_capability": 2
+            }
+          },
+          {
+            "text": "New ideas are actively sought, supported, and implemented",
+            "scores": {
+              "innovation_capability": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-2",
+        "category": "Innovation Process",
+        "text": "How structured is your innovation process from idea to implementation?",
+        "number": 2,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "We have no defined process for developing innovations",
+            "scores": {
+              "innovation_capability": 5
+            }
+          },
+          {
+            "text": "Our innovation process is informal and inconsistent",
+            "scores": {
+              "innovation_capability": 4
+            }
+          },
+          {
+            "text": "We have basic processes but they're not always followed",
+            "scores": {
+              "innovation_capability": 3
+            }
+          },
+          {
+            "text": "We have defined processes that are usually followed",
+            "scores": {
+              "innovation_capability": 2
+            }
+          },
+          {
+            "text": "We have well-established, effective innovation processes",
+            "scores": {
+              "innovation_capability": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-3",
+        "category": "Resource Allocation",
+        "text": "How does your organization allocate resources for innovation?",
+        "number": 3,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Very limited resources are available for innovation",
+            "scores": {
+              "innovation_capability": 5
+            }
+          },
+          {
+            "text": "Resources are available but difficult to access",
+            "scores": {
+              "innovation_capability": 4
+            }
+          },
+          {
+            "text": "Some resources are available for selected initiatives",
+            "scores": {
+              "innovation_capability": 3
+            }
+          },
+          {
+            "text": "Resources are generally available for promising ideas",
+            "scores": {
+              "innovation_capability": 2
+            }
+          },
+          {
+            "text": "Dedicated resources are readily available for innovation",
+            "scores": {
+              "innovation_capability": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-4",
+        "category": "Innovation Outcomes",
+        "text": "How effectively does your organization measure and track innovation outcomes?",
+        "number": 4,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "We don't measure innovation outcomes",
+            "scores": {
+              "innovation_capability": 5
+            }
+          },
+          {
+            "text": "We track basic metrics inconsistently",
+            "scores": {
+              "innovation_capability": 4
+            }
+          },
+          {
+            "text": "We have some metrics but lack comprehensive tracking",
+            "scores": {
+              "innovation_capability": 3
+            }
+          },
+          {
+            "text": "We regularly track key innovation metrics",
+            "scores": {
+              "innovation_capability": 2
+            }
+          },
+          {
+            "text": "We have comprehensive innovation measurement systems",
+            "scores": {
+              "innovation_capability": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-5",
+        "category": "Innovation Culture",
+        "text": "How does your organization handle failure in innovation attempts?",
+        "number": 5,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Failure is severely punished or criticized",
+            "scores": {
+              "innovation_capability": 5
+            }
+          },
+          {
+            "text": "Failure is generally viewed negatively",
+            "scores": {
+              "innovation_capability": 4
+            }
+          },
+          {
+            "text": "Some tolerance for failure but with consequences",
+            "scores": {
+              "innovation_capability": 3
+            }
+          },
+          {
+            "text": "Failure is accepted as part of innovation",
+            "scores": {
+              "innovation_capability": 2
+            }
+          },
+          {
+            "text": "Failure is viewed as a learning opportunity",
+            "scores": {
+              "innovation_capability": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-6",
+        "category": "Innovation Process",
+        "text": "How does your organization collaborate on innovation initiatives?",
+        "number": 6,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Very little collaboration across teams or departments",
+            "scores": {
+              "innovation_capability": 5
+            }
+          },
+          {
+            "text": "Occasional collaboration but mostly siloed work",
+            "scores": {
+              "innovation_capability": 4
+            }
+          },
+          {
+            "text": "Some cross-functional collaboration on key projects",
+            "scores": {
+              "innovation_capability": 3
+            }
+          },
+          {
+            "text": "Regular collaboration across most innovation initiatives",
+            "scores": {
+              "innovation_capability": 2
+            }
+          },
+          {
+            "text": "Strong culture of collaboration and knowledge sharing",
+            "scores": {
+              "innovation_capability": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-7",
+        "category": "Resource Allocation",
+        "text": "How does your organization develop innovation capabilities in employees?",
+        "number": 7,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "No formal innovation training or development",
+            "scores": {
+              "innovation_capability": 5
+            }
+          },
+          {
+            "text": "Limited ad-hoc training opportunities",
+            "scores": {
+              "innovation_capability": 4
+            }
+          },
+          {
+            "text": "Some training programs but not comprehensive",
+            "scores": {
+              "innovation_capability": 3
+            }
+          },
+          {
+            "text": "Regular innovation training and development",
+            "scores": {
+              "innovation_capability": 2
+            }
+          },
+          {
+            "text": "Comprehensive innovation capability development",
+            "scores": {
+              "innovation_capability": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-8",
+        "category": "Innovation Outcomes",
+        "text": "How does your organization's innovation performance compare to competitors?",
+        "number": 8,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "We significantly lag behind competitors",
+            "scores": {
+              "innovation_capability": 5
+            }
+          },
+          {
+            "text": "We are somewhat behind most competitors",
+            "scores": {
+              "innovation_capability": 4
+            }
+          },
+          {
+            "text": "We are on par with industry average",
+            "scores": {
+              "innovation_capability": 3
+            }
+          },
+          {
+            "text": "We are ahead of most competitors",
+            "scores": {
+              "innovation_capability": 2
+            }
+          },
+          {
+            "text": "We are recognized as an innovation leader",
+            "scores": {
+              "innovation_capability": 1
+            }
+          }
+        ]
+      }
+    ],
+    "submitButtonText": "Submit Assessment",
+    "nextRoute": "/thank-you/innovation-capability"
+  },
+  "scoring": {
+    "primaryCategory": "innovation_capability",
+    "maxScorePerQuestion": 5,
+    "recommendations": {
+      "base": [
+        "Establish a common language and understanding of innovation across your organization",
+        "Encourage experimentation and an appropriate level of risk-taking",
+        "Create opportunities for cross-functional collaboration on innovation initiatives"
+      ],
+      "Very High Need": [
+        "Develop a comprehensive innovation strategy aligned with your business objectives",
+        "Implement an innovation governance structure with clear roles and processes",
+        "Design and launch a formal innovation training program for all employees",
+        "Create dedicated time and resources for innovation activities"
+      ],
+      "High Need": [
+        "Conduct an innovation capability workshop to identify specific barriers and opportunities",
+        "Establish innovation metrics and KPIs to track progress and impact",
+        "Launch focused innovation initiatives in high-priority business areas",
+        "Develop a framework for evaluating and selecting innovation ideas"
+      ],
+      "Moderate Need": [
+        "Enhance existing innovation processes with best practices from leading organizations",
+        "Refine your approach to ideation and concept development",
+        "Create more effective methods for testing and validating new ideas",
+        "Build stronger connections between innovation efforts and business outcomes"
+      ],
+      "Low Need": [
+        "Fine-tune your innovation ecosystem to optimize resource allocation",
+        "Improve connections between different innovation initiatives across the organization",
+        "Develop more sophisticated approaches to scaling successful innovations",
+        "Create advanced innovation training for innovation leaders and champions"
+      ],
+      "Very Low Need": [
+        "Establish your organization as an innovation thought leader in your industry",
+        "Develop next-generation innovation methodologies tailored to your specific context",
+        "Create formal mechanisms to share innovation best practices with others",
+        "Explore cutting-edge innovation approaches like open innovation and ecosystem innovation"
+      ]
+    },
+    "category_overviews": {
+      "primary_category": {
+        "title": "Innovation Capability Overview",
+        "description": "Assessment of organizational innovation readiness and effectiveness",
+        "key_findings": {
+          "high": [
+            "Significant gaps in innovation capabilities",
+            "Limited systematic approach to innovation"
+          ],
+          "medium": [
+            "Basic innovation practices in place",
+            "Some structured approaches to innovation"
+          ],
+          "low": [
+            "Strong innovation capabilities",
+            "Well-established innovation processes"
+          ]
+        },
+        "overview_recommendations": {
+          "high": [
+            "Implement comprehensive innovation framework",
+            "Establish innovation governance structure"
+          ],
+          "medium": [
+            "Enhance existing innovation practices",
+            "Develop systematic innovation approaches"
+          ],
+          "low": [
+            "Optimize innovation processes",
+            "Scale successful innovation practices"
+          ]
+        }
+      },
+      "secondary_category": {
+        "title": "Innovation Implementation",
+        "description": "Assessment of organization's ability to execute and implement innovative ideas",
+        "key_findings": {
+          "high": [
+            "Significant gaps in innovation implementation processes",
+            "Limited success in bringing new ideas to market"
+          ],
+          "medium": [
+            "Moderate implementation capabilities with some successes",
+            "Inconsistent execution of innovative initiatives"
+          ],
+          "low": [
+            "Strong implementation processes for innovation",
+            "Consistent track record of bringing ideas to fruition"
+          ]
+        },
+        "overview_recommendations": {
+          "high": [
+            "Establish structured innovation implementation framework",
+            "Develop stage-gate process for innovation development"
+          ],
+          "medium": [
+            "Enhance existing implementation processes",
+            "Address specific bottlenecks in execution"
+          ],
+          "low": [
+            "Optimize already effective implementation processes",
+            "Share implementation best practices"
+          ]
+        }
+      }
+    },
+    "theme": {
+      "primary": "bg-violet-600",
+      "secondary": "bg-violet-100",
+      "text": "text-violet-600",
+      "hover": "hover:bg-violet-700",
+      "border": "border-violet-200"
+    },
+    "email_template": {
+      "title": "Innovation Capability Assessment Report for ${title}",
+      "sections": [
+        {
+          "title": "Innovation Overview",
+          "content": "${overallRecommendation}",
+          "format": "uppercase"
+        },
+        {
+          "title": "Capability Analysis",
+          "content": "${categoryAnalysis}"
+        },
+        {
+          "title": "Key Recommendations",
+          "content": "${recommendations}"
+        },
+        {
+          "title": "Action Items",
+          "content": "${specificRecommendations}"
+        },
+        {
+          "title": "Detailed Analysis",
+          "content": "${detailedAnalysis}"
+        }
+      ]
+    },
+    "report_structure": {
+      "title": "Innovation Capability Development Plan",
+      "description": "Based on your innovation assessment, we've created a targeted development plan focused on enhancing innovation capabilities:",
+      "sections": {
+        "critical_focus": {
+          "title": "Critical Innovation Areas",
+          "description": "These areas require immediate attention based on your assessment:",
+          "threshold": 60,
+          "type": "category_recommendations",
+          "recommendationLevel": "high"
+        },
+        "development_opportunities": {
+          "title": "Development Areas",
+          "description": "Areas showing potential for capability enhancement:",
+          "minThreshold": 40,
+          "maxThreshold": 60,
+          "type": "category_recommendations",
+          "recommendationLevel": "medium"
+        },
+        "implementation_strategy": {
+          "title": "Implementation Strategy",
+          "description": "A structured approach to developing innovation capabilities:",
+          "type": "static_recommendations",
+          "recommendations": [
+            "Capability Assessment: Document current innovation practices",
+            "Framework Development: Establish innovation processes",
+            "Culture Building: Foster creative environment",
+            "Resource Allocation: Align resources with innovation goals",
+            "Measurement: Implement innovation metrics"
+          ]
+        },
+        "support_resources": {
+          "title": "Support Resources",
+          "description": "Tools and resources for innovation development:",
+          "type": "static_recommendations",
+          "recommendations": [
+            "Innovation process templates",
+            "Ideation workshop materials",
+            "Innovation metrics toolkit",
+            "Creative thinking exercises",
+            "Best practices library"
+          ]
+        }
+      },
+      "results_sections": {
+        "specific_recommendations": {
+          "title": "Innovation-Specific Recommendations",
+          "icon": "Lightbulb",
+          "style": {
+            "border": "border-violet-500",
+            "hoverBg": "hover:bg-violet-100",
+            "iconColor": "text-violet-600"
+          }
+        },
+        "general_recommendations": {
+          "title": "General Recommendations",
+          "icon": "CalendarCheck",
+          "style": {
+            "border": "border-gray-200",
+            "hoverBg": "hover:bg-gray-100",
+            "iconColor": "text-gray-600"
+          }
+        }
+      }
+    },
+    "questionRecommendations": {
+      "Category Name": {
+        "high": "${Replace with high priority recommendation for this category}",
+        "medium": "${Replace with medium priority recommendation for this category}",
+        "low": "${Replace with low priority recommendation for this category}"
+      },
+      "Another Category": {
+        "high": "${Replace with high priority recommendation for this category}",
+        "medium": "${Replace with medium priority recommendation for this category}",
+        "low": "${Replace with low priority recommendation for this category}"
+      },
+      "Innovation Culture": {
+        "high": "Establish comprehensive innovation culture program with focus on creativity and risk-taking.",
+        "medium": "Enhance current innovation practices and strengthen creative environment.",
+        "low": "Fine-tune innovation culture and scale successful practices."
+      },
+      "Innovation Process": {
+        "high": "Implement structured innovation process from ideation to implementation.",
+        "medium": "Strengthen existing innovation processes and improve efficiency.",
+        "low": "Optimize innovation processes and share best practices."
+      },
+      "Resource Allocation": {
+        "high": "Develop comprehensive resource allocation strategy for innovation.",
+        "medium": "Enhance resource utilization for innovation initiatives.",
+        "low": "Fine-tune resource allocation and maximize innovation impact."
+      }
+    },
+    "thresholds": {
+      "needLevel": [
+        { "threshold": 75, "label": "There is a very high chance your team could benefit from innovation capability training" },
+        { "threshold": 60, "label": "There is a high chance your team could benefit from innovation capability training" },
+        { "threshold": 40, "label": "There is a moderate chance your team could benefit from innovation capability training" },
+        { "threshold": 25, "label": "There is a low chance your team could benefit from innovation capability training" },
+        { "threshold": 0, "label": "There is a very low chance your team could benefit from innovation capability training" }
+      ],
+      "recommendationLevel": [
+        { "threshold": 75, "label": "very-high", "displayText": "High Priority" },
+        { "threshold": 60, "label": "high", "displayText": "Medium Priority" },
+        { "threshold": 40, "label": "medium", "displayText": "Moderate Priority" },
+        { "threshold": 25, "label": "low", "displayText": "Low Priority" },
+        { "threshold": 0, "label": "very-low", "displayText": "Very Low Priority" }
+      ]
+    },
+    "summaries": [
+      {
+        "threshold": 75,
+        "text": "Your organization shows significant opportunities for improving innovation capabilities."
+      },
+      {
+        "threshold": 60,
+        "text": "Your assessment indicates several areas requiring focused innovation development."
+      },
+      {
+        "threshold": 40,
+        "text": "Your organization demonstrates moderate innovation capabilities with room for enhancement."
+      },
+      {
+        "threshold": 25,
+        "text": "Your organization shows good innovation practices with opportunities for optimization."
+      },
+      {
+        "threshold": 0,
+        "text": "Your organization demonstrates strong innovation capabilities across most areas."
+      }
+    ]
+  },
+  "thankYou": {
+    "title": "Thank You for Completing the Innovation Capability Assessment!",
+    "message": "We've analyzed your organization's innovation capabilities and will provide targeted recommendations for improvement.",
+    "nextSteps": "We'll provide detailed insights and actionable recommendations based on your assessment. An innovation specialist may contact you to discuss development strategies.",
+    "buttonText": "Explore Innovation Solutions",
+    "buttonLink": "https://www.brainiup.com/innovation-capability"
+  },
+  "scorecards": [
+    {
+      "id": "conflict-views",
+      "scorecardInfo": {
+        "title": "Conflict Views",
+        "shortDescription": "Evaluate if your team would benefit from conflict resolution training and mediation techniques",
+        "category": "Workplace Communication",
+        "visibility": true
+      }
+    }
+  ]
+}

@@ -33,7 +33,7 @@ const SingleChoice = ({
               className={`
                 relative flex items-center p-3 rounded-md cursor-pointer
                 transition-all duration-200 group
-                ${selectedValue === option.text 
+                ${selectedValue === index 
                   ? 'bg-deep-purple ring-1 ring-deep-purple' 
                   : 'hover:bg-gray-50 border border-gray-200'
                 }
@@ -44,14 +44,14 @@ const SingleChoice = ({
                 <input
                   type="radio"
                   name={`question-${question.id}`}
-                  value={option.text}
-                  checked={selectedValue === option.text}
-                  onChange={() => onSelect(option.text)}
+                  value={index}
+                  checked={selectedValue === index}
+                  onChange={() => onSelect(index)}
                   className="absolute opacity-0 w-full h-full cursor-pointer z-10"
                 />
                 <div className={`
                   w-5 h-5 rounded-full border-2 flex items-center justify-center
-                  ${selectedValue === option.text 
+                  ${selectedValue === index 
                     ? 'border-white' 
                     : 'border-deep-purple group-hover:border-charcoal'
                   }
@@ -59,7 +59,7 @@ const SingleChoice = ({
                 `}>
                   <div className={`
                     w-2.5 h-2.5 rounded-full
-                    ${selectedValue === option.text 
+                    ${selectedValue === index 
                       ? 'bg-white' 
                       : 'bg-deep-purple group-hover:bg-charcoal'
                     }
@@ -72,7 +72,7 @@ const SingleChoice = ({
               <div className="ml-3 flex-1">
                 <span className={`
                   text-sm
-                  ${selectedValue === option.text 
+                  ${selectedValue === index 
                     ? 'text-white font-medium' 
                     : 'text-gray-600 group-hover:text-charcoal'
                   }
@@ -102,7 +102,7 @@ SingleChoice.propTypes = {
       })
     ).isRequired
   }).isRequired,
-  selectedValue: PropTypes.string,
+  selectedValue: PropTypes.number,
   onSelect: PropTypes.func.isRequired,
   showNumber: PropTypes.bool
 };

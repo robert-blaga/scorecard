@@ -1,0 +1,797 @@
+{
+  "id": "discover-work",
+  "sync_test": {
+    "version": "1.0.2",
+    "timestamp": "2024-04-04",
+    "description": "Final sync test",
+    "status": "active",
+    "test_nested": {
+      "field1": "value1",
+      "field2": "value2"
+    }
+  },
+  "test_sync": "This field should be added to all JSONs",
+  "_setup_instructions": "IMPORTANT SETUP INSTRUCTIONS: 1. Replace all placeholder values marked with ${...}. 2. For each question in your assessment, add a corresponding category in questionRecommendations. 3. Ensure primaryCategory is set to your main scoring category. 4. Use the question's category name exactly as it appears in the questions section. 5. Each question should contribute to both its own category score and the primaryCategory score. 6. The paths in nextRoute should include the assessment ID (e.g., '/survey/your-assessment-id'). 7. Remove this _setup_instructions field when done.",
+  "intro": {
+    "title": "DISC Work Style Assessment",
+    "subtitle": "Discover your natural work style and communication preferences",
+    "instructions": {
+      "title": "How to Complete This Assessment",
+      "steps": [
+        "Answer each question based on your natural tendencies",
+        "Consider how you typically behave, not how you think you should",
+        "Focus on your workplace behaviors and communication style",
+        "Select the option that best describes your usual approach"
+      ]
+    },
+    "columns": [
+      {
+        "title": "DISC Framework",
+        "content": "Understanding behavioral styles to improve workplace communication and effectiveness"
+      },
+      {
+        "title": "Assessment Areas",
+        "points": [
+          {
+            "icon": "users",
+            "text": "Communication Style",
+            "description": "How you interact and share information with others"
+          },
+          {
+            "icon": "target",
+            "text": "Work Preferences",
+            "description": "Your natural approach to tasks and projects"
+          },
+          {
+            "icon": "lightbulb",
+            "text": "Decision Making",
+            "description": "How you evaluate options and make choices"
+          },
+          {
+            "icon": "heart",
+            "text": "Team Dynamics",
+            "description": "Your role and contributions in team settings"
+          }
+        ]
+      }
+    ],
+    "consentText": "I understand this assessment will help identify my DISC work style preferences",
+    "buttonText": "Start Assessment",
+    "nextRoute": "/survey/discover-work"
+  },
+  "questions": {
+    "items": [
+      {
+        "id": "question-1",
+        "category": "Communication",
+        "text": "How would you describe communication within your team?",
+        "number": 1,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Team members often misunderstand each other and have different communication styles",
+            "scores": {
+              "disc_need": 5
+            }
+          },
+          {
+            "text": "Communication is sometimes clear but other times leads to confusion",
+            "scores": {
+              "disc_need": 4
+            }
+          },
+          {
+            "text": "Communication is generally effective but could be improved",
+            "scores": {
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Team members communicate well with occasional misunderstandings",
+            "scores": {
+              "disc_need": 2
+            }
+          },
+          {
+            "text": "Communication is consistently clear and effective across all team members",
+            "scores": {
+              "disc_need": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-2",
+        "category": "Conflict",
+        "text": "How does your team handle conflicts and disagreements?",
+        "number": 2,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Conflicts frequently escalate and remain unresolved",
+            "scores": {
+              "disc_need": 5
+            }
+          },
+          {
+            "text": "Conflicts are often avoided rather than addressed",
+            "scores": {
+              "disc_need": 4
+            }
+          },
+          {
+            "text": "Some conflicts are resolved well while others linger",
+            "scores": {
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Conflicts are usually addressed but not always optimally",
+            "scores": {
+              "disc_need": 2
+            }
+          },
+          {
+            "text": "Conflicts are openly discussed and productively resolved",
+            "scores": {
+              "disc_need": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-3",
+        "category": "Work Styles",
+        "text": "How similar or different are team members' approaches to completing tasks?",
+        "number": 3,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Extremely varied approaches often lead to frustration and friction",
+            "scores": {
+              "disc_need": 5
+            }
+          },
+          {
+            "text": "Quite different approaches that occasionally cause tension",
+            "scores": {
+              "disc_need": 4
+            }
+          },
+          {
+            "text": "Moderate differences that the team manages adequately",
+            "scores": {
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Similar approaches with a few complementary differences",
+            "scores": {
+              "disc_need": 2
+            }
+          },
+          {
+            "text": "Well-understood differences that the team leverages effectively",
+            "scores": {
+              "disc_need": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-4",
+        "category": "Decision Making",
+        "text": "How does your team make decisions?",
+        "number": 4,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Decision-making is often contentious and difficult",
+            "scores": {
+              "disc_need": 5
+            }
+          },
+          {
+            "text": "Some team members dominate while others rarely contribute",
+            "scores": {
+              "disc_need": 4
+            }
+          },
+          {
+            "text": "Decision processes vary in effectiveness depending on the topic",
+            "scores": {
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Decision-making is generally inclusive but could be more efficient",
+            "scores": {
+              "disc_need": 2
+            }
+          },
+          {
+            "text": "Decision-making balances different perspectives and reaches consensus effectively",
+            "scores": {
+              "disc_need": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-5",
+        "category": "Team Dynamics",
+        "text": "How would you characterize the social dynamics within your team?",
+        "number": 5,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Significant tension with clear personality clashes",
+            "scores": {
+              "disc_need": 5
+            }
+          },
+          {
+            "text": "Several team members struggle to work together effectively",
+            "scores": {
+              "disc_need": 4
+            }
+          },
+          {
+            "text": "Generally cooperative with occasional interpersonal challenges",
+            "scores": {
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Mostly positive relationships with good collaboration",
+            "scores": {
+              "disc_need": 2
+            }
+          },
+          {
+            "text": "Strong mutual respect with excellent working relationships",
+            "scores": {
+              "disc_need": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-6",
+        "category": "Adaptability",
+        "text": "How well does your team adapt to different working situations and requirements?",
+        "number": 6,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Team struggles significantly when work approaches need to change",
+            "scores": {
+              "disc_need": 5
+            }
+          },
+          {
+            "text": "Adaptation happens but with considerable resistance",
+            "scores": {
+              "disc_need": 4
+            }
+          },
+          {
+            "text": "Some team members adapt well while others struggle",
+            "scores": {
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Team generally adapts well with some adjustment time",
+            "scores": {
+              "disc_need": 2
+            }
+          },
+          {
+            "text": "Team flexibly shifts approaches based on situational needs",
+            "scores": {
+              "disc_need": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-7",
+        "category": "Self-Awareness",
+        "text": "How aware are team members of their own communication and behavioral preferences?",
+        "number": 7,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Very limited awareness of personal styles and their impact",
+            "scores": {
+              "disc_need": 5
+            }
+          },
+          {
+            "text": "Some awareness but rarely consider how styles affect others",
+            "scores": {
+              "disc_need": 4
+            }
+          },
+          {
+            "text": "Moderate awareness with inconsistent application",
+            "scores": {
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Good awareness but could benefit from deeper understanding",
+            "scores": {
+              "disc_need": 2
+            }
+          },
+          {
+            "text": "Excellent awareness with active adaptation to others' styles",
+            "scores": {
+              "disc_need": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-8",
+        "category": "Previous Training",
+        "text": "Has your team received any personality or behavioral style training before?",
+        "number": 8,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "No previous training of any kind",
+            "scores": {
+              "disc_need": 4
+            }
+          },
+          {
+            "text": "Brief introduction but no structured training",
+            "scores": {
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Some training but not specific to behavioral styles",
+            "scores": {
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Previous DISC training but needs refresher/deeper application",
+            "scores": {
+              "disc_need": 2
+            }
+          },
+          {
+            "text": "Comprehensive behavioral style training recently completed",
+            "scores": {
+              "disc_need": 1
+            }
+          }
+        ]
+      }
+    ],
+    "submitButtonText": "Submit Assessment",
+    "nextRoute": "/thank-you/discover-work"
+  },
+  "scoring": {
+    "primaryCategory": "disc_need",
+    "maxScorePerQuestion": 5,
+    "recommendations": {
+      "base": [
+        "Understand the four DISC styles and their key characteristics",
+        "Practice active listening techniques to better understand different communication preferences",
+        "Develop adaptability in your approach to different work and communication styles"
+      ],
+      "Very High Need": [
+        "Complete a comprehensive DISC training program with your team",
+        "Identify your primary DISC style and understand how it influences your work approach",
+        "Learn specific strategies to communicate effectively with each DISC style",
+        "Create team agreements for communication based on different style needs"
+      ],
+      "High Need": [
+        "Participate in a focused DISC workshop with your team members",
+        "Develop a style-based communication plan for your team",
+        "Practice recognizing different behavioral styles in workplace interactions",
+        "Set up regular reflection sessions to improve style adaptability"
+      ],
+      "Moderate Need": [
+        "Refresh your understanding of DISC principles through targeted resources",
+        "Practice adapting your communication approach with different team members",
+        "Identify specific situations where style conflicts occur and develop strategies",
+        "Create opportunities to leverage diverse styles on your team"
+      ],
+      "Low Need": [
+        "Fine-tune your already effective style adaptation techniques",
+        "Help others on your team recognize and adapt to different styles",
+        "Apply advanced DISC concepts to complex team situations",
+        "Document best practices for style-based communication in your team"
+      ],
+      "Very Low Need": [
+        "Mentor others in recognizing and adapting to different behavioral styles",
+        "Explore advanced applications of DISC in challenging workplace scenarios",
+        "Lead style-based communication improvement initiatives",
+        "Develop customized style adaptation strategies for your specific work context"
+      ]
+    },
+    "category_overviews": {
+      "primary_category": {
+        "title": "DISC Work Style Assessment",
+        "description": "Comprehensive evaluation of behavioral preferences and communication styles",
+        "key_findings": {
+          "high": [
+            "Significant differences in communication styles causing friction",
+            "Limited understanding of behavioral preferences affecting teamwork"
+          ],
+          "medium": [
+            "Some awareness of different work styles but inconsistent application",
+            "Moderate adaptation to different communication preferences"
+          ],
+          "low": [
+            "Strong understanding of DISC principles and applications",
+            "Effective adaptation to different behavioral styles"
+          ]
+        },
+        "overview_recommendations": {
+          "high": [
+            "Implement comprehensive DISC training program",
+            "Develop team communication protocols based on style preferences"
+          ],
+          "medium": [
+            "Enhance understanding of behavioral styles through targeted training",
+            "Develop specific strategies for adapting to different styles"
+          ],
+          "low": [
+            "Fine-tune advanced applications of DISC principles",
+            "Share best practices for behavioral adaptability"
+          ]
+        }
+      },
+      "secondary_category": {
+        "title": "Work Style Adaptation",
+        "description": "Assessment of flexibility in adjusting to different behavioral styles",
+        "key_findings": {
+          "high": [
+            "Limited adaptation to different work and communication styles",
+            "Rigid behavioral approaches affecting collaboration"
+          ],
+          "medium": [
+            "Some flexibility in adapting to different styles",
+            "Inconsistent adjustment to diverse behavioral preferences"
+          ],
+          "low": [
+            "High adaptability across different behavioral styles",
+            "Effective flexibility in diverse team environments"
+          ]
+        },
+        "overview_recommendations": {
+          "high": [
+            "Develop comprehensive style adaptation strategies",
+            "Implement behavioral flexibility training"
+          ],
+          "medium": [
+            "Enhance adaptation skills through targeted exercises",
+            "Build awareness of adaptation benefits"
+          ],
+          "low": [
+            "Refine advanced adaptation techniques",
+            "Mentor others in behavioral flexibility"
+          ]
+        }
+      },
+      "disc_need": {
+        "title": "DISC Profile Overview",
+        "description": "Assessment of your primary and secondary DISC styles",
+        "key_findings": {
+          "high": [
+            "Strong need for DISC-based communication training",
+            "Significant opportunity to improve workplace interactions"
+          ],
+          "medium": [
+            "Moderate understanding of DISC principles",
+            "Room for enhancing communication effectiveness"
+          ],
+          "low": [
+            "Good grasp of DISC communication styles",
+            "Effective use of behavioral adaptability"
+          ]
+        },
+        "overview_recommendations": {
+          "high": [
+            "Complete comprehensive DISC training program",
+            "Practice style-based communication strategies"
+          ],
+          "medium": [
+            "Enhance DISC awareness through targeted exercises",
+            "Develop flexibility in communication approaches"
+          ],
+          "low": [
+            "Fine-tune advanced DISC applications",
+            "Share best practices with team members"
+          ]
+        }
+      },
+      "communication": {
+        "title": "Communication Effectiveness",
+        "description": "Analysis of communication style and adaptability",
+        "key_findings": {
+          "high": [
+            "Communication challenges affecting workplace relationships",
+            "Limited adaptability across different styles"
+          ],
+          "medium": [
+            "Basic understanding of communication preferences",
+            "Some ability to adapt to different styles"
+          ],
+          "low": [
+            "Strong communication adaptability",
+            "Effective across different DISC styles"
+          ]
+        },
+        "overview_recommendations": {
+          "high": [
+            "Focus on style recognition and adaptation",
+            "Practice active listening techniques"
+          ],
+          "medium": [
+            "Enhance style flexibility",
+            "Develop situation-specific approaches"
+          ],
+          "low": [
+            "Master advanced adaptation techniques",
+            "Mentor others in style recognition"
+          ]
+        }
+      }
+    },
+    "theme": {
+      "primary": "bg-indigo-600",
+      "secondary": "bg-indigo-100",
+      "text": "text-indigo-600",
+      "hover": "hover:bg-indigo-700",
+      "border": "border-indigo-200"
+    },
+    "email_template": {
+      "title": "DISC Work Style Assessment Report for ${title}",
+      "sections": [
+        {
+          "title": "Overall Profile",
+          "content": "${overallRecommendation}",
+          "format": "uppercase"
+        },
+        {
+          "title": "Style Analysis",
+          "content": "${categoryAnalysis}"
+        },
+        {
+          "title": "Key Recommendations",
+          "content": "${recommendations}"
+        },
+        {
+          "title": "Action Steps",
+          "content": "${specificRecommendations}"
+        },
+        {
+          "title": "Detailed Analysis",
+          "content": "${detailedAnalysis}"
+        }
+      ]
+    },
+    "report_structure": {
+      "title": "DISC Development Plan",
+      "description": "Based on your DISC assessment, we've created a personalized development plan focused on leveraging your natural style and improving adaptability:",
+      "sections": {
+        "critical_focus": {
+          "title": "Priority Development Areas",
+          "description": "These areas require immediate attention based on your assessment:",
+          "threshold": 60,
+          "type": "category_recommendations",
+          "recommendationLevel": "high"
+        },
+        "development_opportunities": {
+          "title": "Growth Opportunities",
+          "description": "Areas showing potential for enhancement:",
+          "minThreshold": 40,
+          "maxThreshold": 60,
+          "type": "category_recommendations",
+          "recommendationLevel": "medium"
+        },
+        "implementation_strategy": {
+          "title": "Implementation Plan",
+          "description": "A structured approach to developing your DISC effectiveness:",
+          "type": "static_recommendations",
+          "recommendations": [
+            "Style Assessment: Understand your natural DISC profile",
+            "Adaptability Training: Learn to recognize and adapt to other styles",
+            "Practice Application: Apply DISC principles in daily interactions",
+            "Feedback Loop: Gather input on communication effectiveness",
+            "Continuous Development: Regular review and adjustment of approach"
+          ]
+        },
+        "support_resources": {
+          "title": "Support Resources",
+          "description": "Tools and resources for your development:",
+          "type": "static_recommendations",
+          "recommendations": [
+            "Access to DISC profile reference materials",
+            "Communication style guides and checklists",
+            "Interactive style adaptation exercises",
+            "Team communication workshops",
+            "Progress tracking tools"
+          ]
+        }
+      },
+      "results_sections": {
+        "specific_recommendations": {
+          "title": "Style-Specific Recommendations",
+          "icon": "Lightbulb",
+          "style": {
+            "border": "border-indigo-500",
+            "hoverBg": "hover:bg-indigo-100",
+            "iconColor": "text-indigo-600"
+          }
+        },
+        "general_recommendations": {
+          "title": "General Recommendations",
+          "icon": "CalendarCheck",
+          "style": {
+            "border": "border-gray-200",
+            "hoverBg": "hover:bg-gray-100",
+            "iconColor": "text-gray-600"
+          }
+        }
+      }
+    },
+    "questionRecommendations": {
+      "Category Name": {
+        "high": "${Replace with high priority recommendation for this category}",
+        "medium": "${Replace with medium priority recommendation for this category}",
+        "low": "${Replace with low priority recommendation for this category}"
+      },
+      "Another Category": {
+        "high": "${Replace with high priority recommendation for this category}",
+        "medium": "${Replace with medium priority recommendation for this category}",
+        "low": "${Replace with low priority recommendation for this category}"
+      },
+      "primary_category": {
+        "high": "${Replace with high priority recommendation for primary category}",
+        "medium": "${Replace with medium priority recommendation for primary category}",
+        "low": "${Replace with low priority recommendation for primary category}"
+      },
+      "category_1": {
+        "high": "",
+        "medium": "",
+        "low": ""
+      },
+      "category_example": {
+        "high": "High priority recommendation example for this category",
+        "medium": "Medium priority recommendation example for this category",
+        "low": "Low priority recommendation example for this category"
+      },
+      "another_category": {
+        "high": "Another high priority recommendation example",
+        "medium": "Another medium priority recommendation example",
+        "low": "Another low priority recommendation example"
+      },
+      "primary_score": {
+        "high": "Primary high priority recommendation for overall assessment",
+        "medium": "Primary medium priority recommendation for overall assessment",
+        "low": "Primary low priority recommendation for overall assessment"
+      },
+      "category_2": {
+        "high": "",
+        "medium": "",
+        "low": ""
+      },
+      "category_3": {
+        "high": "",
+        "medium": "",
+        "low": ""
+      },
+      "Communication Style": {
+        "high": "Focus on developing awareness of different communication styles and practicing adaptability in various workplace situations.",
+        "medium": "Enhance your understanding of DISC styles and work on flexible communication approaches.",
+        "low": "Fine-tune your already effective communication style and help others develop their adaptability."
+      },
+      "Work Preferences": {
+        "high": "Develop strategies to work effectively with different DISC styles and adapt your approach based on the situation.",
+        "medium": "Build on your existing work style while incorporating flexibility for different team dynamics.",
+        "low": "Share your effective work strategies while continuing to enhance adaptability."
+      }
+    },
+    "thresholds": {
+      "needLevel": [
+        {
+          "threshold": 75,
+          "label": "There is a very high chance your team could benefit from DISC training"
+        },
+        {
+          "threshold": 60,
+          "label": "There is a high chance your team could benefit from DISC training"
+        },
+        {
+          "threshold": 40,
+          "label": "There is a moderate chance your team could benefit from DISC training"
+        },
+        {
+          "threshold": 25,
+          "label": "There is a low chance your team could benefit from DISC training"
+        },
+        {
+          "threshold": 0,
+          "label": "There is a very low chance your team could benefit from DISC training"
+        }
+      ],
+      "recommendationLevel": [
+        {
+          "threshold": 75,
+          "label": "very-high",
+          "displayText": "High Priority"
+        },
+        {
+          "threshold": 60,
+          "label": "high",
+          "displayText": "Medium Priority"
+        },
+        {
+          "threshold": 40,
+          "label": "medium",
+          "displayText": "Moderate Priority"
+        },
+        {
+          "threshold": 25,
+          "label": "low",
+          "displayText": "Low Priority"
+        },
+        {
+          "threshold": 0,
+          "label": "very-low",
+          "displayText": "Very Low Priority"
+        }
+      ]
+    },
+    "summaries": [
+      {
+        "threshold": 75,
+        "text": "Your DISC profile indicates significant opportunities for improving workplace communication and effectiveness."
+      },
+      {
+        "threshold": 60,
+        "text": "Your assessment shows clear areas where DISC-based development would enhance your workplace interactions."
+      },
+      {
+        "threshold": 40,
+        "text": "You demonstrate moderate understanding of DISC principles with room for enhanced application."
+      },
+      {
+        "threshold": 25,
+        "text": "You show good DISC awareness but could benefit from advanced application techniques."
+      },
+      {
+        "threshold": 0,
+        "text": "You demonstrate strong DISC understanding and effective application in workplace situations."
+      }
+    ]
+  },
+  "thankYou": {
+    "title": "Thank You for Completing the DISC Assessment!",
+    "message": "We've captured your natural work style preferences and will provide insights to help you communicate more effectively and work more productively with others.",
+    "nextSteps": "We'll analyze your responses and provide personalized recommendations for leveraging your DISC style. A specialist may contact you to discuss development opportunities.",
+    "buttonText": "Explore DISC Training",
+    "buttonLink": "https://www.brainiup.com/disc-training"
+  },
+  "scorecards": [
+    {
+      "id": "conflict-views",
+      "scorecardInfo": {
+        "title": "Conflict Views",
+        "shortDescription": "Evaluate if your team would benefit from conflict resolution training and mediation techniques",
+        "category": "Workplace Communication",
+        "visibility": true
+      }
+    }
+  ]
+}

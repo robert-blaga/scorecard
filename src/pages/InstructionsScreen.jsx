@@ -43,23 +43,25 @@ export default function InstructionsScreen() {
     );
   }
 
-  if (!scorecard) {
+  if (!scorecard || !scorecard.intro) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-red-600">Scorecard not found</div>
+        <div className="text-red-600">Scorecard not found or missing intro data</div>
       </div>
     );
   }
+
+  const introData = scorecard.intro;
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="w-full max-w-4xl">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-serif text-gray-900 mb-2">
-            {scorecard.title}
+            {introData.title}
           </h1>
           <p className="text-gray-600">
-            {scorecard.subtitle}
+            {introData.subtitle}
           </p>
         </div>
 
@@ -67,18 +69,18 @@ export default function InstructionsScreen() {
           {/* Left Column */}
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <h2 className="text-xl font-medium text-gray-900 mb-4">
-              {scorecard.columns[0].title}
+              {introData.columns[0].title}
             </h2>
             <p className="text-gray-600 text-sm">
-              {scorecard.columns[0].content}
+              {introData.columns[0].content}
             </p>
             {/* Instructions Section */}
             <div className="mt-6">
               <h3 className="text-lg font-medium text-gray-900 mb-3">
-                {scorecard.instructions.title}
+                {introData.instructions.title}
               </h3>
               <ul className="list-disc pl-5 space-y-2">
-                {scorecard.instructions.steps.map((step, index) => (
+                {introData.instructions.steps.map((step, index) => (
                   <li key={index} className="text-gray-600 text-sm">
                     {step}
                   </li>
@@ -90,11 +92,11 @@ export default function InstructionsScreen() {
           {/* Right Column */}
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <h2 className="text-xl font-medium text-gray-900 mb-3">
-              {scorecard.columns[1].title}
+              {introData.columns[1].title}
             </h2>
             
             <div className="space-y-2">
-              {scorecard.columns[1].points.map((point, index) => (
+              {introData.columns[1].points.map((point, index) => (
                 <div key={index} className="flex items-start gap-3 bg-deep-purple/5 p-3 rounded-lg">
                   <div className="w-7 h-7 rounded-lg bg-deep-purple/10 flex items-center justify-center flex-shrink-0">
                     <svg className="w-4 h-4 text-deep-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -119,11 +121,11 @@ export default function InstructionsScreen() {
               onChange={(e) => setHasReadInstructions(e.target.checked)}
               className="w-4 h-4 rounded border-gray-300 text-deep-purple focus:ring-deep-purple"
             />
-            {scorecard.consentText}
+            {introData.consentText}
           </label>
           
           <button
-            onClick={() => navigate(scorecard.nextRoute)}
+            onClick={() => navigate(introData.nextRoute)}
             disabled={!hasReadInstructions}
             className={`w-full px-6 py-2.5 rounded-lg font-medium transition-colors ${
               hasReadInstructions
@@ -131,7 +133,7 @@ export default function InstructionsScreen() {
                 : 'bg-gray-100 text-gray-400 cursor-not-allowed'
             }`}
           >
-            {scorecard.buttonText}
+            {introData.buttonText}
           </button>
         </div>
       </div>

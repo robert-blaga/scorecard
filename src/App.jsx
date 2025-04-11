@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'r
 import LoginScreen from './pages/LoginScreen'
 import IdentificationScreen from './pages/IdentificationScreen'
 import InstructionsScreen from './pages/InstructionsScreen'
-import SurveyScreen from './pages/SurveyScreen'
+import SurveyScreen from './pages/QuestionScreen'
+import ScorecardPage from './pages/ResultsScreen'
 import ThankYouScreen from './pages/ThankYouScreen'
 import AdminLogin from './pages/AdminLoginScreen'
 import Dashboard from './pages/DashboardScreen'
 import LibraryScreen from './pages/LibraryScreen'
+import ExtendedReportScreen from './pages/ExtendedReportScreen'
 import { AuthProvider, useAuth } from './contexts/AuthContext'
 
 function PrivateRoute({ children }) {
@@ -61,12 +63,13 @@ function AppContent() {
           <Route path="/identify" element={
               <IdentificationScreen />
           } />
-          <Route path="/survey" element={
-              <SurveyScreen />
-          } />
-          <Route path="/thank-you" element={
-              <ThankYouScreen />
-          } />
+          <Route path="/survey" element={<Navigate to="/library" replace />} />
+          <Route path="/survey/:id" element={<SurveyScreen />} />
+          <Route path="/scorecard" element={<Navigate to="/library" replace />} />
+          <Route path="/scorecard/:scorecardId" element={<ScorecardPage />} />
+          <Route path="/extended-report/:scorecardId" element={<ExtendedReportScreen />} />
+          <Route path="/thank-you" element={<ThankYouScreen />} />
+          <Route path="/thank-you/:id" element={<ThankYouScreen />} />
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/dashboard" element={
             <AdminRoute>

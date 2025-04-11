@@ -1,0 +1,727 @@
+{
+  "id": "agile-leadership",
+  "sync_test": {
+    "version": "1.0.2",
+    "timestamp": "2024-04-04",
+    "description": "Final sync test",
+    "status": "active",
+    "test_nested": {
+      "field1": "value1",
+      "field2": "value2"
+    }
+  },
+  "test_sync": "This field should be added to all JSONs",
+  "_setup_instructions": "IMPORTANT SETUP INSTRUCTIONS: 1. Replace all placeholder values marked with ${...}. 2. For each question in your assessment, add a corresponding category in questionRecommendations. 3. Ensure primaryCategory is set to your main scoring category. 4. Use the question's category name exactly as it appears in the questions section. 5. Each question should contribute to both its own category score and the primaryCategory score. 6. The paths in nextRoute should include the assessment ID (e.g., '/survey/your-assessment-id'). 7. Use Title Case for category names (e.g., 'Stress Management', not 'stress_management' or 'stress-management'). 8. Make sure the same category name format is used consistently in the 'category' field, scores object, and questionRecommendations section. 9. Remove this _setup_instructions field when done.",
+  "intro": {
+    "title": "Agile Leadership Assessment",
+    "subtitle": "Evaluate if your teams would benefit from agile leadership training",
+    "instructions": {
+      "title": "How to Complete This Assessment",
+      "steps": [
+        "Answer each question based on your observations of leadership approaches",
+        "Consider patterns across your entire organization or team",
+        "Focus on how leaders handle change, decision-making, and team empowerment",
+        "Select the option that best describes typical leadership approaches"
+      ]
+    },
+    "columns": [
+      {
+        "title": "Agile Leadership Framework",
+        "content": "Developing the mindset and practices needed to lead effectively in fast-paced, constantly changing environments"
+      },
+      {
+        "title": "Assessment Areas",
+        "points": [
+          {
+            "icon": "compass",
+            "text": "Adaptive Mindset",
+            "description": "How leaders approach uncertainty and changing conditions"
+          },
+          {
+            "icon": "users",
+            "text": "Team Empowerment",
+            "description": "How leaders delegate authority and build autonomous teams"
+          },
+          {
+            "icon": "lightbulb",
+            "text": "Continuous Improvement",
+            "description": "How leaders foster learning and iterative development"
+          },
+          {
+            "icon": "target",
+            "text": "Value Delivery",
+            "description": "How leaders prioritize customer value and outcomes"
+          }
+        ]
+      }
+    ],
+    "consentText": "I understand that this assessment will help determine if agile leadership training would benefit our organization",
+    "buttonText": "Start Assessment",
+    "nextRoute": "/survey/agile-leadership"
+  },
+  "questions": {
+    "items": [
+      {
+        "id": "question-1",
+        "category": "Adaptive Mindset",
+        "text": "How do your leaders typically respond to unexpected changes or disruptions?",
+        "number": 1,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Often resist change and struggle to adapt plans",
+            "scores": {
+              "Adaptive Mindset": 5,
+              "Agile Leadership": 5
+            }
+          },
+          {
+            "text": "Accept change reluctantly but have difficulty adjusting strategies",
+            "scores": {
+              "Adaptive Mindset": 4,
+              "Agile Leadership": 4
+            }
+          },
+          {
+            "text": "Adapt to change adequately but could improve flexibility",
+            "scores": {
+              "Adaptive Mindset": 3,
+              "Agile Leadership": 3
+            }
+          },
+          {
+            "text": "Generally embrace change and adjust plans accordingly",
+            "scores": {
+              "Adaptive Mindset": 2,
+              "Agile Leadership": 2
+            }
+          },
+          {
+            "text": "View change as opportunity and quickly pivot strategies when needed",
+            "scores": {
+              "Adaptive Mindset": 1,
+              "Agile Leadership": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-2",
+        "category": "Team Empowerment",
+        "text": "How do leaders in your organization approach decision-making authority?",
+        "number": 2,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Centralize most decisions and require approvals for minor matters",
+            "scores": {
+              "Team Empowerment": 5,
+              "Agile Leadership": 5
+            }
+          },
+          {
+            "text": "Delegate limited decisions but maintain control over important matters",
+            "scores": {
+              "Team Empowerment": 4,
+              "Agile Leadership": 4
+            }
+          },
+          {
+            "text": "Share decision-making sometimes but could improve team autonomy",
+            "scores": {
+              "Team Empowerment": 3,
+              "Agile Leadership": 3
+            }
+          },
+          {
+            "text": "Often empower teams but occasionally step in unnecessarily",
+            "scores": {
+              "Team Empowerment": 2,
+              "Agile Leadership": 2
+            }
+          },
+          {
+            "text": "Fully empower teams with appropriate decision-making authority",
+            "scores": {
+              "Team Empowerment": 1,
+              "Agile Leadership": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-3",
+        "category": "Continuous Improvement",
+        "text": "How do leaders approach learning and improvement in your organization?",
+        "number": 3,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Rarely examine past performance or implement lessons learned",
+            "scores": {
+              "Continuous Improvement": 5,
+              "Agile Leadership": 5
+            }
+          },
+          {
+            "text": "Occasionally review performance but seldom make meaningful changes",
+            "scores": {
+              "Continuous Improvement": 4,
+              "Agile Leadership": 4
+            }
+          },
+          {
+            "text": "Conduct regular reviews but could improve follow-through on insights",
+            "scores": {
+              "Continuous Improvement": 3,
+              "Agile Leadership": 3
+            }
+          },
+          {
+            "text": "Regularly reflect on performance and often implement improvements",
+            "scores": {
+              "Continuous Improvement": 2,
+              "Agile Leadership": 2
+            }
+          },
+          {
+            "text": "Consistently foster a culture of experimentation and systematic improvement",
+            "scores": {
+              "Continuous Improvement": 1,
+              "Agile Leadership": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-4",
+        "category": "Value Delivery",
+        "text": "How do your leaders prioritize work and initiatives?",
+        "number": 4,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Based primarily on internal preferences without clear value criteria",
+            "scores": {
+              "Value Delivery": 5,
+              "Agile Leadership": 5
+            }
+          },
+          {
+            "text": "Occasionally consider customer value but often focus on output metrics",
+            "scores": {
+              "Value Delivery": 4,
+              "Agile Leadership": 4
+            }
+          },
+          {
+            "text": "Balance customer needs with internal priorities but could improve focus",
+            "scores": {
+              "Value Delivery": 3,
+              "Agile Leadership": 3
+            }
+          },
+          {
+            "text": "Usually prioritize based on customer value and outcomes",
+            "scores": {
+              "Value Delivery": 2,
+              "Agile Leadership": 2
+            }
+          },
+          {
+            "text": "Consistently prioritize based on customer impact and measure value delivered",
+            "scores": {
+              "Value Delivery": 1,
+              "Agile Leadership": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-5",
+        "category": "Transparency",
+        "text": "How transparent are leaders about goals, challenges, and decision-making?",
+        "number": 5,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Information is closely guarded and teams often work without context",
+            "scores": {
+              "Transparency": 5,
+              "Agile Leadership": 5
+            }
+          },
+          {
+            "text": "Share limited information on a need-to-know basis",
+            "scores": {
+              "Transparency": 4,
+              "Agile Leadership": 4
+            }
+          },
+          {
+            "text": "Communicate major decisions but could be more open about challenges",
+            "scores": {
+              "Transparency": 3,
+              "Agile Leadership": 3
+            }
+          },
+          {
+            "text": "Generally transparent but occasionally withhold certain information",
+            "scores": {
+              "Transparency": 2,
+              "Agile Leadership": 2
+            }
+          },
+          {
+            "text": "Maintain high transparency about goals, challenges, and decision rationale",
+            "scores": {
+              "Transparency": 1,
+              "Agile Leadership": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-6",
+        "category": "Collaboration",
+        "text": "How do leaders in your organization approach cross-functional collaboration?",
+        "number": 6,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Work primarily in silos with minimal cross-team coordination",
+            "scores": {
+              "Collaboration": 5,
+              "Agile Leadership": 5
+            }
+          },
+          {
+            "text": "Allow some collaboration but maintain rigid departmental boundaries",
+            "scores": {
+              "Collaboration": 4,
+              "Agile Leadership": 4
+            }
+          },
+          {
+            "text": "Support cross-functional work but could reduce organizational barriers",
+            "scores": {
+              "Collaboration": 3,
+              "Agile Leadership": 3
+            }
+          },
+          {
+            "text": "Often facilitate cross-team collaboration and remove most obstacles",
+            "scores": {
+              "Collaboration": 2,
+              "Agile Leadership": 2
+            }
+          },
+          {
+            "text": "Actively promote fluid collaboration and organize around value delivery",
+            "scores": {
+              "Collaboration": 1,
+              "Agile Leadership": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-7",
+        "category": "Customer Focus",
+        "text": "How connected are your leaders to customer needs and feedback?",
+        "number": 7,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Rarely interact with customers or consider their feedback",
+            "scores": {
+              "Customer Focus": 5,
+              "Agile Leadership": 5
+            }
+          },
+          {
+            "text": "Occasionally review customer data but decisions are primarily internal",
+            "scores": {
+              "Customer Focus": 4,
+              "Agile Leadership": 4
+            }
+          },
+          {
+            "text": "Consider customer feedback but could improve direct engagement",
+            "scores": {
+              "Customer Focus": 3,
+              "Agile Leadership": 3
+            }
+          },
+          {
+            "text": "Regularly seek customer input and use it to inform decisions",
+            "scores": {
+              "Customer Focus": 2,
+              "Agile Leadership": 2
+            }
+          },
+          {
+            "text": "Deeply understand customers and build continuous feedback loops",
+            "scores": {
+              "Customer Focus": 1,
+              "Agile Leadership": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "question-8",
+        "category": "Risk Management",
+        "text": "How do leaders in your organization approach risk and uncertainty?",
+        "number": 8,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Highly risk-averse, requiring extensive planning before action",
+            "scores": {
+              "Risk Management": 5,
+              "Agile Leadership": 5
+            }
+          },
+          {
+            "text": "Hesitant to proceed without certainty and detailed analysis",
+            "scores": {
+              "Risk Management": 4,
+              "Agile Leadership": 4
+            }
+          },
+          {
+            "text": "Balance risk assessment with action but could improve adaptability",
+            "scores": {
+              "Risk Management": 3,
+              "Agile Leadership": 3
+            }
+          },
+          {
+            "text": "Generally comfortable with calculated risks and experimentation",
+            "scores": {
+              "Risk Management": 2,
+              "Agile Leadership": 2
+            }
+          },
+          {
+            "text": "Embrace uncertainty through iterative approaches and rapid learning",
+            "scores": {
+              "Risk Management": 1,
+              "Agile Leadership": 1
+            }
+          }
+        ]
+      }
+    ],
+    "submitButtonText": "Submit Assessment",
+    "nextRoute": "/thank-you/agile-leadership"
+  },
+  "scoring": {
+    "primaryCategory": "Agile Leadership",
+    "maxScorePerQuestion": 5,
+    "recommendations": {
+      "base": [
+        "Focus on developing an agile mindset before implementing specific practices",
+        "Build a culture of psychological safety to enable experimentation",
+        "Ensure leaders model the behaviors they wish to see in their teams"
+      ],
+      "Very High Need": [
+        "Consider an executive workshop on agile leadership principles",
+        "Implement regular leadership retrospectives to identify improvement opportunities",
+        "Partner leaders with agile coaches for personalized development",
+        "Create clear metrics for measuring leadership effectiveness in agility"
+      ],
+      "High Need": [
+        "Provide training on servant leadership and team empowerment",
+        "Establish communities of practice for collaborative learning",
+        "Implement regular feedback mechanisms for leaders",
+        "Create more opportunities for direct customer interaction"
+      ],
+      "Moderate Need": [
+        "Focus on specific skill gaps identified in the assessment",
+        "Enhance decision-making frameworks to balance autonomy with alignment",
+        "Strengthen feedback loops with customers and teams",
+        "Improve transparency in goal-setting and progress tracking"
+      ],
+      "Low Need": [
+        "Refine existing agile practices and leadership approaches",
+        "Share best practices across the organization",
+        "Mentor emerging leaders in agile principles",
+        "Explore advanced agile leadership concepts"
+      ],
+      "Very Low Need": [
+        "Focus on sustaining your strong agile leadership culture",
+        "Document and share your leadership practices with the wider community",
+        "Explore innovative ways to enhance your already strong foundation",
+        "Consider how your leadership approach can adapt to future challenges"
+      ]
+    },
+    "category_overviews": {
+      "primary_category": {
+        "title": "Agile Leadership",
+        "description": "The overall ability of leaders to foster agility, adaptability, and continuous improvement in fast-changing environments",
+        "key_findings": {
+          "high": [
+            "Leaders struggle to adapt to changing circumstances",
+            "Teams lack autonomy to make decisions and innovate"
+          ],
+          "medium": [
+            "Some agile practices exist but aren't consistently applied",
+            "Leaders balance control with empowerment but could improve"
+          ],
+          "low": [
+            "Leaders effectively empower teams and embrace change",
+            "Organization demonstrates agility and customer focus"
+          ]
+        },
+        "overview_recommendations": {
+          "high": [
+            "Invest in comprehensive agile leadership training",
+            "Create structures that encourage delegation and team autonomy"
+          ],
+          "medium": [
+            "Strengthen existing agile practices through targeted coaching",
+            "Identify and address specific barriers to greater agility"
+          ],
+          "low": [
+            "Share your effective practices with the wider organization",
+            "Focus on mentoring emerging leaders in agile principles"
+          ]
+        }
+      },
+      "secondary_category": {
+        "title": "Adaptive Mindset",
+        "description": "The ability of leaders to respond positively to change, uncertainty, and complexity",
+        "key_findings": {
+          "high": [
+            "Leaders often resist change and prefer established methods",
+            "Organization struggles to adapt to shifting market conditions"
+          ],
+          "medium": [
+            "Leaders accept change but could improve response speed",
+            "Some flexibility exists but with attachment to existing plans"
+          ],
+          "low": [
+            "Leaders effectively navigate uncertainty and complexity",
+            "Organization demonstrates resilience in changing conditions"
+          ]
+        },
+        "overview_recommendations": {
+          "high": [
+            "Focus on developing comfort with uncertainty through simulations",
+            "Establish shorter planning horizons and more frequent reassessment"
+          ],
+          "medium": [
+            "Practice scenario planning to improve adaptability",
+            "Implement more frequent review and adjustment cycles"
+          ],
+          "low": [
+            "Leverage your adaptive capabilities for competitive advantage",
+            "Mentor others in handling change effectively"
+          ]
+        }
+      }
+    },
+    "theme": {
+      "primary": "#3182CE",
+      "secondary": "#EBF8FF",
+      "text": "#2D3748",
+      "hover": "#4299E1",
+      "border": "#BEE3F8"
+    },
+    "email_template": {
+      "title": "Your Agile Leadership Assessment Results",
+      "sections": [
+        {
+          "title": "Overview",
+          "content": "${overallRecommendation}",
+          "format": "uppercase"
+        },
+        {
+          "title": "Analysis",
+          "content": "${categoryAnalysis}"
+        },
+        {
+          "title": "Key Recommendations",
+          "content": "${recommendations}"
+        },
+        {
+          "title": "Action Items",
+          "content": "${specificRecommendations}"
+        },
+        {
+          "title": "Detailed Analysis",
+          "content": "${detailedAnalysis}"
+        }
+      ]
+    },
+    "report_structure": {
+      "title": "Agile Leadership Assessment Report",
+      "description": "A comprehensive analysis of your organization's agile leadership capabilities and specific recommendations for improvement",
+      "sections": {
+        "critical_focus": {
+          "title": "Priority Focus Areas",
+          "description": "These areas require immediate attention for improvement",
+          "threshold": 70,
+          "type": "category_recommendations",
+          "recommendationLevel": "high"
+        },
+        "development_opportunities": {
+          "title": "Development Opportunities",
+          "description": "These areas present opportunities for improvement",
+          "minThreshold": 40,
+          "maxThreshold": 70,
+          "type": "category_recommendations",
+          "recommendationLevel": "medium"
+        },
+        "implementation_strategy": {
+          "title": "Implementation Strategy",
+          "description": "A structured approach to enhancing agile leadership capabilities",
+          "type": "static_recommendations",
+          "recommendations": [
+            "Begin with leadership awareness sessions to build understanding and buy-in",
+            "Follow with hands-on workshops focused on practical application",
+            "Implement regular leadership retrospectives to drive continuous improvement",
+            "Establish mentoring relationships between experienced agile leaders and newcomers",
+            "Create communities of practice to sustain momentum and learning"
+          ]
+        },
+        "support_resources": {
+          "title": "Support Resources",
+          "description": "Resources to help leaders develop agile capabilities",
+          "type": "static_recommendations",
+          "recommendations": [
+            "Agile leadership coaching for executives and middle management",
+            "Online learning modules for self-paced development",
+            "Assessment tools to track progress over time",
+            "Case studies of successful agile transformations",
+            "Peer learning circles to share experiences and challenges"
+          ]
+        }
+      },
+      "results_sections": {
+        "specific_recommendations": {
+          "title": "Tailored Recommendations",
+          "icon": "Compass",
+          "style": {
+            "border": "border-blue-200",
+            "hoverBg": "hover:bg-blue-50",
+            "iconColor": "text-blue-600"
+          }
+        },
+        "general_recommendations": {
+          "title": "General Recommendations",
+          "icon": "CalendarCheck",
+          "style": {
+            "border": "border-gray-200",
+            "hoverBg": "hover:bg-gray-100",
+            "iconColor": "text-gray-600"
+          }
+        }
+      }
+    },
+    "questionRecommendations": {
+      "Category Name": {
+        "high": "${Replace with high priority recommendation for this category}",
+        "medium": "${Replace with medium priority recommendation for this category}",
+        "low": "${Replace with low priority recommendation for this category}"
+      },
+      "Another Category": {
+        "high": "${Replace with high priority recommendation for this category}",
+        "medium": "${Replace with medium priority recommendation for this category}",
+        "low": "${Replace with low priority recommendation for this category}"
+      },
+      "Adaptive Mindset": {
+        "high": "Develop comfort with uncertainty through shorter planning cycles and more frequent reassessment",
+        "medium": "Enhance adaptability by practicing scenario planning and contingency development",
+        "low": "Share your effective adaptation strategies across the organization"
+      },
+      "Team Empowerment": {
+        "high": "Implement clear decision-making frameworks that delegate appropriate authority to teams",
+        "medium": "Expand team autonomy gradually in well-defined areas with clear guardrails",
+        "low": "Mentor other leaders in effective team empowerment techniques"
+      },
+      "Continuous Improvement": {
+        "high": "Establish regular retrospectives focused on leadership practices and organizational learning",
+        "medium": "Strengthen existing improvement cycles with more rigorous follow-through on action items",
+        "low": "Develop advanced experimentation approaches to drive innovation"
+      },
+      "Value Delivery": {
+        "high": "Implement customer-focused metrics that prioritize outcomes over outputs",
+        "medium": "Refine value measurement approaches to better connect work to customer impact",
+        "low": "Share your effective value-driven practices with the wider organization"
+      },
+      "Transparency": {
+        "high": "Create structured information sharing practices that make goals, metrics, and challenges visible",
+        "medium": "Expand information sharing beyond immediate teams to the broader organization",
+        "low": "Explore advanced transparency practices that can further strengthen trust"
+      },
+      "Collaboration": {
+        "high": "Reorganize work around value streams rather than functional departments",
+        "medium": "Reduce handoffs and approval processes that impede cross-functional collaboration",
+        "low": "Mentor others in effective cross-functional leadership techniques"
+      },
+      "Customer Focus": {
+        "high": "Establish direct connections between leaders and customers through regular interaction",
+        "medium": "Strengthen existing customer feedback mechanisms with more frequent touchpoints",
+        "low": "Explore advanced customer research techniques to deepen understanding"
+      },
+      "Risk Management": {
+        "high": "Shift from risk avoidance to risk management through smaller experiments",
+        "medium": "Balance risk mitigation with more rapid learning cycles",
+        "low": "Share your effective risk management approaches with the broader organization"
+      },
+      "Agile Leadership": {
+        "high": "Consider a comprehensive agile leadership development program for key leaders",
+        "medium": "Target specific agile leadership skills with the greatest improvement opportunity",
+        "low": "Focus on sustaining and sharing your effective agile leadership practices"
+      }
+    },
+    "thresholds": {
+      "needLevel": [
+        { "threshold": 75, "label": "There is a very high chance your team could benefit from agile leadership training" },
+        { "threshold": 60, "label": "There is a high chance your team could benefit from agile leadership training" },
+        { "threshold": 40, "label": "There is a moderate chance your team could benefit from agile leadership training" },
+        { "threshold": 25, "label": "There is a low chance your team could benefit from agile leadership training" },
+        { "threshold": 0, "label": "There is a very low chance your team could benefit from agile leadership training" }
+      ],
+      "recommendationLevel": [
+        { "threshold": 75, "label": "very-high", "displayText": "High Priority" },
+        { "threshold": 60, "label": "high", "displayText": "Medium Priority" },
+        { "threshold": 40, "label": "medium", "displayText": "Moderate Priority" },
+        { "threshold": 25, "label": "low", "displayText": "Low Priority" },
+        { "threshold": 0, "label": "very-low", "displayText": "Very Low Priority" }
+      ]
+    },
+    "summaries": [
+      {
+        "threshold": 75,
+        "text": "Your organization shows significant opportunities for developing agile leadership capabilities. Leaders currently struggle with adapting to change, empowering teams, and maintaining customer focus. A comprehensive agile leadership development program would deliver substantial benefits."
+      },
+      {
+        "threshold": 60,
+        "text": "Your organization demonstrates some agile leadership practices but has notable improvement opportunities. Enhancing leaders' abilities to empower teams, adapt to change, and maintain customer focus would strengthen organizational agility."
+      },
+      {
+        "threshold": 40,
+        "text": "Your organization shows a moderate foundation in agile leadership with specific areas for targeted improvement. Focusing on these areas will help leaders better support team autonomy and adaptability."
+      },
+      {
+        "threshold": 25,
+        "text": "Your organization demonstrates strong agile leadership capabilities with a few areas for refinement. Leaders generally empower teams effectively and adapt well to changing conditions."
+      },
+      {
+        "threshold": 0,
+        "text": "Your organization exemplifies excellent agile leadership practices. Leaders effectively empower teams, adapt to change, maintain customer focus, and drive continuous improvement. Focus on sustaining these strengths and mentoring others."
+      }
+    ]
+  },
+  "thankYou": {
+    "title": "Thank You for Completing the Agile Leadership Assessment",
+    "message": "Your responses will help us evaluate if agile leadership training would benefit your organization. We'll analyze your results and provide tailored recommendations.",
+    "nextSteps": "You'll receive a detailed report shortly with analysis and specific recommendations for enhancing agile leadership capabilities in your organization.",
+    "buttonText": "Return to Dashboard",
+    "buttonLink": "/dashboard"
+  }
+}

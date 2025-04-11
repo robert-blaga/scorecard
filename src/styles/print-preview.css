@@ -1,0 +1,65 @@
+/* Print Preview Styles */
+#pdf-preview {
+  background: white;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#pdf-preview #report-content {
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+/* Ensure all images and SVGs render properly */
+#pdf-preview img,
+#pdf-preview svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure proper spacing between sections */
+#pdf-preview .p-5,
+#pdf-preview .p-6,
+#pdf-preview .px-5,
+#pdf-preview .py-4 {
+  padding: 1.25rem !important;
+}
+
+/* Ensure proper border rendering */
+#pdf-preview .border,
+#pdf-preview .border-t,
+#pdf-preview .border-b {
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* Ensure background colors render properly */
+#pdf-preview .bg-white {
+  background-color: white !important;
+}
+
+#pdf-preview .bg-gray-50,
+#pdf-preview .bg-blue-50 {
+  background-color: #f9fafb !important;
+}
+
+/* Ensure text colors render properly */
+#pdf-preview .text-gray-600 {
+  color: #4b5563 !important;
+}
+
+#pdf-preview .text-gray-900 {
+  color: #111827 !important;
+}
+
+/* Print-specific styles */
+@media print {
+  #pdf-preview {
+    padding: 0;
+  }
+
+  #pdf-preview #report-content {
+    font-size: 12pt;
+  }
+} 
