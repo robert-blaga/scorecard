@@ -206,11 +206,10 @@ const ScorecardResults = ({ results, report, scorecardId, scorecard }) => {
               </div>
             </div>
             
-            {/* Need level */}
+            {/* Need level to be added later */}
             {primaryScore.needLevel && (
               <div className="mt-4 text-center">
                 <span className="text-base text-charcoal font-medium">
-                  {primaryScore.needLevel}
                 </span>
               </div>
             )}
