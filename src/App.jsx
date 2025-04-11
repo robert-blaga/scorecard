@@ -56,7 +56,7 @@ function AppContent() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         <Routes>
-          <Route path="/" element={<LoginScreen />} />
+          <Route path="/" element={<AdminLogin />} />
           <Route path="/library" element={<LibraryScreen />} />
           <Route path="/instructions" element={<Navigate to="/library" replace />} />
           <Route path="/instructions/:id" element={<InstructionsScreen />} />

@@ -33,7 +33,7 @@ export default function AdminLogin() {
             Admin Dashboard
           </h1>
           <p className="text-gray-600">
-            Autentificare administrator
+            Authenticate with your email and password
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function AdminLogin() {
 
           <div className="space-y-2">
             <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-              Parolă
+              Password
             </label>
             <input
               id="password"
@@ -80,7 +80,7 @@ export default function AdminLogin() {
               hover:bg-deep-purple-600 transition-all
               ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
           >
-            {loading ? 'Se autentifică...' : 'Autentificare'}
+            {loading ? 'Authenticating...' : 'Authenticate'}
           </button>
         </form>
       </div>
