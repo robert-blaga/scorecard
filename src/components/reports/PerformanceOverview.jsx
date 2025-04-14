@@ -25,22 +25,22 @@ const PerformanceOverview = ({ scorecard, responses }) => {
       if (typeof answer === 'number' || !isNaN(parseInt(answer))) {
         const selectedOptionIndex = parseInt(answer);
         const selectedOption = question.options[selectedOptionIndex];
-        score = selectedOption?.scores?.[scorecard.scoring.primaryCategory] || 0;
+        score = selectedOption?.scores?.[scorecard.basic_scoring.primaryCategory] || 0;
       } 
       // Check if answer has scores data structure
-      else if (answer[scorecard.scoring.primaryCategory] !== undefined) {
-        score = Number(answer[scorecard.scoring.primaryCategory]);
+      else if (answer[scorecard.basic_scoring.primaryCategory] !== undefined) {
+        score = Number(answer[scorecard.basic_scoring.primaryCategory]);
       }
       
       // Find the ideal (minimum) score for this question (inverted scale where 1 is best)
       const idealScore = question.options.reduce((min, option) => {
-        const optionScore = option.scores?.[scorecard.scoring.primaryCategory] || scorecard.scoring.maxScorePerQuestion;
+        const optionScore = option.scores?.[scorecard.basic_scoring.primaryCategory] || scorecard.basic_scoring.maxScorePerQuestion;
         return optionScore < min ? optionScore : min;
-      }, scorecard.scoring.maxScorePerQuestion);
+      }, scorecard.basic_scoring.maxScorePerQuestion);
       
       acc[question.category].totalScore += score;
       acc[question.category].idealScore += idealScore;
-      acc[question.category].maxScore += scorecard.scoring.maxScorePerQuestion;
+      acc[question.category].maxScore += scorecard.basic_scoring.maxScorePerQuestion;
       acc[question.category].questionCount++;
     }
     

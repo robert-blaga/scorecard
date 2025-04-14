@@ -1,5 +1,216 @@
 {
   "id": "team-performance-metrics",
+  "version": "1.0.0",
+  "last_updated": "${Replace with current date}",
+  "_documentation": {
+    "version_control": "This field tracks the version of the assessment template",
+    "structure_overview": "This template defines the structure for all assessments in the system",
+    "validation_rules": {
+      "required_fields": [
+        "id",
+        "version",
+        "intro",
+        "questions",
+        "scoring",
+        "thankYou"
+      ],
+      "question_rules": {
+        "count": "Exactly 12 questions required",
+        "options": "5 options per question required",
+        "scoring": "Scores must range from 1-5, where 1 is most positive",
+        "categories": "Each question must have a category and contribute to primaryCategory"
+      },
+      "recommendation_rules": {
+        "levels": "Must include: very-high, high, medium, low, very-low",
+        "format": "Use lowercase with hyphens for all recommendation levels",
+        "count": "Each level should have 3-5 recommendations"
+      },
+      "threshold_rules": {
+        "values": "Must include thresholds: 75, 60, 40, 25, 0",
+        "labels": "Must use consistent labels: very-high, high, medium, low, very-low",
+        "displayText": "Each threshold must have a user-friendly displayText"
+      },
+      "results_sections": {
+        "required": [
+          "specific_recommendations",
+          "general_recommendations"
+        ],
+        "specific_recommendations": {
+          "title": "Must be 'Specific Recommendations'",
+          "icon": "Must be a valid icon name",
+          "style": {
+            "required": [
+              "border",
+              "hoverBg",
+              "iconColor"
+            ],
+            "format": "Must use Tailwind CSS classes"
+          }
+        },
+        "general_recommendations": {
+          "title": "Must be 'General Recommendations'",
+          "icon": "Must be a valid icon name",
+          "style": {
+            "required": [
+              "border",
+              "hoverBg",
+              "iconColor"
+            ],
+            "format": "Must use Tailwind CSS classes"
+          }
+        }
+      }
+    },
+    "best_practices": {
+      "naming": {
+        "categories": "Use Title Case for category names (e.g., 'Stress Management')",
+        "recommendations": "Use lowercase with hyphens for recommendation levels",
+        "ids": "Use kebab-case for IDs (e.g., 'team-performance-metrics')",
+        "results_sections": "Use consistent titles: 'Specific Recommendations' and 'General Recommendations'"
+      },
+      "content": {
+        "questions": "Keep questions clear and concise",
+        "options": "Ensure options are mutually exclusive and cover the full range",
+        "recommendations": "Make recommendations specific and actionable",
+        "results_sections": "Keep section titles consistent across all assessments"
+      },
+      "scoring": {
+        "consistency": "Maintain consistent scoring across all questions",
+        "direction": "1 is always the most positive/desired response",
+        "categories": "Each question should contribute to both its category and primaryCategory"
+      }
+    },
+    "common_pitfalls": [
+      "Avoid duplicate recommendation sections",
+      "Don't mix case styles in recommendation levels",
+      "Ensure all placeholder text is replaced",
+      "Maintain consistent scoring direction",
+      "Don't skip required sections"
+    ],
+    "scorecard_rules": {
+      "required_fields": [
+        "id",
+        "scorecardInfo",
+        "title",
+        "shortDescription",
+        "category",
+        "visibility"
+      ],
+      "format": {
+        "id": "Use kebab-case (e.g., 'agile-leadership-metrics')",
+        "title": "Use Title Case",
+        "category": "Use Title Case",
+        "visibility": "Must be boolean"
+      }
+    },
+    "examples": {
+      "complete_question": {
+        "id": "question-1",
+        "category": "Adaptive Mindset",
+        "text": "How do your leaders typically respond to unexpected changes or disruptions?",
+        "number": 1,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Often resist change and struggle to adapt plans",
+            "scores": {
+              "Adaptive Mindset": 5,
+              "Agile Leadership": 5
+            }
+          },
+          {
+            "text": "Accept change reluctantly but have difficulty adjusting strategies",
+            "scores": {
+              "Adaptive Mindset": 4,
+              "Agile Leadership": 4
+            }
+          },
+          {
+            "text": "Adapt to change adequately but could improve flexibility",
+            "scores": {
+              "Adaptive Mindset": 3,
+              "Agile Leadership": 3
+            }
+          },
+          {
+            "text": "Generally embrace change and adjust plans accordingly",
+            "scores": {
+              "Adaptive Mindset": 2,
+              "Agile Leadership": 2
+            }
+          },
+          {
+            "text": "View change as opportunity and quickly pivot strategies when needed",
+            "scores": {
+              "Adaptive Mindset": 1,
+              "Agile Leadership": 1
+            }
+          }
+        ]
+      },
+      "complete_recommendations": {
+        "base": [
+          "Focus on developing an agile mindset before implementing specific practices",
+          "Build a culture of psychological safety to enable experimentation",
+          "Ensure leaders model the behaviors they wish to see in their teams"
+        ],
+        "very-high": [
+          "Implement a comprehensive agile leadership development program",
+          "Establish regular leadership retrospectives to drive continuous improvement",
+          "Create clear metrics for measuring leadership effectiveness in agility",
+          "Partner leaders with agile coaches for personalized development"
+        ]
+      },
+      "complete_thresholds": {
+        "needLevel": [
+          {
+            "threshold": 75,
+            "label": "very-high",
+            "displayText": "There is a very high chance your team could benefit from agile leadership training"
+          },
+          {
+            "threshold": 60,
+            "label": "high",
+            "displayText": "There is a high chance your team could benefit from agile leadership training"
+          }
+        ]
+      },
+      "complete_results_sections": {
+        "specific_recommendations": {
+          "title": "Specific Recommendations",
+          "icon": "Compass",
+          "style": {
+            "border": "border-blue-200",
+            "hoverBg": "hover:bg-blue-50",
+            "iconColor": "text-blue-600"
+          }
+        },
+        "general_recommendations": {
+          "title": "General Recommendations",
+          "icon": "CalendarCheck",
+          "style": {
+            "border": "border-gray-200",
+            "hoverBg": "hover:bg-gray-100",
+            "iconColor": "text-gray-600"
+          }
+        }
+      },
+      "complete_scorecard": {
+        "id": "agile-leadership-metrics",
+        "scorecardInfo": {
+          "title": "Agile Leadership Metrics",
+          "shortDescription": "Evaluate your organization's agile leadership capabilities and identify improvement opportunities",
+          "category": "Leadership Development",
+          "visibility": true
+        }
+      }
+    },
+    "update_instructions": {
+      "new_scorecard": "1. Copy the complete_scorecard example. 2. Update all fields with your specific values. 3. Ensure the id is unique and in kebab-case. 4. Add the scorecard to the scorecards array.",
+      "update_scorecard": "1. Locate the existing scorecard in the scorecards array. 2. Update the relevant fields while maintaining the structure. 3. Ensure all required fields are present. 4. Verify the id remains unchanged.",
+      "validation": "After creating or updating a scorecard, verify: 1. All required fields are present. 2. The id is unique and properly formatted. 3. The title and category use Title Case. 4. The visibility field is a boolean."
+    }
+  },
   "sync_test": {
     "version": "1.0.2",
     "timestamp": "2024-04-04",
@@ -12,6 +223,7 @@
   },
   "test_sync": "This field should be added to all JSONs",
   "_setup_instructions": "IMPORTANT SETUP INSTRUCTIONS: 1. Replace all placeholder values marked with ${...}. 2. For each question in your assessment, add a corresponding category in questionRecommendations. 3. Ensure primaryCategory is set to your main scoring category. 4. Use the question's category name exactly as it appears in the questions section. 5. Each question should contribute to both its own category score and the primaryCategory score. 6. The paths in nextRoute should include the assessment ID (e.g., '/survey/your-assessment-id'). 7. Remove this _setup_instructions field when done.",
+  "_question_standardization": "QUESTION STANDARDIZATION RULES: 1. All assessments must have exactly 12 questions. 2. All questions must be in English. 3. Question scoring follows this pattern: a) Each question has 5 options. b) Options are scored from 1 to 5, where 1 is the most positive/desired response and 5 is the least positive/desired response. c) Each option contributes to both its specific category score and the primaryCategory score. d) The scoring should be consistent across all questions in the assessment.",
   "intro": {
     "title": "Team Performance Metrics Assessment",
     "subtitle": "Evaluate your team's performance across key metrics and identify areas for improvement",
@@ -63,274 +275,577 @@
     "items": [
       {
         "id": "q1",
-        "category": "IDENTIFICAREA CU COMPANIA",
-        "text": "Sunt mândru/ă să lucrez în OIG",
+        "category": "Company Identification",
+        "text": "How often do team members actively promote the company to others?",
         "number": 1,
         "type": "single_choice",
         "options": [
           {
-            "text": "Deloc",
-            "scores": {}
+            "text": "Never - team members avoid discussing the company",
+            "scores": {
+              "Company Identification": 5,
+              "team_performance": 5
+            }
           },
           {
-            "text": "În mică măsură",
-            "scores": {}
+            "text": "Rarely - only when specifically asked",
+            "scores": {
+              "Company Identification": 4,
+              "team_performance": 4
+            }
           },
           {
-            "text": "Oarecum",
-            "scores": {}
+            "text": "Sometimes - occasionally share positive experiences",
+            "scores": {
+              "Company Identification": 3,
+              "team_performance": 3
+            }
           },
           {
-            "text": "În mare măsură",
-            "scores": {}
+            "text": "Often - regularly share company achievements",
+            "scores": {
+              "Company Identification": 2,
+              "team_performance": 2
+            }
           },
           {
-            "text": "În totalitate",
-            "scores": {}
+            "text": "Always - actively promote the company as a great place to work",
+            "scores": {
+              "Company Identification": 1,
+              "team_performance": 1
+            }
           }
         ]
       },
       {
         "id": "q2",
-        "category": "IDENTIFICAREA CU COMPANIA",
-        "text": "Recomand prietenilor mei să facă cumpărături în magazinul în care lucrez sau în alte magazine din rețeaua OIG",
+        "category": "Company Identification",
+        "text": "How well do team members understand and align with company goals?",
         "number": 2,
         "type": "single_choice",
         "options": [
           {
-            "text": "Deloc",
-            "scores": {}
+            "text": "Not at all - unclear about company direction",
+            "scores": {
+              "Company Identification": 5,
+              "team_performance": 5
+            }
           },
           {
-            "text": "În mică măsură",
-            "scores": {}
+            "text": "Minimally - basic understanding of goals",
+            "scores": {
+              "Company Identification": 4,
+              "team_performance": 4
+            }
           },
           {
-            "text": "Oarecum",
-            "scores": {}
+            "text": "Moderately - understand main objectives",
+            "scores": {
+              "Company Identification": 3,
+              "team_performance": 3
+            }
           },
           {
-            "text": "În mare măsură",
-            "scores": {}
+            "text": "Well - clear understanding of goals and strategy",
+            "scores": {
+              "Company Identification": 2,
+              "team_performance": 2
+            }
           },
           {
-            "text": "În totalitate",
-            "scores": {}
+            "text": "Extremely well - actively contribute to goal achievement",
+            "scores": {
+              "Company Identification": 1,
+              "team_performance": 1
+            }
           }
         ]
       },
       {
         "id": "q3",
-        "category": "IDENTIFICAREA CU COMPANIA",
-        "text": "Aș recomanda prietenilor sau familiei mele să lucreze în OIG",
+        "category": "Company Identification",
+        "text": "How often do team members demonstrate company values in their work?",
         "number": 3,
         "type": "single_choice",
         "options": [
           {
-            "text": "Deloc",
-            "scores": {}
+            "text": "Rarely - values are not evident in daily work",
+            "scores": {
+              "Company Identification": 5,
+              "team_performance": 5
+            }
           },
           {
-            "text": "În mică măsură",
-            "scores": {}
+            "text": "Occasionally - some values are demonstrated",
+            "scores": {
+              "Company Identification": 4,
+              "team_performance": 4
+            }
           },
           {
-            "text": "Oarecum",
-            "scores": {}
+            "text": "Sometimes - values are generally followed",
+            "scores": {
+              "Company Identification": 3,
+              "team_performance": 3
+            }
           },
           {
-            "text": "În mare măsură",
-            "scores": {}
+            "text": "Often - values are consistently demonstrated",
+            "scores": {
+              "Company Identification": 2,
+              "team_performance": 2
+            }
           },
           {
-            "text": "În totalitate",
-            "scores": {}
+            "text": "Always - values are deeply embedded in all work",
+            "scores": {
+              "Company Identification": 1,
+              "team_performance": 1
+            }
           }
         ]
       },
       {
         "id": "q4",
-        "category": "IDENTIFICAREA CU COMPANIA",
-        "text": "Asociez cariera mea viitoare cu OIG",
+        "category": "Company Identification",
+        "text": "How engaged are team members in company initiatives?",
         "number": 4,
         "type": "single_choice",
         "options": [
           {
-            "text": "Deloc",
-            "scores": {}
+            "text": "Not engaged - minimal participation in initiatives",
+            "scores": {
+              "Company Identification": 5,
+              "team_performance": 5
+            }
           },
           {
-            "text": "În mică măsură",
-            "scores": {}
+            "text": "Minimally engaged - participate when required",
+            "scores": {
+              "Company Identification": 4,
+              "team_performance": 4
+            }
           },
           {
-            "text": "Oarecum",
-            "scores": {}
+            "text": "Moderately engaged - participate in most initiatives",
+            "scores": {
+              "Company Identification": 3,
+              "team_performance": 3
+            }
           },
           {
-            "text": "În mare măsură",
-            "scores": {}
+            "text": "Highly engaged - actively participate and contribute",
+            "scores": {
+              "Company Identification": 2,
+              "team_performance": 2
+            }
           },
           {
-            "text": "În totalitate",
-            "scores": {}
+            "text": "Extremely engaged - lead and champion initiatives",
+            "scores": {
+              "Company Identification": 1,
+              "team_performance": 1
+            }
           }
         ]
       },
       {
         "id": "q5",
-        "category": "MEDIUL DE LUCRU",
-        "text": "Mediul de lucru promovează colaborarea și comunicarea cu colegii mei de echipă?",
+        "category": "Work Environment",
+        "text": "How effective is team communication in daily operations?",
         "number": 5,
         "type": "single_choice",
         "options": [
           {
-            "text": "Deloc",
-            "scores": {}
+            "text": "Poor - frequent miscommunication and confusion",
+            "scores": {
+              "Work Environment": 5,
+              "team_performance": 5
+            }
           },
           {
-            "text": "În mică măsură",
-            "scores": {}
+            "text": "Limited - communication gaps cause delays",
+            "scores": {
+              "Work Environment": 4,
+              "team_performance": 4
+            }
           },
           {
-            "text": "Oarecum",
-            "scores": {}
+            "text": "Moderate - communication is generally effective",
+            "scores": {
+              "Work Environment": 3,
+              "team_performance": 3
+            }
           },
           {
-            "text": "În mare măsură",
-            "scores": {}
+            "text": "Good - clear and consistent communication",
+            "scores": {
+              "Work Environment": 2,
+              "team_performance": 2
+            }
           },
           {
-            "text": "În totalitate",
-            "scores": {}
+            "text": "Excellent - seamless and proactive communication",
+            "scores": {
+              "Work Environment": 1,
+              "team_performance": 1
+            }
           }
         ]
       },
       {
         "id": "q6",
-        "category": "MEDIUL DE LUCRU",
-        "text": "Mediul de lucru promovează colaborarea și comunicarea cu colegii din celelalte departamente?",
+        "category": "Work Environment",
+        "text": "How well does the team balance workload and personal needs?",
         "number": 6,
         "type": "single_choice",
         "options": [
           {
-            "text": "Deloc",
-            "scores": {}
+            "text": "Poor - frequent burnout and stress",
+            "scores": {
+              "Work Environment": 5,
+              "team_performance": 5
+            }
           },
           {
-            "text": "În mică măsură",
-            "scores": {}
+            "text": "Limited - occasional work-life balance issues",
+            "scores": {
+              "Work Environment": 4,
+              "team_performance": 4
+            }
           },
           {
-            "text": "Oarecum",
-            "scores": {}
+            "text": "Moderate - generally balanced workload",
+            "scores": {
+              "Work Environment": 3,
+              "team_performance": 3
+            }
           },
           {
-            "text": "În mare măsură",
-            "scores": {}
+            "text": "Good - effective workload management",
+            "scores": {
+              "Work Environment": 2,
+              "team_performance": 2
+            }
           },
           {
-            "text": "În totalitate",
-            "scores": {}
+            "text": "Excellent - optimal work-life integration",
+            "scores": {
+              "Work Environment": 1,
+              "team_performance": 1
+            }
           }
         ]
       },
       {
         "id": "q7",
-        "category": "MEDIUL DE LUCRU",
-        "text": "Am încredere în conducerea companiei",
+        "category": "Team Collaboration",
+        "text": "How effectively does the team work together on projects?",
         "number": 7,
         "type": "single_choice",
         "options": [
           {
-            "text": "Deloc",
-            "scores": {}
+            "text": "Poor - frequent conflicts and delays",
+            "scores": {
+              "Team Collaboration": 5,
+              "team_performance": 5
+            }
           },
           {
-            "text": "În mică măsură",
-            "scores": {}
+            "text": "Limited - some collaboration challenges",
+            "scores": {
+              "Team Collaboration": 4,
+              "team_performance": 4
+            }
           },
           {
-            "text": "Oarecum",
-            "scores": {}
+            "text": "Moderate - generally effective collaboration",
+            "scores": {
+              "Team Collaboration": 3,
+              "team_performance": 3
+            }
           },
           {
-            "text": "În mare măsură",
-            "scores": {}
+            "text": "Good - strong team coordination",
+            "scores": {
+              "Team Collaboration": 2,
+              "team_performance": 2
+            }
           },
           {
-            "text": "În totalitate",
-            "scores": {}
+            "text": "Excellent - seamless team synergy",
+            "scores": {
+              "Team Collaboration": 1,
+              "team_performance": 1
+            }
           }
         ]
       },
       {
         "id": "q8",
-        "category": "MEDIUL DE LUCRU",
-        "text": "Conducerea companiei demonstrează grijă pentru angajați",
+        "category": "Team Collaboration",
+        "text": "How well does the team handle and resolve conflicts?",
         "number": 8,
         "type": "single_choice",
         "options": [
           {
-            "text": "Deloc",
-            "scores": {}
+            "text": "Poor - conflicts often escalate",
+            "scores": {
+              "Team Collaboration": 5,
+              "team_performance": 5
+            }
           },
           {
-            "text": "În mică măsură",
-            "scores": {}
+            "text": "Limited - some conflicts remain unresolved",
+            "scores": {
+              "Team Collaboration": 4,
+              "team_performance": 4
+            }
           },
           {
-            "text": "Oarecum",
-            "scores": {}
+            "text": "Moderate - most conflicts are resolved",
+            "scores": {
+              "Team Collaboration": 3,
+              "team_performance": 3
+            }
           },
           {
-            "text": "În mare măsură",
-            "scores": {}
+            "text": "Good - conflicts are handled constructively",
+            "scores": {
+              "Team Collaboration": 2,
+              "team_performance": 2
+            }
           },
           {
-            "text": "În totalitate",
-            "scores": {}
+            "text": "Excellent - conflicts lead to positive outcomes",
+            "scores": {
+              "Team Collaboration": 1,
+              "team_performance": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q9",
+        "category": "Performance Metrics",
+        "text": "How consistently does the team meet performance targets?",
+        "number": 9,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Rarely - frequently miss targets",
+            "scores": {
+              "Performance Metrics": 5,
+              "team_performance": 5
+            }
+          },
+          {
+            "text": "Sometimes - meet some targets",
+            "scores": {
+              "Performance Metrics": 4,
+              "team_performance": 4
+            }
+          },
+          {
+            "text": "Often - meet most targets",
+            "scores": {
+              "Performance Metrics": 3,
+              "team_performance": 3
+            }
+          },
+          {
+            "text": "Usually - consistently meet targets",
+            "scores": {
+              "Performance Metrics": 2,
+              "team_performance": 2
+            }
+          },
+          {
+            "text": "Always - exceed targets regularly",
+            "scores": {
+              "Performance Metrics": 1,
+              "team_performance": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "category": "Performance Metrics",
+        "text": "How effectively does the team track and measure progress?",
+        "number": 10,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Poor - no clear tracking system",
+            "scores": {
+              "Performance Metrics": 5,
+              "team_performance": 5
+            }
+          },
+          {
+            "text": "Limited - basic tracking methods",
+            "scores": {
+              "Performance Metrics": 4,
+              "team_performance": 4
+            }
+          },
+          {
+            "text": "Moderate - regular progress reviews",
+            "scores": {
+              "Performance Metrics": 3,
+              "team_performance": 3
+            }
+          },
+          {
+            "text": "Good - systematic tracking and analysis",
+            "scores": {
+              "Performance Metrics": 2,
+              "team_performance": 2
+            }
+          },
+          {
+            "text": "Excellent - advanced metrics and analytics",
+            "scores": {
+              "Performance Metrics": 1,
+              "team_performance": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "category": "Continuous Improvement",
+        "text": "How effectively does the team learn from mistakes?",
+        "number": 11,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Poor - repeat same mistakes",
+            "scores": {
+              "Continuous Improvement": 5,
+              "team_performance": 5
+            }
+          },
+          {
+            "text": "Limited - some learning occurs",
+            "scores": {
+              "Continuous Improvement": 4,
+              "team_performance": 4
+            }
+          },
+          {
+            "text": "Moderate - learn from most mistakes",
+            "scores": {
+              "Continuous Improvement": 3,
+              "team_performance": 3
+            }
+          },
+          {
+            "text": "Good - systematic learning process",
+            "scores": {
+              "Continuous Improvement": 2,
+              "team_performance": 2
+            }
+          },
+          {
+            "text": "Excellent - proactive learning culture",
+            "scores": {
+              "Continuous Improvement": 1,
+              "team_performance": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q12",
+        "category": "Continuous Improvement",
+        "text": "How well does the team adapt to changes and challenges?",
+        "number": 12,
+        "type": "single_choice",
+        "options": [
+          {
+            "text": "Poor - resist change and struggle",
+            "scores": {
+              "Continuous Improvement": 5,
+              "team_performance": 5
+            }
+          },
+          {
+            "text": "Limited - slow to adapt",
+            "scores": {
+              "Continuous Improvement": 4,
+              "team_performance": 4
+            }
+          },
+          {
+            "text": "Moderate - adapt with some difficulty",
+            "scores": {
+              "Continuous Improvement": 3,
+              "team_performance": 3
+            }
+          },
+          {
+            "text": "Good - adapt effectively to changes",
+            "scores": {
+              "Continuous Improvement": 2,
+              "team_performance": 2
+            }
+          },
+          {
+            "text": "Excellent - embrace and drive change",
+            "scores": {
+              "Continuous Improvement": 1,
+              "team_performance": 1
+            }
           }
         ]
       }
     ],
-    "submitButtonText": "Finalizează",
-    "nextRoute": "/thank-you"
+    "submitButtonText": "Submit Assessment",
+    "nextRoute": "/thank-you/team-performance-metrics"
   },
   "scoring": {
-    "primaryCategory": "performance_need",
+    "primaryCategory": "team_performance",
     "maxScorePerQuestion": 5,
+    "_scoring_notes": {
+      "primaryCategory": "This is the main category used for overall assessment scoring",
+      "maxScorePerQuestion": "Maximum score per question (should be 5)",
+      "recommendations": "Recommendations are organized by need level",
+      "thresholds": "Thresholds determine the recommendation level based on scores",
+      "results_sections": "Keep section titles consistent: 'Specific Recommendations' and 'General Recommendations'"
+    },
     "recommendations": {
       "base": [
         "Establish clear performance expectations and goals for all team members",
         "Implement regular check-ins to discuss progress and provide feedback",
         "Create a system for recognizing and celebrating team achievements"
       ],
-      "Very High Need": [
+      "very-high": [
         "Develop a comprehensive team performance framework with balanced metrics",
         "Implement structured team performance reviews with specific action planning",
         "Create a performance dashboard to track key metrics and provide transparency",
         "Establish clear accountability mechanisms and performance consequences"
       ],
-      "High Need": [
+      "high": [
         "Conduct a team performance workshop to identify key barriers and enablers",
         "Implement regular structured feedback sessions for all team members",
         "Develop focused improvement plans for underperforming areas",
         "Align individual goals with team performance metrics"
       ],
-      "Moderate Need": [
+      "medium": [
         "Refine existing performance measurement approaches for better accuracy",
         "Enhance communication around performance expectations and current results",
         "Implement targeted coaching for specific performance improvement areas",
         "Create better connections between performance metrics and business outcomes"
       ],
-      "Low Need": [
+      "low": [
         "Fine-tune your performance management system to optimize team results",
         "Develop advanced performance coaching capabilities for team leaders",
         "Create mechanisms for sharing performance best practices across teams",
         "Implement sophisticated performance recognition approaches"
       ],
-      "Very Low Need": [
+      "very-low": [
         "Establish your team as a performance model for the rest of the organization",
         "Develop next-generation performance management approaches",
         "Create systems to sustain high performance during periods of change",
@@ -339,34 +854,34 @@
     },
     "category_overviews": {
       "primary_category": {
-        "title": "Team Performance Assessment",
-        "description": "Comprehensive evaluation of team effectiveness and collaboration metrics",
+        "title": "",
+        "description": "",
         "key_findings": {
           "high": [
-            "Significant performance gaps affecting productivity",
-            "Collaboration challenges limiting team effectiveness"
+            "",
+            ""
           ],
           "medium": [
-            "Moderate performance with specific areas for improvement",
-            "Some effective practices alongside development needs"
+            "",
+            ""
           ],
           "low": [
-            "Strong team performance across key metrics",
-            "Effective collaboration and productive workflows"
+            "",
+            ""
           ]
         },
         "overview_recommendations": {
           "high": [
-            "Implement comprehensive performance improvement program",
-            "Address fundamental collaboration and productivity barriers"
+            "",
+            ""
           ],
           "medium": [
-            "Target specific improvement areas while leveraging strengths",
-            "Enhance existing processes and team coordination"
+            "",
+            ""
           ],
           "low": [
-            "Optimize high-performing team practices",
-            "Share successful approaches across the organization"
+            "",
+            ""
           ]
         }
       },
@@ -434,35 +949,93 @@
           ]
         }
       },
-      "collaboration": {
-        "title": "Team Collaboration Assessment",
-        "description": "Analysis of team cooperation and collective efficiency",
+      "Company Identification": {
+        "title": "Company Identification",
+        "description": "Employee alignment with company values and mission",
         "key_findings": {
           "high": [
-            "Collaboration challenges affecting productivity",
-            "Communication barriers impacting team performance"
+            "Strong company culture and values alignment",
+            "High employee engagement and commitment"
           ],
           "medium": [
-            "Moderate collaboration effectiveness",
-            "Some team synergy present but inconsistent"
+            "Moderate alignment with company values",
+            "Some areas for improved engagement"
           ],
           "low": [
-            "Strong collaborative practices",
-            "Effective team coordination and communication"
+            "Limited connection to company values",
+            "Low employee engagement and commitment"
           ]
-        },
-        "overview_recommendations": {
+        }
+      },
+      "Work Environment": {
+        "title": "Work Environment",
+        "description": "Quality of workplace conditions and culture",
+        "key_findings": {
           "high": [
-            "Establish team collaboration frameworks",
-            "Implement communication improvement strategies"
+            "Positive and supportive work environment",
+            "Strong team collaboration and communication"
           ],
           "medium": [
-            "Enhance team coordination processes",
-            "Develop cross-functional collaboration"
+            "Mixed work environment conditions",
+            "Some areas for improved collaboration"
           ],
           "low": [
-            "Optimize existing collaboration practices",
-            "Scale successful team approaches"
+            "Challenging work environment",
+            "Limited team collaboration and communication"
+          ]
+        }
+      },
+      "Team Collaboration": {
+        "title": "Team Collaboration",
+        "description": "Effectiveness of team interactions and cooperation",
+        "key_findings": {
+          "high": [
+            "Strong team cohesion and trust",
+            "Effective cross-functional collaboration"
+          ],
+          "medium": [
+            "Moderate team cohesion",
+            "Some collaboration challenges"
+          ],
+          "low": [
+            "Limited team cohesion",
+            "Poor cross-functional collaboration"
+          ]
+        }
+      },
+      "Performance Metrics": {
+        "title": "Performance Metrics",
+        "description": "Measurement and tracking of team performance",
+        "key_findings": {
+          "high": [
+            "Clear performance expectations",
+            "Strong accountability and tracking"
+          ],
+          "medium": [
+            "Some unclear expectations",
+            "Inconsistent tracking and accountability"
+          ],
+          "low": [
+            "Unclear performance expectations",
+            "Limited tracking and accountability"
+          ]
+        }
+      },
+      "Continuous Improvement": {
+        "title": "Continuous Improvement",
+        "description": "Team's ability to learn and adapt",
+        "key_findings": {
+          "high": [
+            "Strong learning culture",
+            "Regular process improvements"
+          ],
+          "medium": [
+            "Developing learning culture",
+            "Some improvement initiatives"
+          ],
+          "low": [
+            "Limited learning culture",
+            "Few improvement initiatives"
           ]
         }
       }
@@ -501,52 +1074,59 @@
       ]
     },
     "report_structure": {
-      "title": "Team Performance Improvement Plan",
-      "description": "Based on your team's performance assessment, we've created a targeted improvement plan focused on key metrics and collaboration:",
+      "title": "Team Performance Development Plan",
+      "description": "Based on your team's performance assessment, we've created a comprehensive development plan focused on enhancing team effectiveness:",
       "sections": {
         "critical_focus": {
-          "title": "Critical Performance Areas",
-          "description": "These areas require immediate attention based on your assessment:",
-          "threshold": 60,
+          "title": "Priority Focus Areas",
+          "description": "These areas require immediate attention for improvement",
+          "threshold": 40,
           "type": "category_recommendations",
           "recommendationLevel": "high"
         },
         "development_opportunities": {
-          "title": "Development Areas",
-          "description": "Areas showing potential for performance enhancement:",
-          "minThreshold": 40,
-          "maxThreshold": 60,
+          "title": "Development Opportunities",
+          "description": "These areas present opportunities for improvement",
+          "minThreshold": 25,
+          "maxThreshold": 40,
           "type": "category_recommendations",
-          "recommendationLevel": "medium"
+          "recommendationLevel": "medium",
+          "categories": [
+            "Company Identification",
+            "Work Environment",
+            "Team Collaboration",
+            "Performance Metrics",
+            "Continuous Improvement"
+          ]
         },
         "implementation_strategy": {
           "title": "Implementation Strategy",
-          "description": "A structured approach to improving team performance:",
+          "description": "A structured approach to improving team performance",
           "type": "static_recommendations",
           "recommendations": [
-            "Baseline Assessment: Document current performance metrics",
-            "Goal Setting: Establish clear, measurable objectives",
-            "Process Improvement: Implement efficiency enhancements",
-            "Monitoring System: Set up performance tracking",
-            "Regular Review: Establish feedback and adjustment cycles"
+            "Performance Assessment: Conduct comprehensive team performance review",
+            "Goal Setting: Establish clear, measurable performance objectives",
+            "Action Planning: Develop specific improvement initiatives",
+            "Progress Tracking: Implement regular performance monitoring",
+            "Continuous Improvement: Establish feedback and adjustment mechanisms"
           ]
         },
         "support_resources": {
           "title": "Support Resources",
-          "description": "Tools and resources for performance improvement:",
+          "description": "Tools and resources to support performance improvement",
           "type": "static_recommendations",
           "recommendations": [
-            "Performance tracking templates",
-            "Team collaboration tools",
-            "Process optimization guides",
-            "Productivity enhancement workshops",
-            "Progress monitoring dashboards"
+            "Performance management templates and tools",
+            "Team effectiveness assessment guides",
+            "Performance coaching resources",
+            "Team development workshops",
+            "Progress tracking dashboards"
           ]
         }
       },
       "results_sections": {
         "specific_recommendations": {
-          "title": "Performance-Specific Recommendations",
+          "title": "Specific Recommendations",
           "icon": "Lightbulb",
           "style": {
             "border": "border-emerald-500",
@@ -576,71 +1156,146 @@
         "medium": "${Replace with medium priority recommendation for this category}",
         "low": "${Replace with low priority recommendation for this category}"
       },
-      "primary_category": {
-        "high": "${Replace with high priority recommendation for primary category}",
-        "medium": "${Replace with medium priority recommendation for primary category}",
-        "low": "${Replace with low priority recommendation for primary category}"
+      "Company Identification": {
+        "high": [
+          "Strong alignment with company values and mission",
+          "High level of organizational commitment",
+          "Clear understanding of company goals"
+        ],
+        "medium": [
+          "Moderate alignment with company values",
+          "Some areas for improved commitment",
+          "Need for clearer goal communication"
+        ],
+        "low": [
+          "Limited alignment with company values",
+          "Low organizational commitment",
+          "Unclear understanding of company direction"
+        ]
       },
-      "category_1": {
-        "high": "",
-        "medium": "",
-        "low": ""
-      },
-      "category_example": {
-        "high": "High priority recommendation example for this category",
-        "medium": "Medium priority recommendation example for this category",
-        "low": "Low priority recommendation example for this category"
-      },
-      "another_category": {
-        "high": "Another high priority recommendation example",
-        "medium": "Another medium priority recommendation example",
-        "low": "Another low priority recommendation example"
-      },
-      "primary_score": {
-        "high": "Primary high priority recommendation for overall assessment",
-        "medium": "Primary medium priority recommendation for overall assessment",
-        "low": "Primary low priority recommendation for overall assessment"
-      },
-      "category_2": {
-        "high": "",
-        "medium": "",
-        "low": ""
-      },
-      "category_3": {
-        "high": "",
-        "medium": "",
-        "low": ""
-      },
-      "Goal Achievement": {
-        "high": "Implement structured goal-setting framework with clear metrics and regular progress reviews.",
-        "medium": "Enhance current goal-tracking processes and improve team alignment on objectives.",
-        "low": "Fine-tune goal achievement processes and share successful strategies."
+      "Work Environment": {
+        "high": [
+          "Positive and supportive work culture",
+          "Effective communication channels",
+          "Strong team collaboration"
+        ],
+        "medium": [
+          "Some areas for culture improvement",
+          "Inconsistent communication",
+          "Moderate team collaboration"
+        ],
+        "low": [
+          "Challenging work environment",
+          "Poor communication practices",
+          "Limited team collaboration"
+        ]
       },
       "Team Collaboration": {
-        "high": "Establish comprehensive collaboration frameworks and communication protocols.",
-        "medium": "Strengthen existing collaboration practices and enhance team coordination.",
-        "low": "Optimize collaboration processes and scale successful approaches."
+        "high": [
+          "Strong team cohesion",
+          "Effective cross-functional collaboration",
+          "High trust among team members"
+        ],
+        "medium": [
+          "Moderate team cohesion",
+          "Some collaboration challenges",
+          "Developing trust among team"
+        ],
+        "low": [
+          "Limited team cohesion",
+          "Poor cross-functional collaboration",
+          "Low trust among team members"
+        ]
       },
-      "Productivity": {
-        "high": "Implement productivity tracking systems and efficiency improvement measures.",
-        "medium": "Enhance current productivity measures and identify optimization opportunities.",
-        "low": "Fine-tune productivity processes and maintain high performance standards."
+      "Performance Metrics": {
+        "high": [
+          "Clear performance expectations",
+          "Regular progress tracking",
+          "Strong accountability"
+        ],
+        "medium": [
+          "Some unclear expectations",
+          "Inconsistent tracking",
+          "Moderate accountability"
+        ],
+        "low": [
+          "Unclear performance expectations",
+          "Limited progress tracking",
+          "Weak accountability"
+        ]
+      },
+      "Continuous Improvement": {
+        "high": [
+          "Strong learning culture",
+          "Regular process improvements",
+          "Effective feedback mechanisms"
+        ],
+        "medium": [
+          "Developing learning culture",
+          "Some improvement initiatives",
+          "Basic feedback systems"
+        ],
+        "low": [
+          "Limited learning culture",
+          "Few improvement initiatives",
+          "Weak feedback mechanisms"
+        ]
       }
     },
     "thresholds": {
       "needLevel": [
-        { "threshold": 75, "label": "There is a very high chance your team could benefit from performance improvement training" },
-        { "threshold": 60, "label": "There is a high chance your team could benefit from performance improvement training" },
-        { "threshold": 40, "label": "There is a moderate chance your team could benefit from performance improvement training" },
-        { "threshold": 25, "label": "There is a low chance your team could benefit from performance improvement training" },
-        { "threshold": 0, "label": "There is a very low chance your team could benefit from performance improvement training" }
+        {
+          "threshold": 75,
+          "label": "very-high",
+          "displayText": "There is a very high chance your team could benefit from this training"
+        },
+        {
+          "threshold": 60,
+          "label": "high",
+          "displayText": "There is a high chance your team could benefit from this training"
+        },
+        {
+          "threshold": 40,
+          "label": "medium",
+          "displayText": "There is a moderate chance your team could benefit from this training"
+        },
+        {
+          "threshold": 25,
+          "label": "low",
+          "displayText": "There is a low chance your team could benefit from this training"
+        },
+        {
+          "threshold": 0,
+          "label": "very-low",
+          "displayText": "There is a very low chance your team could benefit from this training"
+        }
       ],
       "recommendationLevel": [
-        { "threshold": 75, "label": "very-high", "displayText": "High Priority" },
-        { "threshold": 60, "label": "high", "displayText": "Medium Priority" },
-        { "threshold": 40, "label": "medium", "displayText": "Moderate Priority" },
-        { "threshold": 25, "label": "low", "displayText": "Low Priority" },
-        { "threshold": 0, "label": "very-low", "displayText": "Very Low Priority" }
+        {
+          "threshold": 75,
+          "label": "very-high",
+          "displayText": "High Priority"
+        },
+        {
+          "threshold": 60,
+          "label": "high",
+          "displayText": "Medium Priority"
+        },
+        {
+          "threshold": 40,
+          "label": "medium",
+          "displayText": "Moderate Priority"
+        },
+        {
+          "threshold": 25,
+          "label": "low",
+          "displayText": "Low Priority"
+        },
+        {
+          "threshold": 0,
+          "label": "very-low",
+          "displayText": "Very Low Priority"
+        }
       ]
     },
     "summaries": [

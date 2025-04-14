@@ -1,22 +1,28 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useScorecard from '../hooks/useScorecard';
-import { Target, CircleArrowRight } from 'lucide-react';
+import { Target } from 'lucide-react';
 
 // Components
 import PerformanceOverview from './reports/PerformanceOverview';
 import QuestionAnalysis from './reports/QuestionAnalysis';
 import RecommendationsSection from './reports/RecommendationsSection';
+import DevelopmentOpportunities from './reports/DevelopmentOpportunities';
+import PrioritySection from './PrioritySection';
+import ManagerDevelopmentReport from './reports/ManagerDevelopmentReport';
 
 // Utils
 import { getQuestionAnalysis } from '../utils/reportAnalysis';
 import { getContextualRecommendations } from '../utils/recommendationUtils';
 import { getThemeColors } from '../utils/themeUtils';
+import { usePriorityAreas } from '../hooks/usePriorityAreas';
 
 const ExtendedReport = ({ scorecardId }) => {
   const navigate = useNavigate();
   const { scorecard, loading, error, results, report } = useScorecard(scorecardId);
   const reportRef = useRef(null);
+  
+  const { priorityFocusAreas, developmentAreas, config } = usePriorityAreas(scorecard, results);
 
   // Function to trigger browser print with custom settings
   const handlePrint = () => {
@@ -330,7 +336,7 @@ const ExtendedReport = ({ scorecardId }) => {
     );
   }
 
-  const primaryCategory = scorecard.scoring?.primaryCategory;
+  const primaryCategory = scorecard.basic_scoring?.primaryCategory;
   const interpretation = results.interpretation?.[primaryCategory];
 
   if (!interpretation) {
@@ -347,6 +353,7 @@ const ExtendedReport = ({ scorecardId }) => {
 
   const theme = getThemeColors(scorecardId);
   const recommendations = getContextualRecommendations(scorecard, results, report);
+  const reportStructure = scorecard.report_structure;
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-100">
@@ -360,7 +367,9 @@ const ExtendedReport = ({ scorecardId }) => {
               </svg>
             </div>
             <div className="flex-1">
-              <h2 className="text-base text-charcoal font-medium leading-relaxed">{scorecard.scorecardInfo?.title}</h2>
+              <h2 className="text-base text-charcoal font-medium leading-relaxed">
+                {reportStructure?.title || scorecard.scorecardInfo?.title}
+              </h2>
               <p className="text-sm text-gray-500 mt-0.5">
                 Completed on {new Date(report.timestamp).toLocaleDateString('en-US', {
                   year: 'numeric',
@@ -372,8 +381,9 @@ const ExtendedReport = ({ scorecardId }) => {
           </div>
         </div>
 
-        {/* Performance Overview Section */}
+        {/* Report Content */}
         <div className="p-5">
+          {/* Overview Section */}
           <div className="mb-6 page-break-inside-avoid">
             <div className="bg-blue-50 rounded-lg border border-gray-200 overflow-hidden">
               <div className="px-6 py-4 border-b border-blue-500 bg-blue-50">
@@ -394,20 +404,63 @@ const ExtendedReport = ({ scorecardId }) => {
               questions={scorecard.questions.items}
               answers={results.answers}
               scorecard={scorecard}
-              maxScorePerQuestion={scorecard.scoring.maxScorePerQuestion}
+              maxScorePerQuestion={scorecard.basic_scoring.maxScorePerQuestion}
             />
           </div>
 
-          {/* Recommendations - this will include all sections configured in the JSON */}
-          {recommendations && recommendations.sections && recommendations.sections.length > 0 && (
+          {/* Manager Development Report */}
+          {scorecard?.manager_development_report && (
+            <div className="page-break-inside-avoid mt-6">
+              <ManagerDevelopmentReport report={scorecard.manager_development_report} />
+            </div>
+          )}
+
+          {/* Priority Focus Areas - Using report structure */}
+          {reportStructure?.sections?.critical_focus && (
+            <PrioritySection 
+              areas={priorityFocusAreas}
+              config={{
+                title: reportStructure.sections.critical_focus.title,
+                description: reportStructure.sections.critical_focus.description,
+                threshold: reportStructure.sections.critical_focus.threshold,
+                recommendationLevel: reportStructure.sections.critical_focus.recommendationLevel
+              }}
+            >
+              <DevelopmentOpportunities opportunities={priorityFocusAreas} />
+            </PrioritySection>
+          )}
+
+          {/* Development Opportunities - Using report structure */}
+          {reportStructure?.sections?.development_opportunities && (
+            <PrioritySection 
+              areas={developmentAreas}
+              config={{
+                title: reportStructure.sections.development_opportunities.title,
+                description: reportStructure.sections.development_opportunities.description,
+                minThreshold: reportStructure.sections.development_opportunities.minThreshold,
+                maxThreshold: reportStructure.sections.development_opportunities.maxThreshold,
+                recommendationLevel: reportStructure.sections.development_opportunities.recommendationLevel,
+                categories: reportStructure.sections.development_opportunities.categories
+              }}
+            >
+              <DevelopmentOpportunities opportunities={developmentAreas} />
+            </PrioritySection>
+          )}
+
+          {/* Implementation Strategy - Using report structure */}
+          {reportStructure?.sections?.implementation_strategy && recommendations && recommendations.sections && recommendations.sections.length > 0 && (
             <div className="page-break-inside-avoid">
-              <RecommendationsSection recommendations={recommendations} />
+              <RecommendationsSection 
+                recommendations={recommendations} 
+                title={reportStructure.sections.implementation_strategy.title}
+                description={reportStructure.sections.implementation_strategy.description}
+              />
             </div>
           )}
         </div>
       </div>
 
-      {/* Direct Action Buttons (without preview) */}
+      {/* Direct Action Buttons */}
       <div className="px-5 py-4 bg-gray-50 border-t border-gray-100 print:hidden">
         <div className="flex flex-col sm:flex-row gap-2">
           <button

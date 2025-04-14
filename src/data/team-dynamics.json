@@ -39,7 +39,11 @@
           "title": "Must be 'Specific Recommendations'",
           "icon": "Must be a valid icon name",
           "style": {
-            "required": ["border", "hoverBg", "iconColor"],
+            "required": [
+              "border",
+              "hoverBg",
+              "iconColor"
+            ],
             "format": "Must use Tailwind CSS classes"
           }
         },
@@ -47,7 +51,11 @@
           "title": "Must be 'General Recommendations'",
           "icon": "Must be a valid icon name",
           "style": {
-            "required": ["border", "hoverBg", "iconColor"],
+            "required": [
+              "border",
+              "hoverBg",
+              "iconColor"
+            ],
             "format": "Must use Tailwind CSS classes"
           }
         }
@@ -274,40 +282,40 @@
         "number": 1,
         "type": "single_choice",
         "options": [
-          { 
-            "text": "${Replace with option text}", 
+          {
+            "text": "${Replace with option text}",
             "scores": {
-              "Category Name": 1, 
+              "Category Name": 1,
               "${primaryCategory}": 1
-            } 
+            }
           },
-          { 
-            "text": "${Replace with option text}", 
+          {
+            "text": "${Replace with option text}",
             "scores": {
-              "Category Name": 2, 
+              "Category Name": 2,
               "${primaryCategory}": 2
-            } 
+            }
           },
-          { 
-            "text": "${Replace with option text}", 
+          {
+            "text": "${Replace with option text}",
             "scores": {
-              "Category Name": 3, 
+              "Category Name": 3,
               "${primaryCategory}": 3
-            } 
+            }
           },
-          { 
-            "text": "${Replace with option text}", 
+          {
+            "text": "${Replace with option text}",
             "scores": {
-              "Category Name": 4, 
+              "Category Name": 4,
               "${primaryCategory}": 4
-            } 
+            }
           },
-          { 
-            "text": "${Replace with option text}", 
+          {
+            "text": "${Replace with option text}",
             "scores": {
-              "Category Name": 5, 
+              "Category Name": 5,
               "${primaryCategory}": 5
-            } 
+            }
           }
         ]
       }
@@ -554,18 +562,53 @@
     },
     "thresholds": {
       "needLevel": [
-        { "threshold": 75, "label": "very-high" },
-        { "threshold": 60, "label": "high" },
-        { "threshold": 40, "label": "medium" },
-        { "threshold": 25, "label": "low" },
-        { "threshold": 0, "label": "very-low" }
+        {
+          "threshold": 75,
+          "label": "very-high"
+        },
+        {
+          "threshold": 60,
+          "label": "high"
+        },
+        {
+          "threshold": 40,
+          "label": "medium"
+        },
+        {
+          "threshold": 25,
+          "label": "low"
+        },
+        {
+          "threshold": 0,
+          "label": "very-low"
+        }
       ],
       "recommendationLevel": [
-        { "threshold": 75, "label": "very-high", "displayText": "High Priority" },
-        { "threshold": 60, "label": "high", "displayText": "Medium Priority" },
-        { "threshold": 40, "label": "medium", "displayText": "Moderate Priority" },
-        { "threshold": 25, "label": "low", "displayText": "Low Priority" },
-        { "threshold": 0, "label": "very-low", "displayText": "Very Low Priority" }
+        {
+          "threshold": 75,
+          "label": "very-high",
+          "displayText": "High Priority"
+        },
+        {
+          "threshold": 60,
+          "label": "high",
+          "displayText": "Medium Priority"
+        },
+        {
+          "threshold": 40,
+          "label": "medium",
+          "displayText": "Moderate Priority"
+        },
+        {
+          "threshold": 25,
+          "label": "low",
+          "displayText": "Low Priority"
+        },
+        {
+          "threshold": 0,
+          "label": "very-low",
+          "displayText": "Very Low Priority"
+        }
       ]
     },
     "summaries": [
@@ -597,5 +640,61 @@
     "nextSteps": "",
     "buttonText": "",
     "buttonLink": ""
+  },
+  "thresholds": {
+    "needLevel": [
+      {
+        "threshold": 75,
+        "label": "very-high",
+        "displayText": "There is a very high chance your team could benefit from this training"
+      },
+      {
+        "threshold": 60,
+        "label": "high",
+        "displayText": "There is a high chance your team could benefit from this training"
+      },
+      {
+        "threshold": 40,
+        "label": "medium",
+        "displayText": "There is a moderate chance your team could benefit from this training"
+      },
+      {
+        "threshold": 25,
+        "label": "low",
+        "displayText": "There is a low chance your team could benefit from this training"
+      },
+      {
+        "threshold": 0,
+        "label": "very-low",
+        "displayText": "There is a very low chance your team could benefit from this training"
+      }
+    ],
+    "recommendationLevel": [
+      {
+        "threshold": 75,
+        "label": "very-high",
+        "displayText": "High Priority"
+      },
+      {
+        "threshold": 60,
+        "label": "high",
+        "displayText": "Medium Priority"
+      },
+      {
+        "threshold": 40,
+        "label": "medium",
+        "displayText": "Moderate Priority"
+      },
+      {
+        "threshold": 25,
+        "label": "low",
+        "displayText": "Low Priority"
+      },
+      {
+        "threshold": 0,
+        "label": "very-low",
+        "displayText": "Very Low Priority"
+      }
+    ]
   }
-} 
+}

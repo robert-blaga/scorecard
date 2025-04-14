@@ -2,12 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CalendarCheck, Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SpecificRecommendations from './SpecificRecommendations';
 
 /**
  * A component to display scorecard assessment results
  */
 const ScorecardResults = ({ results, report, scorecardId, scorecard }) => {
+  // Add debug logging
+  console.log('ScorecardResults props:', {
+    results,
+    report,
+    scorecardId,
+    scorecard
+  });
+
   if (!results || !report) {
+    console.log('Missing results or report');
     return (
       <div className="p-6 bg-gray-50 rounded-lg shadow-sm">
         <p className="text-gray-400 text-center">No results to display</p>
@@ -60,7 +70,7 @@ const ScorecardResults = ({ results, report, scorecardId, scorecard }) => {
 
   // Get human-readable recommendation level
   const getRecommendationText = (level) => {
-    const reportStructure = scorecard?.scoring?.report_structure;
+    const reportStructure = scorecard?.basic_scoring?.report_structure;
     if (reportStructure?.thresholds?.recommendationLevel) {
       const levelConfig = reportStructure.thresholds.recommendationLevel.find(
         item => item.label === level
@@ -88,7 +98,7 @@ const ScorecardResults = ({ results, report, scorecardId, scorecard }) => {
   };
 
   const getSectionTitle = (section) => {
-    const reportStructure = scorecard?.scoring?.report_structure;
+    const reportStructure = scorecard?.basic_scoring?.report_structure;
     if (reportStructure?.results_sections?.[section]?.title) {
       return reportStructure.results_sections[section].title;
     }
@@ -97,7 +107,7 @@ const ScorecardResults = ({ results, report, scorecardId, scorecard }) => {
     switch (section) {
       case 'specific_recommendations':
       case 'specificRecommendations':
-        return 'Style-Specific Recommendations';
+        return 'Specific Recommendations';
       case 'general_recommendations':
       case 'baseRecommendations':
         return 'General Recommendations';
@@ -107,7 +117,7 @@ const ScorecardResults = ({ results, report, scorecardId, scorecard }) => {
   };
 
   const getSectionIcon = (section) => {
-    const reportStructure = scorecard?.scoring?.report_structure;
+    const reportStructure = scorecard?.basic_scoring?.report_structure;
     if (reportStructure?.results_sections?.[section]?.icon) {
       return reportStructure.results_sections[section].icon;
     }
@@ -126,7 +136,7 @@ const ScorecardResults = ({ results, report, scorecardId, scorecard }) => {
   };
 
   const getSectionStyle = (section) => {
-    const reportStructure = scorecard?.scoring?.report_structure;
+    const reportStructure = scorecard?.basic_scoring?.report_structure;
     if (reportStructure?.results_sections?.[section]?.style) {
       return reportStructure.results_sections[section].style;
     }
@@ -229,29 +239,14 @@ const ScorecardResults = ({ results, report, scorecardId, scorecard }) => {
           
           {/* Specific Recommendations */}
           {report.specificRecommendations && report.specificRecommendations.length > 0 ? (
-            <div className="mt-4"> 
-              <h4 className="text-sm text-gray-600 font-medium mb-2">
-                {getSectionTitle('specificRecommendations')}
-              </h4>
-              <div className="space-y-2">
-                {report.specificRecommendations.map((recommendation, index) => {
-                  const styles = getSectionStyle('specificRecommendations');
-                  const iconName = getSectionIcon('specificRecommendations');
-                  
-                  return (
-                    <div 
-                      key={`specific-${index}`} 
-                      className={`flex items-start p-3 rounded-md border ${styles.border} bg-white ${styles.hoverBg} transition-colors duration-200`}
-                    >
-                      <div className={`flex-shrink-0 h-5 w-5 ${styles.iconColor}`}>
-                        {renderIcon(iconName)}
-                      </div>
-                      <p className="ml-3 text-sm text-gray-600">{recommendation}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+            <>
+              {console.log('Passing recommendations to SpecificRecommendations:', report.specificRecommendations)}
+              <SpecificRecommendations 
+                recommendations={report.specificRecommendations}
+                title={getSectionTitle('specificRecommendations')}
+                styles={getSectionStyle('specificRecommendations')}
+              />
+            </>
           ) : (
             <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
               <p className="text-sm text-gray-600">No specific recommendations available.</p>
@@ -337,7 +332,7 @@ ScorecardResults.propTypes = {
   }),
   scorecardId: PropTypes.string.isRequired,
   scorecard: PropTypes.shape({
-    scoring: PropTypes.shape({
+    basic_scoring: PropTypes.shape({
       report_structure: PropTypes.shape({
         recommendationLevels: PropTypes.object,
         sections: PropTypes.object,

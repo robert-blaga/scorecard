@@ -130,7 +130,7 @@ export default function SurveyScreen() {
 
         <div className="text-center mb-8">
           <h1 className="text-3xl font-serif text-gray-900 mb-2">
-            {currentQuestion.category}
+            {scorecard.scorecardInfo.title}
           </h1>
           <p className="text-gray-600">
             Question {currentQuestionIndex + 1} of {questions.length}

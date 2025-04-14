@@ -37,7 +37,7 @@ export function calculateScores(responses, scorecard) {
   });
 
   // Get primary category from scoring config
-  const primaryCategory = scorecard.scoring?.primaryCategory;
+  const primaryCategory = scorecard.basic_scoring?.primaryCategory;
   
   if (!primaryCategory) {
     return { error: 'No primary scoring category defined in scorecard' };
@@ -52,13 +52,13 @@ export function calculateScores(responses, scorecard) {
   const percentage = (scores[primaryCategory] / maxPossible) * 100;
 
   // Get need level based on thresholds
-  const needLevel = getNeedLevel(percentage, scorecard.scoring.thresholds.needLevel);
+  const needLevel = getNeedLevel(percentage, scorecard.basic_scoring.thresholds.needLevel);
   
   // Get recommendation level
   const recommendationLevel = getRecommendationLevel(percentage, scorecard);
 
   // Get summary text
-  const summary = getSummary(percentage, scorecard.scoring.summaries);
+  const summary = getSummary(percentage, scorecard.basic_scoring.summaries);
 
   const result = {
     rawScores: scores,
@@ -88,13 +88,13 @@ function interpretScores(scores, scorecard) {
   const interpretation = {};
   
   // Check if scorecard has scoring configuration
-  if (!scorecard.scoring) {
+  if (!scorecard.basic_scoring) {
     // Generate generic interpretation if no scoring configuration exists
     return generateGenericInterpretation(scores, scorecard);
   }
   
   // Get primary category from scoring config or use first score category as fallback
-  const primaryCategory = scorecard.scoring.primaryCategory || Object.keys(scores)[0];
+  const primaryCategory = scorecard.basic_scoring.primaryCategory || Object.keys(scores)[0];
   
   // If the primary category exists in scores
   if (scores[primaryCategory]) {
@@ -109,13 +109,13 @@ function interpretScores(scores, scorecard) {
     };
     
     // Add need level if thresholds are defined
-    if (scorecard.scoring.thresholds && scorecard.scoring.thresholds.needLevel) {
-      interpretation[primaryCategory].needLevel = getNeedLevel(percentage, scorecard.scoring.thresholds.needLevel);
+    if (scorecard.basic_scoring.thresholds && scorecard.basic_scoring.thresholds.needLevel) {
+      interpretation[primaryCategory].needLevel = getNeedLevel(percentage, scorecard.basic_scoring.thresholds.needLevel);
     }
     
     // Add summary if summaries are defined
-    if (scorecard.scoring.summaries) {
-      interpretation[primaryCategory].summary = getSummary(percentage, scorecard.scoring.summaries);
+    if (scorecard.basic_scoring.summaries) {
+      interpretation[primaryCategory].summary = getSummary(percentage, scorecard.basic_scoring.summaries);
     }
   }
   
@@ -153,8 +153,8 @@ function generateGenericInterpretation(scores, scorecard) {
  */
 function calculateMaxPossibleScore(scorecard, category) {
   // Use the configured max score if available
-  if (scorecard.scoring && scorecard.scoring.maxScorePerQuestion) {
-    return scorecard.questions.items.length * scorecard.scoring.maxScorePerQuestion;
+  if (scorecard.basic_scoring && scorecard.basic_scoring.maxScorePerQuestion) {
+    return scorecard.questions.items.length * scorecard.basic_scoring.maxScorePerQuestion;
   }
   
   // Otherwise calculate it by finding the max value for each question
@@ -181,8 +181,8 @@ function calculateMaxPossibleScore(scorecard, category) {
  */
 function getRecommendationLevel(percentage, scorecard) {
   // Check if scorecard has recommendation thresholds
-  if (scorecard.scoring?.thresholds?.recommendationLevel) {
-    for (const threshold of scorecard.scoring.thresholds.recommendationLevel) {
+  if (scorecard.basic_scoring?.thresholds?.recommendationLevel) {
+    for (const threshold of scorecard.basic_scoring.thresholds.recommendationLevel) {
       if (percentage >= threshold.threshold) {
         return threshold.label;
       }
@@ -206,7 +206,15 @@ function getNeedLevel(percentage, needLevelThresholds) {
   // Find the appropriate threshold for the percentage
   for (const threshold of needLevelThresholds) {
     if (percentage >= threshold.threshold) {
-      return threshold.label;
+      // If the label is a full sentence, extract the need level
+      const label = threshold.label;
+      if (label.includes('very high')) return 'very-high';
+      if (label.includes('high')) return 'high';
+      if (label.includes('moderate')) return 'medium';
+      if (label.includes('low')) return 'low';
+      if (label.includes('very low')) return 'very-low';
+      // If it's already in the correct format, return it as is
+      return label;
     }
   }
   
@@ -246,10 +254,17 @@ function getSummary(percentage, summaries) {
  */
 export function generateReport(assessmentResults, scorecard) {
   if (!assessmentResults || !scorecard) {
+    console.error('generateReport: Invalid assessment results or scorecard');
     return { error: 'Invalid assessment results or scorecard' };
   }
   
   const { rawScores, interpretation, recommendationLevel } = assessmentResults;
+  
+  console.log('generateReport: Starting report generation', {
+    scorecardId: scorecard.id,
+    interpretation,
+    recommendationLevel
+  });
   
   // Base report structure
   const report = {
@@ -262,25 +277,50 @@ export function generateReport(assessmentResults, scorecard) {
   };
   
   // Get primary category from scoring config or use first score category as fallback
-  const primaryCategory = scorecard.scoring?.primaryCategory || Object.keys(rawScores)[0];
+  const primaryCategory = scorecard.basic_scoring?.primaryCategory || Object.keys(rawScores)[0];
+  console.log('generateReport: Primary category', primaryCategory);
   
   // Get recommendations based on scoring configuration if available
-  if (scorecard.scoring && scorecard.scoring.recommendations) {
+  if (scorecard.basic_scoring && scorecard.basic_scoring.recommendations) {
     const needLevel = interpretation[primaryCategory]?.needLevel;
+    console.log('generateReport: Need level', needLevel);
     
-    if (needLevel && scorecard.scoring.recommendations[needLevel]) {
+    // Find matching recommendation level (case insensitive)
+    const matchingLevel = Object.keys(scorecard.basic_scoring.recommendations).find(
+      key => key.toLowerCase() === (needLevel?.toLowerCase() || '')
+    );
+    
+    console.log('generateReport: Matching recommendation level', matchingLevel);
+    
+    if (matchingLevel) {
       // Set base recommendations
-      report.baseRecommendations = scorecard.scoring.recommendations.base || [];
+      report.baseRecommendations = scorecard.basic_scoring.recommendations.base || [];
+      console.log('generateReport: Base recommendations', report.baseRecommendations);
+      
       // Set need-level specific recommendations
-      report.specificRecommendations = scorecard.scoring.recommendations[needLevel];
+      const specificRecs = scorecard.basic_scoring.recommendations[matchingLevel];
+      console.log('generateReport: Raw specific recommendations', specificRecs);
+      console.log('generateReport: Specific recommendations type', typeof specificRecs);
+      console.log('generateReport: Is array?', Array.isArray(specificRecs));
+      
+      // Handle both string and array recommendations
+      report.specificRecommendations = Array.isArray(specificRecs) ? specificRecs : [specificRecs];
+      console.log('generateReport: Processed specific recommendations', report.specificRecommendations);
     } else {
+      console.log('generateReport: No specific recommendations found for need level', needLevel);
       // Fallback to generic recommendations as base recommendations
       report.baseRecommendations = getGenericRecommendations(scorecard);
     }
   } else {
+    console.log('generateReport: No scoring configuration found');
     // Use generic recommendations as base recommendations if no configuration exists
     report.baseRecommendations = getGenericRecommendations(scorecard);
   }
+  
+  console.log('generateReport: Final report structure', {
+    baseRecommendations: report.baseRecommendations,
+    specificRecommendations: report.specificRecommendations
+  });
   
   return report;
 }
@@ -293,8 +333,8 @@ export function generateReport(assessmentResults, scorecard) {
  */
 function getGenericRecommendations(scorecard) {
   // Check if scorecard has base recommendations
-  if (scorecard.scoring?.recommendations?.base) {
-    return scorecard.scoring.recommendations.base;
+  if (scorecard.basic_scoring?.recommendations?.base) {
+    return scorecard.basic_scoring.recommendations.base;
   }
 
   // Fallback to default recommendations if no configuration exists
@@ -303,4 +343,18 @@ function getGenericRecommendations(scorecard) {
     'Identify specific areas that scored highest for targeted improvement',
     'Consult with our training specialists for customized recommendations'
   ];
-} 
+}
+
+export const DEFAULT_THRESHOLDS = {
+  excellent: 75,
+  good: 60,
+  average: 40,
+  needsImprovement: 25,
+  poor: 0
+};
+
+export const DEVELOPMENT_THRESHOLDS = {
+  high: 25,
+  medium: 40,
+  low: 70
+}; 

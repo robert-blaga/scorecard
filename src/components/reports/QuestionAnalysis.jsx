@@ -86,17 +86,6 @@ const QuestionAnalysis = ({ questions, answers, scorecard, maxScorePerQuestion }
                   <p className="text-sm text-gray-700">{analysis.idealState}</p>
                 </div>
               </div>
-
-              {/* Recommended Improvement */}
-              <div className="p-3 bg-white rounded-md border border-gray-200">
-                <div className="flex items-center mb-2">
-                  <svg className="w-4 h-4 text-deep-purple mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
-                  <span className="text-xs font-medium text-gray-600">Recommended Improvement</span>
-                </div>
-                <p className="text-sm text-gray-600 pl-6">{analysis.recommendation}</p>
-              </div>
             </div>
           );
         })}

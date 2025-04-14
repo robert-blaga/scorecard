@@ -83,7 +83,7 @@ export function AuthProvider({ children }) {
 
         // Admin credentials
         const validAdmins = {
-          'admin@brainiup.com': 'admin'
+          'admin@brainiup.com': 'Enigma3579dol!@#'
         };
 
         // Check admin credentials

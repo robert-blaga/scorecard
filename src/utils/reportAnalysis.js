@@ -13,10 +13,10 @@ export const getQuestionAnalysis = (question, userAnswer, scorecard, maxScore) =
     // If userAnswer is an object with category scores
     else if (typeof userAnswer === 'object' && userAnswer !== null) {
       // Try to find the option with the matching score
-      const score = userAnswer[scorecard.scoring.primaryCategory];
+      const score = userAnswer[scorecard.basic_scoring.primaryCategory];
       if (score !== undefined) {
         selectedOption = question.options.find(option => 
-          option.scores?.[scorecard.scoring.primaryCategory] === score
+          option.scores?.[scorecard.basic_scoring.primaryCategory] === score
         );
         
         // If no matching option found, use the first option with this score as fallback
@@ -29,23 +29,23 @@ export const getQuestionAnalysis = (question, userAnswer, scorecard, maxScore) =
 
   // Find the ideal option (lowest score for inverted scale where 1 is best, 5 is worst)
   const idealOption = question.options.reduce((best, current) => {
-    const currentScore = current.scores?.[scorecard.scoring.primaryCategory] || 0;
-    const bestScore = best.scores?.[scorecard.scoring.primaryCategory] || 0;
+    const currentScore = current.scores?.[scorecard.basic_scoring.primaryCategory] || 0;
+    const bestScore = best.scores?.[scorecard.basic_scoring.primaryCategory] || 0;
     return currentScore < bestScore ? current : best;
   }, question.options[0]);
 
   // Get current score
   let currentScore;
-  if (selectedOption?.scores?.[scorecard.scoring.primaryCategory] !== undefined) {
-    currentScore = selectedOption.scores[scorecard.scoring.primaryCategory];
-  } else if (typeof userAnswer === 'object' && userAnswer?.[scorecard.scoring.primaryCategory] !== undefined) {
-    currentScore = Number(userAnswer[scorecard.scoring.primaryCategory]);
+  if (selectedOption?.scores?.[scorecard.basic_scoring.primaryCategory] !== undefined) {
+    currentScore = selectedOption.scores[scorecard.basic_scoring.primaryCategory];
+  } else if (typeof userAnswer === 'object' && userAnswer?.[scorecard.basic_scoring.primaryCategory] !== undefined) {
+    currentScore = Number(userAnswer[scorecard.basic_scoring.primaryCategory]);
   } else {
     currentScore = maxScore; // Default to max (worst) if no valid score is found
   }
 
   // Get ideal score
-  const idealScore = idealOption.scores?.[scorecard.scoring.primaryCategory] || 1; // Ideal is minimum (best)
+  const idealScore = idealOption.scores?.[scorecard.basic_scoring.primaryCategory] || 1; // Ideal is minimum (best)
 
   // For an inverted scale (where lower is better):
   // 1. Calculate total possible improvement range (maxScore - idealScore)
@@ -67,33 +67,33 @@ export const getQuestionAnalysis = (question, userAnswer, scorecard, maxScore) =
 
   // Get recommendations based on gap severity
   const getRecommendations = () => {
-    if (!scorecard.scoring?.questionRecommendations?.[question.category]) {
-      return 'No specific recommendations available for this category';
+    if (!scorecard.basic_scoring?.recommendations) {
+      return 'No recommendations available for this assessment';
     }
 
-    const recommendations = scorecard.scoring.questionRecommendations[question.category];
-    let recs;
-    
-    // Higher gap percentage = more improvement needed
+    // Get recommendations based on gap percentage
+    let recommendationLevel;
     if (gapPercentage >= 60) {
-      recs = recommendations.high;
+      recommendationLevel = 'high';
     } else if (gapPercentage >= 30) {
-      recs = recommendations.medium;
+      recommendationLevel = 'medium';
     } else {
-      recs = recommendations.low;
+      recommendationLevel = 'low';
     }
 
-    // Ensure we return a string
-    if (!recs) {
-      return 'No specific recommendations available for this gap level';
-    }
+    const recommendations = scorecard.basic_scoring.recommendations[recommendationLevel];
     
+    // If no specific recommendations found, use base recommendations
+    if (!recommendations && scorecard.basic_scoring.recommendations.base) {
+      return scorecard.basic_scoring.recommendations.base[0];
+    }
+
     // Format recommendations to replace underscores with spaces
-    if (Array.isArray(recs)) {
-      return recs.map(rec => typeof rec === 'string' ? rec.replace(/_/g, ' ') : rec).join(', ');
+    if (Array.isArray(recommendations)) {
+      return recommendations[0].replace(/_/g, ' ');
     }
     
-    return typeof recs === 'string' ? recs.replace(/_/g, ' ') : recs;
+    return recommendations || 'No specific recommendations available for this gap level';
   };
 
   // Define gap severity labels that will be more understandable to users
