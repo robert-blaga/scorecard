@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { supabase } from '../lib/supabase';
-import SingleChoice from '../components/survey-items/SingleChoice';
-import { getScorecard } from '../utils/scorecardUtils';
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import SingleChoice from "../components/survey-items/SingleChoice";
+import { getScorecard } from "../utils/scorecardUtils";
 
 // Storage keys
-const SURVEY_ANSWERS_KEY = 'survey_answers';
-const SURVEY_CURRENT_QUESTION_KEY = 'survey_current_question';
+const SURVEY_ANSWERS_KEY = "survey_answers";
+const SURVEY_CURRENT_QUESTION_KEY = "survey_current_question";
 
 export default function SurveyScreen() {
   const navigate = useNavigate();
@@ -14,12 +13,14 @@ export default function SurveyScreen() {
   const [scorecard, setScorecard] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(() => {
-    const saved = localStorage.getItem(`${scorecardId}_${SURVEY_CURRENT_QUESTION_KEY}`);
+    const saved = localStorage.getItem(
+      `${scorecardId}_${SURVEY_CURRENT_QUESTION_KEY}`
+    );
     return saved ? parseInt(saved, 10) : 0;
   });
-  
+
   const [answers, setAnswers] = useState(() => {
     const saved = localStorage.getItem(`${scorecardId}_${SURVEY_ANSWERS_KEY}`);
     return saved ? JSON.parse(saved) : {};
@@ -28,14 +29,20 @@ export default function SurveyScreen() {
   // Save answers whenever they change
   useEffect(() => {
     if (scorecardId) {
-      localStorage.setItem(`${scorecardId}_${SURVEY_ANSWERS_KEY}`, JSON.stringify(answers));
+      localStorage.setItem(
+        `${scorecardId}_${SURVEY_ANSWERS_KEY}`,
+        JSON.stringify(answers)
+      );
     }
   }, [answers, scorecardId]);
 
   // Save current question index
   useEffect(() => {
     if (scorecardId) {
-      localStorage.setItem(`${scorecardId}_${SURVEY_CURRENT_QUESTION_KEY}`, currentQuestionIndex.toString());
+      localStorage.setItem(
+        `${scorecardId}_${SURVEY_CURRENT_QUESTION_KEY}`,
+        currentQuestionIndex.toString()
+      );
     }
   }, [currentQuestionIndex, scorecardId]);
 
@@ -49,8 +56,8 @@ export default function SurveyScreen() {
         }
         setLoading(false);
       } catch (error) {
-        console.error('Error loading scorecard:', error);
-        setError('Failed to load scorecard');
+        console.error("Error loading scorecard:", error);
+        setError("Failed to load scorecard");
         setLoading(false);
       }
     };
@@ -59,34 +66,40 @@ export default function SurveyScreen() {
   }, [scorecardId]);
 
   const handleSelect = (questionId, value) => {
-    setAnswers(prev => {
+    console.log(`Selected answer for ${questionId}:`, value);
+    setAnswers((prev) => {
       const newAnswers = {
         ...prev,
-        [questionId]: value
+        [questionId]: value,
       };
+      console.log("Updated answers:", newAnswers);
       return newAnswers;
     });
   };
 
   const handleNext = async () => {
     if (currentQuestionIndex < scorecard.questions.items.length - 1) {
-      setCurrentQuestionIndex(prev => prev + 1);
+      setCurrentQuestionIndex((prev) => prev + 1);
     } else {
       try {
         // Clear stored survey data
         localStorage.removeItem(`${scorecardId}_${SURVEY_ANSWERS_KEY}`);
-        localStorage.removeItem(`${scorecardId}_${SURVEY_CURRENT_QUESTION_KEY}`);
-        
+        localStorage.removeItem(
+          `${scorecardId}_${SURVEY_CURRENT_QUESTION_KEY}`
+        );
+
+        console.log("Final answers being passed to results screen:", answers);
+
         // Navigate to results screen with the answers
-        navigate(`/scorecard/${scorecardId}`, { 
+        navigate(`/scorecard/${scorecardId}`, {
           replace: true,
-          state: { 
-            answers
-          }
+          state: {
+            answers,
+          },
         });
       } catch (error) {
-        console.error('Error in submission process:', error);
-        setError('Failed to complete submission. Please try again.');
+        console.error("Error in submission process:", error);
+        setError("Failed to complete submission. Please try again.");
       }
     }
   };
@@ -112,10 +125,10 @@ export default function SurveyScreen() {
   const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-1 items-center">
       {/* Progress bar */}
       <div className="fixed top-0 left-0 w-full h-2 bg-gray-200">
-        <div 
+        <div
           className="h-full bg-deep-purple transition-all duration-300 ease-in-out"
           style={{ width: `${progress}%` }}
         />
@@ -149,12 +162,13 @@ export default function SurveyScreen() {
         {/* Navigation */}
         <div className="flex justify-between">
           <button
-            onClick={() => setCurrentQuestionIndex(prev => prev - 1)}
+            onClick={() => setCurrentQuestionIndex((prev) => prev - 1)}
             disabled={currentQuestionIndex === 0}
             className={`px-6 py-2.5 rounded-lg font-medium transition-colors
-              ${currentQuestionIndex > 0
-                ? 'bg-white text-deep-purple border border-deep-purple hover:bg-deep-purple/5'
-                : 'bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200'
+              ${
+                currentQuestionIndex > 0
+                  ? "bg-white text-deep-purple border border-deep-purple hover:bg-deep-purple/5"
+                  : "bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200"
               }`}
           >
             Back
@@ -163,15 +177,18 @@ export default function SurveyScreen() {
             onClick={handleNext}
             disabled={answers[currentQuestion.id] === undefined}
             className={`px-6 py-2.5 rounded-lg font-medium transition-colors
-              ${answers[currentQuestion.id] !== undefined
-                ? 'bg-deep-purple text-white hover:bg-deep-purple-600'
-                : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+              ${
+                answers[currentQuestion.id] !== undefined
+                  ? "bg-deep-purple text-white hover:bg-deep-purple-600"
+                  : "bg-gray-100 text-gray-400 cursor-not-allowed"
               }`}
           >
-            {currentQuestionIndex === questions.length - 1 ? (scorecard.questions.submitButtonText || 'Finalizează') : 'Next'}
+            {currentQuestionIndex === questions.length - 1
+              ? scorecard.questions.submitButtonText || "Finalizează"
+              : "Next"}
           </button>
         </div>
       </div>
     </div>
   );
-} 
+}

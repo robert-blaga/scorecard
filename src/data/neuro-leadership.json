@@ -1,1221 +1,424 @@
 {
-  "id": "neuro-leadership",
-  "version": "1.0.0",
-  "last_updated": "2024-04-04",
-  "_documentation": {
-    "version_control": "This field tracks the version of the assessment template",
-    "structure_overview": "This template defines the structure for all assessments in the system",
-    "validation_rules": {
-      "required_fields": [
-        "id",
-        "version",
-        "intro",
-        "questions",
-        "scoring",
-        "thankYou"
+    "id": "neuro-leadership-assessment",
+    "version": "1.0.0",
+    "last_updated": "2025-04-17",
+    "intro": {
+      "title": "Would you benefit from Neuro‑Leadership Lab?",
+      "subtitle": "Answer 12 quick questions to find out if a gamified, boardgame‑based Neuro‑Leadership course would enhance your team's leadership effectiveness.",
+      "buttonText": "Start Assessment",
+      "nextRoute": "/survey/neuro-leadership"
+    },
+    "questions": {
+      "items": [
+        {
+          "id": "question-1",
+          "text": "Employees understand how stress and cognitive load impact decision-making and behavior.",
+          "number": 1,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        },
+        {
+          "id": "question-2",
+          "text": "Leaders actively apply techniques that regulate emotions and mental states in challenging situations.",
+          "number": 2,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        },
+        {
+          "id": "question-3",
+          "text": "Team members leverage neuroscience‑based strategies (e.g., reward loops) to maintain motivation and engagement.",
+          "number": 3,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        },
+        {
+          "id": "question-4",
+          "text": "Employees regularly reflect on their own brain patterns to enhance self‑awareness and leadership presence.",
+          "number": 4,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        },
+        {
+          "id": "question-5",
+          "text": "Leaders structure team interactions to optimize cognitive resources and foster learning.",
+          "number": 5,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        },
+        {
+          "id": "question-6",
+          "text": "Teams use brain‑based communication principles (e.g., storytelling, framing) to increase clarity and retention.",
+          "number": 6,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        },
+        {
+          "id": "question-7",
+          "text": "Leaders recognize and mitigate cognitive biases in decision‑making processes.",
+          "number": 7,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        },
+        {
+          "id": "question-8",
+          "text": "Employees apply principles of neuroplasticity to develop new skills and adapt to change.",
+          "number": 8,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        },
+        {
+          "id": "question-9",
+          "text": "Leaders provide feedback in ways that align with how the brain processes rewards and learning.",
+          "number": 9,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        },
+        {
+          "id": "question-10",
+          "text": "Teams incorporate brief brain breaks and mindfulness practices to sustain focus and reduce burnout.",
+          "number": 10,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        },
+        {
+          "id": "question-11",
+          "text": "Leaders model empathy and mirror‑neuron responses to build trust and rapport.",
+          "number": 11,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        },
+        {
+          "id": "question-12",
+          "text": "Employees understand memory and attention techniques to improve knowledge transfer and retention.",
+          "number": 12,
+          "type": "single_choice",
+          "options": [
+            { "text": "Not at all",       "scores": { "neuro_need": 0 } },
+            { "text": "Rarely true",      "scores": { "neuro_need": 1 } },
+            { "text": "Sometimes true",   "scores": { "neuro_need": 2 } },
+            { "text": "Often true",       "scores": { "neuro_need": 3 } },
+            { "text": "Consistently true","scores": { "neuro_need": 4 } }
+          ]
+        }
       ],
-      "question_rules": {
-        "count": "Exactly 12 questions required",
-        "options": "5 options per question required",
-        "scoring": "Scores must range from 1-5, where 1 is most positive",
-        "categories": "Each question must have a category and contribute to primaryCategory"
-      },
-      "recommendation_rules": {
-        "levels": "Must include: very-high, high, medium, low, very-low",
-        "format": "Use lowercase with hyphens for all recommendation levels",
-        "count": "Each level should have 3-5 recommendations"
-      },
-      "threshold_rules": {
-        "values": "Must include thresholds: 75, 60, 40, 25, 0",
-        "labels": "Must use consistent labels: very-high, high, medium, low, very-low",
-        "displayText": "Each threshold must have a user-friendly displayText"
-      },
-      "results_sections": {
-        "required": [
-          "specific_recommendations",
-          "general_recommendations"
+      "submitButtonText": "Submit Assessment",
+      "nextRoute": "/thank-you/neuro-leadership"
+    },
+    "basic_scoring": {
+      "primaryCategory": "neuro_need",
+      "maxScorePerQuestion": 4,
+      "overview_thresholds": {
+        "needPercentage": [
+          { "threshold": 100, "label": "not-needed", "displayText": "Employees consistently demonstrate advanced Neuro‑Leadership practices with minimal gaps." },
+          { "threshold": 85,  "label": "low",        "displayText": "Employees generally apply neuroscience principles but could benefit from reinforcement." },
+          { "threshold": 70,  "label": "medium",     "displayText": "Neuro‑Leadership skills are emerging but inconsistently applied across the organization." },
+          { "threshold": 50,  "label": "high",       "displayText": "There are significant gaps in applying neuroscience insights in leadership." },
+          { "threshold": 25,  "label": "critical",   "displayText": "A widespread lack of brain‑based leadership is impacting team performance." }
         ],
-        "specific_recommendations": {
-          "title": "Must be 'Specific Recommendations'",
-          "icon": "Must be a valid icon name",
-          "style": {
-            "required": [
-              "border",
-              "hoverBg",
-              "iconColor"
-            ],
-            "format": "Must use Tailwind CSS classes"
-          }
-        },
-        "general_recommendations": {
-          "title": "Must be 'General Recommendations'",
-          "icon": "Must be a valid icon name",
-          "style": {
-            "required": [
-              "border",
-              "hoverBg",
-              "iconColor"
-            ],
-            "format": "Must use Tailwind CSS classes"
-          }
-        }
-      }
-    },
-    "best_practices": {
-      "naming": {
-        "categories": "Use Title Case for category names (e.g., 'Stress Management')",
-        "recommendations": "Use lowercase with hyphens for recommendation levels",
-        "ids": "Use kebab-case for IDs (e.g., 'team-performance-metrics')",
-        "results_sections": "Use consistent titles: 'Specific Recommendations' and 'General Recommendations'"
-      },
-      "content": {
-        "questions": "Keep questions clear and concise",
-        "options": "Ensure options are mutually exclusive and cover the full range",
-        "recommendations": "Make recommendations specific and actionable",
-        "results_sections": "Keep section titles consistent across all assessments"
-      },
-      "scoring": {
-        "consistency": "Maintain consistent scoring across all questions",
-        "direction": "1 is always the most positive/desired response",
-        "categories": "Each question should contribute to both its category and primaryCategory"
-      }
-    },
-    "common_pitfalls": [
-      "Avoid duplicate recommendation sections",
-      "Don't mix case styles in recommendation levels",
-      "Ensure all placeholder text is replaced",
-      "Maintain consistent scoring direction",
-      "Don't skip required sections"
-    ],
-    "scorecard_rules": {
-      "required_fields": [
-        "id",
-        "scorecardInfo",
-        "title",
-        "shortDescription",
-        "category",
-        "visibility"
-      ],
-      "format": {
-        "id": "Use kebab-case (e.g., 'agile-leadership-metrics')",
-        "title": "Use Title Case",
-        "category": "Use Title Case",
-        "visibility": "Must be boolean"
-      }
-    },
-    "examples": {
-      "complete_question": {
-        "id": "question-1",
-        "category": "Adaptive Mindset",
-        "text": "How do your leaders typically respond to unexpected changes or disruptions?",
-        "number": 1,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Often resist change and struggle to adapt plans",
-            "scores": {
-              "Adaptive Mindset": 5,
-              "Agile Leadership": 5
-            }
-          },
-          {
-            "text": "Accept change reluctantly but have difficulty adjusting strategies",
-            "scores": {
-              "Adaptive Mindset": 4,
-              "Agile Leadership": 4
-            }
-          },
-          {
-            "text": "Adapt to change adequately but could improve flexibility",
-            "scores": {
-              "Adaptive Mindset": 3,
-              "Agile Leadership": 3
-            }
-          },
-          {
-            "text": "Generally embrace change and adjust plans accordingly",
-            "scores": {
-              "Adaptive Mindset": 2,
-              "Agile Leadership": 2
-            }
-          },
-          {
-            "text": "View change as opportunity and quickly pivot strategies when needed",
-            "scores": {
-              "Adaptive Mindset": 1,
-              "Agile Leadership": 1
-            }
-          }
+        "priorityLevel": [
+          { "threshold": 100, "label": "not-needed", "displayText": "Not needed" },
+          { "threshold": 85,  "label": "low",        "displayText": "Low" },
+          { "threshold": 70,  "label": "medium",     "displayText": "Moderate" },
+          { "threshold": 50,  "label": "high",       "displayText": "High" },
+          { "threshold": 25,  "label": "critical",   "displayText": "Urgent" }
         ]
       },
-      "complete_recommendations": {
-        "base": [
-          "Focus on developing an agile mindset before implementing specific practices",
-          "Build a culture of psychological safety to enable experimentation",
-          "Ensure leaders model the behaviors they wish to see in their teams"
+      "recommendations_summaries": {
+        "summary": [
+          { "threshold": 100, "text": "This Neuro‑Leadership Lab may not be necessary at this time, except for occasional refreshers." },
+          { "threshold": 85,  "text": "Consider using targeted modules to reinforce key neuroscience concepts." },
+          { "threshold": 70,  "text": "A full Neuro‑Leadership Lab workshop would help standardize brain‑based leadership skills." },
+          { "threshold": 50,  "text": "Neuro‑Leadership Lab is highly recommended to address gaps and boost leadership effectiveness." },
+          { "threshold": 25,  "text": "Implement Neuro‑Leadership Lab training urgently to transform leadership culture and performance." }
         ],
-        "very-high": [
-          "Implement a comprehensive agile leadership development program",
-          "Establish regular leadership retrospectives to drive continuous improvement",
-          "Create clear metrics for measuring leadership effectiveness in agility",
-          "Partner leaders with agile coaches for personalized development"
-        ]
-      },
-      "complete_thresholds": {
-        "needLevel": [
+        "recommendations": [
           {
-            "threshold": 75,
-            "label": "very-high",
-            "displayText": "There is a very high chance your team could benefit from agile leadership training"
+            "threshold": 100,
+            "recommendations": [
+              "Offer advanced neuroscience topic sessions for experienced leaders.",
+              "Encourage peer mentoring on brain‑based leadership strategies.",
+              "Develop microlearning refreshers on Neuro‑Leadership principles.",
+              "Monitor leadership metrics to sustain neuroscience application."
+            ]
           },
           {
-            "threshold": 60,
-            "label": "high",
-            "displayText": "There is a high chance your team could benefit from agile leadership training"
-          }
-        ]
-      },
-      "complete_results_sections": {
-        "specific_recommendations": {
-          "title": "Specific Recommendations",
-          "icon": "Compass",
-          "style": {
-            "border": "border-blue-200",
-            "hoverBg": "hover:bg-blue-50",
-            "iconColor": "text-blue-600"
-          }
-        },
-        "general_recommendations": {
-          "title": "General Recommendations",
-          "icon": "CalendarCheck",
-          "style": {
-            "border": "border-gray-200",
-            "hoverBg": "hover:bg-gray-100",
-            "iconColor": "text-gray-600"
-          }
-        }
-      },
-      "complete_scorecard": {
-        "id": "agile-leadership-metrics",
-        "scorecardInfo": {
-          "title": "Agile Leadership Metrics",
-          "shortDescription": "Evaluate your organization's agile leadership capabilities and identify improvement opportunities",
-          "category": "Leadership Development",
-          "visibility": true
-        }
-      }
-    },
-    "update_instructions": {
-      "new_scorecard": "1. Copy the complete_scorecard example. 2. Update all fields with your specific values. 3. Ensure the id is unique and in kebab-case. 4. Add the scorecard to the scorecards array.",
-      "update_scorecard": "1. Locate the existing scorecard in the scorecards array. 2. Update the relevant fields while maintaining the structure. 3. Ensure all required fields are present. 4. Verify the id remains unchanged.",
-      "validation": "After creating or updating a scorecard, verify: 1. All required fields are present. 2. The id is unique and properly formatted. 3. The title and category use Title Case. 4. The visibility field is a boolean."
-    }
-  },
-  "sync_test": {
-    "version": "1.0.2",
-    "timestamp": "2024-04-04",
-    "description": "Final sync test",
-    "status": "active",
-    "test_nested": {
-      "field1": "value1",
-      "field2": "value2"
-    }
-  },
-  "test_sync": "This field should be added to all JSONs",
-  "_setup_instructions": "IMPORTANT SETUP INSTRUCTIONS: 1. Replace all placeholder values marked with ${...}. 2. For each question in your assessment, add a corresponding category in questionRecommendations. 3. Ensure primaryCategory is set to your main scoring category. 4. Use the question's category name exactly as it appears in the questions section. 5. Each question should contribute to both its own category score and the primaryCategory score. 6. The paths in nextRoute should include the assessment ID (e.g., '/survey/your-assessment-id'). 7. Remove this _setup_instructions field when done.",
-  "_question_standardization": "QUESTION STANDARDIZATION RULES: 1. All assessments must have exactly 12 questions. 2. All questions must be in English. 3. Question scoring follows this pattern: a) Each question has 5 options. b) Options are scored from 1 to 5, where 1 is the most positive/desired response and 5 is the least positive/desired response. c) Each option contributes to both its specific category score and the primaryCategory score. d) The scoring should be consistent across all questions in the assessment.",
-  "intro": {
-    "title": "Neuro-Leadership Readiness Assessment",
-    "subtitle": "Evaluate if your leadership team would benefit from neuroscience-based leadership training",
-    "instructions": {
-      "title": "How to Complete This Assessment",
-      "steps": [
-        "Answer each question based on your observations of leadership behaviors",
-        "Consider patterns across your entire leadership team",
-        "Focus on how leaders handle stress, decision-making, and team dynamics",
-        "Select the option that best describes typical leadership approaches"
-      ]
-    },
-    "columns": [
-      {
-        "title": "Neuro-Leadership Framework",
-        "content": "Applying neuroscience principles to enhance leadership effectiveness and team performance"
-      },
-      {
-        "title": "Assessment Areas",
-        "points": [
-          {
-            "icon": "brain",
-            "text": "Cognitive Leadership",
-            "description": "How leaders approach decision-making and problem-solving"
+            "threshold": 85,
+            "recommendations": [
+              "Run focused Neuro‑Leadership Lab modules for teams needing reinforcement.",
+              "Integrate neuroscience concepts into leadership development programs.",
+              "Provide one‑on‑one coaching on brain‑based decision‑making.",
+              "Include Neuro‑Leadership topics in performance reviews."
+            ]
           },
           {
-            "icon": "heart",
-            "text": "Emotional Intelligence",
-            "description": "How leaders manage emotions and relate to others"
+            "threshold": 70,
+            "recommendations": [
+              "Schedule full Neuro‑Leadership Lab workshops for key leadership cohorts.",
+              "Build a common neuroscience vocabulary into internal guidelines.",
+              "Incorporate brain‑based techniques in team meetings.",
+              "Facilitate follow‑up sessions to reinforce learning."
+            ]
           },
           {
-            "icon": "users",
-            "text": "Social Dynamics",
-            "description": "How leaders build and maintain team relationships"
+            "threshold": 50,
+            "recommendations": [
+              "Launch a company‑wide Neuro‑Leadership Lab initiative.",
+              "Pair training with coaching for managers and team leads.",
+              "Create internal resources on brain function and leadership.",
+              "Embed Neuro‑Leadership practices in onboarding and performance frameworks."
+            ]
           },
           {
-            "icon": "lightbulb",
-            "text": "Adaptive Thinking",
-            "description": "How leaders handle change and foster innovation"
+            "threshold": 25,
+            "recommendations": [
+              "Implement Neuro‑Leadership Lab as foundational training across the organization.",
+              "Facilitate small‑group neuroscience workshops.",
+              "Assign Neuro‑Leadership champions to drive adoption.",
+              "Align training outcomes with behavior and performance metrics."
+            ]
           }
         ]
       }
-    ],
-    "consentText": "I understand that this assessment will help determine if neuro-leadership training would benefit our leadership team",
-    "buttonText": "Start Assessment",
-    "nextRoute": "/survey/neuro-leadership"
-  },
-  "questions": {
-    "items": [
-      {
-        "id": "question-1",
-        "category": "Stress Management",
-        "text": "How do your leaders typically handle high-pressure situations?",
-        "number": 1,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Often become visibly stressed and transfer pressure to teams",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Sometimes struggle to maintain composure under pressure",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Handle pressure adequately but could improve responses",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Generally maintain calm but occasional stress shows",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Consistently demonstrate calm and focused leadership under pressure",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "question-2",
-        "category": "Decision Making",
-        "text": "How do your leaders approach complex decision-making?",
-        "number": 2,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Often make reactive decisions without considering long-term impacts",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Tend to rely heavily on gut feelings without balanced analysis",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Consider multiple factors but could improve systematic thinking",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Usually make well-thought-out decisions with some consultation",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Consistently use structured approaches combining analysis and intuition",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "question-3",
-        "category": "Emotional Intelligence",
-        "text": "How well do your leaders recognize and respond to team members' emotional states?",
-        "number": 3,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Rarely notice or address emotional dynamics in teams",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Sometimes miss important emotional cues or respond inappropriately",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Show moderate awareness but could improve responses",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Generally aware and responsive to emotional needs",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Highly attuned to emotional dynamics and respond effectively",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "question-4",
-        "category": "Change Management",
-        "text": "How do your leaders handle organizational change?",
-        "number": 4,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Struggle to adapt and often resist necessary changes",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Accept change but have difficulty leading others through it",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Manage change adequately but could improve approach",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Generally lead change well with some room for improvement",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Effectively guide teams through change with clear vision",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "question-5",
-        "category": "Learning Mindset",
-        "text": "How open are your leaders to learning and applying new leadership approaches?",
-        "number": 5,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Resistant to new leadership concepts and methods",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Sometimes skeptical of new approaches to leadership",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Open to learning but may not actively seek development",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Generally eager to learn and apply new concepts",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Actively seek and implement new leadership insights",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "question-6",
-        "category": "Team Engagement",
-        "text": "How effectively do your leaders create psychological safety in their teams?",
-        "number": 6,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Teams often feel unsafe expressing concerns or ideas",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Inconsistent in creating safe spaces for open dialogue",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Moderate level of psychological safety in teams",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Generally good at fostering open communication",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Excellent at creating environments of trust and safety",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "question-7",
-        "category": "Innovation",
-        "text": "How do your leaders approach innovation and creative thinking?",
-        "number": 7,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Tend to stick to traditional approaches only",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Sometimes consider new ideas but rarely implement them",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Open to innovation but could be more proactive",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Generally support and encourage creative thinking",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Actively foster and implement innovative approaches",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "question-8",
-        "category": "Previous Training",
-        "text": "Has your leadership team received any neuroscience-based leadership training before?",
-        "number": 8,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "No previous exposure to neuroscience-based leadership",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Brief introduction but no formal training",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Some leadership training but not neuroscience-focused",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Previous neuro-leadership training but needs updating",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Recent comprehensive neuro-leadership training",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "question-9",
-        "category": "Cognitive Flexibility",
-        "text": "How well do your leaders adapt their thinking and approach to different situations?",
-        "number": 9,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Struggle to shift perspectives or consider alternative approaches",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Sometimes rigid in their thinking and slow to adapt",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Moderate ability to adapt thinking but could improve",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Generally flexible in their approach to different situations",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Highly adaptable and skilled at shifting perspectives when needed",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "question-10",
-        "category": "Emotional Regulation",
-        "text": "How effectively do your leaders manage their emotional responses in challenging situations?",
-        "number": 10,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Often react emotionally and struggle to maintain composure",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Sometimes let emotions affect their judgment and responses",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Moderate ability to regulate emotions but could improve",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Generally maintain emotional balance in challenging situations",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Consistently demonstrate excellent emotional regulation and composure",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "question-11",
-        "category": "Team Dynamics",
-        "text": "How well do your leaders understand and manage team dynamics from a neuroscience perspective?",
-        "number": 11,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Limited understanding of team dynamics and their neurological basis",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Basic understanding but struggle to apply neuroscience principles",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Moderate understanding of team dynamics and neuroscience",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Good understanding and application of neuroscience in team management",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Excellent understanding and application of neuroscience in team dynamics",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "question-12",
-        "category": "Learning Integration",
-        "text": "How effectively do your leaders integrate neuroscience insights into their daily leadership practices?",
-        "number": 12,
-        "type": "single_choice",
-        "options": [
-          {
-            "text": "Rarely apply neuroscience principles in leadership practices",
-            "scores": {
-              "neuro_need": 5
-            }
-          },
-          {
-            "text": "Occasionally apply neuroscience insights but inconsistently",
-            "scores": {
-              "neuro_need": 4
-            }
-          },
-          {
-            "text": "Moderate integration of neuroscience principles in leadership",
-            "scores": {
-              "neuro_need": 3
-            }
-          },
-          {
-            "text": "Regularly apply neuroscience insights in leadership practices",
-            "scores": {
-              "neuro_need": 2
-            }
-          },
-          {
-            "text": "Consistently and effectively integrate neuroscience in all leadership aspects",
-            "scores": {
-              "neuro_need": 1
-            }
-          }
-        ]
-      }
-    ],
-    "submitButtonText": "Submit Assessment",
-    "nextRoute": "/thank-you/neuro-leadership"
-  },
-  "scoring": {
-    "primaryCategory": "neuro_need",
-    "maxScorePerQuestion": 5,
-    "_scoring_notes": {
-      "primaryCategory": "This is the main category used for overall assessment scoring",
-      "maxScorePerQuestion": "Maximum score per question (should be 5)",
-      "recommendations": "Recommendations are organized by need level",
-      "thresholds": "Thresholds determine the recommendation level based on scores",
-      "results_sections": "Keep section titles consistent: 'Specific Recommendations' and 'General Recommendations'"
     },
-    "recommendations": {
-      "base": [
-        "Understand the basic principles of neuroscience and their applications to leadership",
-        "Practice self-awareness techniques to monitor your own stress responses and emotional states",
-        "Learn to recognize cognitive biases in decision-making processes"
-      ],
-      "very-high": [
-        "Complete a comprehensive neuroleadership training program for your leadership team",
-        "Implement regular mindfulness practices to improve executive function and decision-making",
-        "Develop a neurologically-informed feedback system to optimize team communication",
-        "Create a psychological safety framework based on neuroleadership principles"
-      ],
-      "high": [
-        "Participate in focused neuroleadership workshops to understand brain-based leadership",
-        "Establish regular reflection practices that incorporate neuroscience principles",
-        "Redesign meeting structures to maximize cognitive engagement and minimize fatigue",
-        "Implement strategies to reduce threat responses in team interactions"
-      ],
-      "medium": [
-        "Enhance your understanding of how emotions affect decision-making through targeted learning",
-        "Refine your communication approach using neuroscience principles",
-        "Identify specific situations where cognitive bias affects your leadership",
-        "Strengthen team connections through brain-friendly collaboration techniques"
-      ],
-      "low": [
-        "Fine-tune your neuro-leadership practices through advanced applications",
-        "Mentor others in applying neuroscience principles to leadership challenges",
-        "Develop customized approaches for complex leadership situations",
-        "Create organizational systems that support optimal brain functioning"
-      ],
-      "very-low": [
-        "Lead initiatives to integrate neuroscience principles throughout your organization",
-        "Develop advanced applications of neuroleadership for specialized leadership contexts",
-        "Create training materials to help others understand brain-based leadership",
-        "Design strategic initiatives based on cutting-edge neuroscience research"
-      ]
-    },
-    "category_overviews": {
-      "primary_category": {
-        "title": "Neuro-Leadership Readiness",
-        "description": "Assessment of leadership team's preparedness for neuroscience-based approaches",
-        "key_findings": {
-          "high": [
-            "Significant gaps in brain-based leadership understanding",
-            "Limited application of neuroscience principles in leadership"
-          ],
-          "medium": [
-            "Some awareness of neuroscience applications in leadership",
-            "Moderate integration of brain-based approaches"
-          ],
-          "low": [
-            "Strong foundation in neuroscience-based leadership",
-            "Effective application of brain-based principles"
-          ]
-        },
-        "overview_recommendations": {
-          "high": [
-            "Implement comprehensive neuro-leadership training program",
-            "Develop fundamental brain-based leadership practices"
-          ],
-          "medium": [
-            "Enhance existing neuroscience knowledge through targeted training",
-            "Strengthen application of brain-based principles"
-          ],
-          "low": [
-            "Fine-tune advanced neuro-leadership applications",
-            "Share best practices across leadership team"
-          ]
-        }
-      },
-      "secondary_category": {
-        "title": "Cognitive Leadership",
-        "description": "Assessment of leadership decision-making and cognitive processing",
-        "key_findings": {
-          "high": [
-            "Decision-making patterns showing cognitive biases",
-            "Limited awareness of cognitive processing in leadership"
-          ],
-          "medium": [
-            "Some understanding of cognitive biases in decision-making",
-            "Moderate application of cognitive principles"
-          ],
-          "low": [
-            "Strong cognitive awareness in leadership approach",
-            "Effective mitigation of cognitive biases"
-          ]
-        },
-        "overview_recommendations": {
-          "high": [
-            "Implement cognitive bias training for leadership team",
-            "Develop structured decision-making frameworks"
-          ],
-          "medium": [
-            "Enhance cognitive awareness through targeted exercises",
-            "Strengthen bias mitigation strategies"
-          ],
-          "low": [
-            "Refine advanced cognitive leadership techniques",
-            "Share cognitive best practices across organization"
-          ]
-        }
-      },
-      "neuro_need": {
-        "title": "Neurological Leadership Readiness",
-        "description": "Overall assessment of leadership team's neurological development needs",
-        "key_findings": {
-          "high": [
-            "Leadership team shows significant gaps in neurological understanding",
-            "Current practices may not align with brain-based leadership principles"
-          ],
-          "medium": [
-            "Some understanding of neurological principles exists",
-            "Opportunities for enhancing brain-based leadership practices"
-          ],
-          "low": [
-            "Strong foundation in neurological leadership principles",
-            "Well-established brain-based leadership practices"
-          ]
-        },
-        "overview_recommendations": {
-          "high": [
-            "Implement comprehensive neuro-leadership training",
-            "Establish brain-based decision-making protocols"
-          ],
-          "medium": [
-            "Enhance existing practices with neurological insights",
-            "Develop targeted brain-based leadership skills"
-          ],
-          "low": [
-            "Fine-tune advanced neuro-leadership practices",
-            "Share best practices across organization"
-          ]
-        }
-      },
-      "stress_management": {
-        "title": "Stress Management Capability",
-        "description": "Assessment of team's ability to manage stress and emotional regulation",
-        "key_findings": {
-          "high": [
-            "High stress levels affecting decision-making",
-            "Limited emotional regulation strategies in place"
-          ],
-          "medium": [
-            "Moderate stress management capabilities",
-            "Basic emotional regulation practices present"
-          ],
-          "low": [
-            "Effective stress management practices",
-            "Strong emotional regulation capabilities"
-          ]
-        },
-        "overview_recommendations": {
-          "high": [
-            "Implement stress reduction protocols",
-            "Develop emotional regulation training"
-          ],
-          "medium": [
-            "Enhance stress management practices",
-            "Strengthen emotional awareness training"
-          ],
-          "low": [
-            "Maintain effective stress management",
-            "Share successful regulation strategies"
-          ]
-        }
-      }
-    },
-    "theme": {
-      "primary": "bg-blue-600",
-      "secondary": "bg-blue-100",
-      "text": "text-blue-600",
-      "hover": "hover:bg-blue-700",
-      "border": "border-blue-200"
-    },
-    "email_template": {
-      "title": "NeuroLeadership Assessment Report for ${title}",
-      "sections": [
+    "extended_scoring": {
+      "thresholds": [
         {
-          "title": "Overall Assessment",
-          "content": "${overallRecommendation}",
-          "format": "uppercase"
-        },
-        {
-          "title": "Category Analysis",
-          "content": "${categoryAnalysis}"
-        },
-        {
-          "title": "Key Recommendations",
-          "content": "${recommendations}"
-        },
-        {
-          "title": "Specific Action Items",
-          "content": "${specificRecommendations}"
-        },
-        {
-          "title": "Detailed Analysis",
-          "content": "${detailedAnalysis}"
-        }
-      ]
-    },
-    "report_structure": {
-      "title": "NeuroLeadership Development Report",
-      "description": "A comprehensive analysis of your leadership capabilities through the lens of neuroscience",
-      "sections": {
-        "critical_focus": {
-          "title": "Priority Focus Areas",
-          "description": "These areas require immediate attention for improvement",
-          "threshold": 60,
-          "type": "category_recommendations",
-          "recommendationLevel": "high"
-        },
-        "development_opportunities": {
-          "title": "Development Opportunities",
-          "description": "These areas present opportunities for improvement",
-          "minThreshold": 40,
-          "maxThreshold": 70,
-          "type": "category_recommendations",
-          "recommendationLevel": "medium",
-          "categories": [
-            "Emotional Intelligence",
-            "Decision Making",
-            "Change Management",
-            "Team Dynamics",
-            "Communication",
-            "Strategic Thinking",
-            "Innovation",
-            "Resilience",
-            "Cultural Intelligence",
-            "Conflict Resolution",
-            "Time Management",
-            "Stakeholder Management"
-          ]
-        },
-        "implementation_strategy": {
-          "title": "Implementation Strategy",
-          "description": "A structured approach to improvement based on neuroscience principles",
-          "type": "static_recommendations",
-          "recommendations": [
-            "Identify neural patterns that influence your leadership style",
-            "Practice mindfulness techniques to enhance decision-making",
-            "Develop strategies for managing cognitive biases",
-            "Create habits that support neuroplasticity",
-            "Establish feedback loops for continuous improvement"
-          ]
-        },
-        "support_resources": {
-          "title": "Support Resources",
-          "description": "Tools and resources to support your neuroleadership development journey",
-          "type": "static_recommendations",
-          "recommendations": [
-            "NeuroLeadership Institute Research Papers",
-            "Brain-based Leadership Development Toolkit",
-            "Mindfulness and Leadership Exercises",
-            "Cognitive Bias Assessment Tools",
-            "Neuroplasticity Training Resources"
-          ]
-        }
-      },
-      "results_sections": {
-        "specific_recommendations": {
-          "title": "Specific Recommendations",
-          "icon": "Lightbulb",
-          "style": {
-            "border": "border-blue-500",
-            "hoverBg": "hover:bg-blue-100",
-            "iconColor": "text-blue-600"
+          "threshold": 100,
+          "label": "not-needed",
+          "sections": {
+            "current_state": {
+              "title": "Current State Analysis",
+              "narrative": {
+                "intro": "Employees demonstrate a comprehensive understanding of brain function and seamlessly integrate neuroscience principles into their leadership practice. Their decision‑making, emotional regulation, and team engagement consistently reflect advanced Neuro‑Leadership skills.",
+                "main_text": "They effectively manage cognitive load by structuring tasks and expectations to optimize focus and productivity. Emotion regulation techniques are applied naturally, helping leaders stay composed under pressure. Teams collaborate using brain‑based communication frameworks that enhance clarity and retention. Leaders leverage reward and motivation pathways to maintain high engagement and morale. Overall, these practices have cultivated a resilient and innovative leadership culture grounded in neuroscience.",
+                "conclusion": "This level of Neuro‑Leadership maturity suggests no immediate training intervention is required, aside from occasional refreshers."
+              }
+            },
+            "impact": {
+              "title": "Impact",
+              "description": "At this level, the organization benefits from:",
+              "points": [
+                "Enhanced decision‑making under stress",
+                "High team engagement and motivation",
+                "Efficient communication and learning",
+                "Sustained innovation and adaptability"
+              ]
+            },
+            "next_steps": {
+              "title": "Next Steps",
+              "description": "To maintain and build on these strengths, consider the following:",
+              "points": [
+                "Offer advanced Neuro‑Leadership Lab modules on emerging neuroscience topics",
+                "Encourage peer mentoring to share brain‑based strategies",
+                "Develop microlearning episodes to reinforce key concepts",
+                "Track leadership outcomes with brain‑based performance metrics"
+              ]
+            }
           }
         },
-        "general_recommendations": {
-          "title": "General Recommendations",
-          "icon": "CalendarCheck",
-          "style": {
-            "border": "border-gray-200",
-            "hoverBg": "hover:bg-gray-100",
-            "iconColor": "text-gray-600"
+        {
+          "threshold": 85,
+          "label": "low",
+          "sections": {
+            "current_state": {
+              "title": "Current State Analysis",
+              "narrative": {
+                "intro": "Employees have a solid foundation in neuroscience principles but apply them inconsistently across leadership scenarios. While certain teams demonstrate strong brain‑based practices, others fall back on traditional approaches.",
+                "main_text": "Leaders generally understand the impact of stress on cognition but may need reminders in high‑pressure contexts. Teams use brain‑based communication techniques selectively, resulting in uneven clarity and retention. Emotion regulation and reward strategies are applied in some departments but are not yet organization‑wide. Cognitive bias awareness exists but lacks systematic reinforcement in decision processes. Overall, neuro‑leadership concepts are recognized but require structured support for consistency.",
+                "conclusion": "Structured Neuro‑Leadership Lab training could reinforce these practices and ensure more uniform application."
+              }
+            },
+            "impact": {
+              "title": "Impact",
+              "description": "This partial alignment yields the following benefits and challenges:",
+              "points": [
+                "Localized improvements in decision‑making",
+                "Inconsistent application of brain‑based strategies",
+                "Variable team engagement and morale",
+                "Opportunities for broader reinforcement"
+              ]
+            },
+            "next_steps": {
+              "title": "Next Steps",
+              "description": "To elevate neuro‑leadership capabilities organization‑wide, consider:",
+              "points": [
+                "Run targeted Neuro‑Leadership Lab workshops for teams with gaps",
+                "Incorporate neuroscience modules into leadership curricula",
+                "Provide coaching focused on brain‑based decision‑making",
+                "Embed neuroscience principles in feedback and planning processes"
+              ]
+            }
           }
-        }
-      }
-    },
-    "questionRecommendations": {
-      "Category Name": {
-        "high": "${Replace with high priority recommendation for this category}",
-        "medium": "${Replace with medium priority recommendation for this category}",
-        "low": "${Replace with low priority recommendation for this category}"
-      },
-      "Another Category": {
-        "high": "${Replace with high priority recommendation for this category}",
-        "medium": "${Replace with medium priority recommendation for this category}",
-        "low": "${Replace with low priority recommendation for this category}"
-      },
-      "primary_category": {
-        "high": "${Replace with high priority recommendation for primary category}",
-        "medium": "${Replace with medium priority recommendation for primary category}",
-        "low": "${Replace with low priority recommendation for primary category}"
-      },
-      "category_1": {
-        "high": "",
-        "medium": "",
-        "low": ""
-      },
-      "category_example": {
-        "high": "High priority recommendation example for this category",
-        "medium": "Medium priority recommendation example for this category",
-        "low": "Low priority recommendation example for this category"
-      },
-      "another_category": {
-        "high": "Another high priority recommendation example",
-        "medium": "Another medium priority recommendation example",
-        "low": "Another low priority recommendation example"
-      },
-      "primary_score": {
-        "high": "Primary high priority recommendation for overall assessment",
-        "medium": "Primary medium priority recommendation for overall assessment",
-        "low": "Primary low priority recommendation for overall assessment"
-      },
-      "category_2": {
-        "high": "",
-        "medium": "",
-        "low": ""
-      },
-      "category_3": {
-        "high": "",
-        "medium": "",
-        "low": ""
-      },
-      "Stress Management": {
-        "high": "Implement a comprehensive stress management program incorporating neuroscience-based techniques like mindfulness, cognitive reframing, and emotional regulation. Consider biofeedback training to help leaders recognize and manage their physiological stress responses.",
-        "medium": "Introduce regular stress awareness workshops focusing on understanding the brain's stress response and practical techniques for maintaining composure. Practice scenario-based training for high-pressure situations.",
-        "low": "Reinforce existing stress management practices with targeted neuroscience insights. Consider adding advanced techniques like stress-pattern recognition and proactive stress prevention strategies."
-      },
-      "Decision Making": {
-        "high": "Establish a structured decision-making framework based on neuroscience principles, incorporating techniques for managing cognitive biases, emotional regulation, and systematic analysis. Implement regular decision-review processes.",
-        "medium": "Enhance decision-making processes by introducing brain-based techniques for balancing analytical and intuitive thinking. Practice scenario planning and consequence mapping exercises.",
-        "low": "Fine-tune existing decision-making approaches with advanced neuroscience concepts. Focus on optimizing group decision-making dynamics and long-term strategic thinking."
-      },
-      "Emotional Intelligence": {
-        "high": "Begin intensive emotional intelligence development using neuroscience-based approaches. Focus on understanding neural mechanisms of emotion, developing stronger empathy, and practicing emotional regulation techniques.",
-        "medium": "Enhance emotional awareness through structured practice of emotion recognition and response techniques. Implement regular feedback sessions focused on emotional intelligence in leadership.",
-        "low": "Refine emotional intelligence skills with advanced concepts in social neuroscience. Focus on subtle emotional cues and complex team dynamics."
-      },
-      "Change Management": {
-        "high": "Develop a comprehensive change management approach based on the brain's response to change. Focus on reducing resistance through neural pathway formation and creating psychological safety during transitions.",
-        "medium": "Strengthen change management capabilities by incorporating understanding of neuroplasticity and habit formation. Practice techniques for managing team anxiety during change.",
-        "low": "Optimize change management processes with advanced neuroscience insights about adaptation and resilience. Focus on creating sustainable change through brain-friendly approaches."
-      },
-      "Learning Mindset": {
-        "high": "Create a structured program to develop a growth mindset based on neuroplasticity principles. Implement regular learning opportunities and celebrate learning attempts as much as successes.",
-        "medium": "Enhance learning orientation by introducing concepts of brain malleability and the neuroscience of skill acquisition. Create safe spaces for experimentation and learning from mistakes.",
-        "low": "Refine existing learning practices with advanced concepts in cognitive development and neural network formation. Focus on pushing beyond comfort zones while maintaining psychological safety."
-      },
-      "Team Engagement": {
-        "high": "Implement comprehensive psychological safety initiatives based on social neuroscience principles. Focus on building trust through consistent behavior, transparent communication, and emotional validation.",
-        "medium": "Enhance team engagement through structured activities that build psychological safety. Practice techniques for creating brain-friendly environments that promote open dialogue.",
-        "low": "Optimize team dynamics with advanced concepts in social neuroscience. Focus on strengthening existing psychological safety practices and developing deeper trust."
-      },
-      "Innovation": {
-        "high": "Establish an innovation framework based on creative thinking neuroscience. Implement regular ideation sessions using brain-based techniques for enhancing creativity and reducing fear of failure.",
-        "medium": "Enhance innovation practices by incorporating understanding of cognitive flexibility and divergent thinking. Create structured opportunities for creative exploration.",
-        "low": "Refine innovation processes with advanced neuroscience concepts about creativity and insight generation. Focus on optimizing conditions for breakthrough thinking."
-      },
-      "Previous Training": {
-        "high": "Begin with foundational neuroscience concepts and gradually build to more advanced applications. Focus on practical implementation of brain-based leadership principles.",
-        "medium": "Build upon existing knowledge by filling gaps in understanding and introducing new neuroscience applications in leadership.",
-        "low": "Focus on advanced applications and latest developments in neuroscience-based leadership approaches. Share expertise with others in the organization."
-      }
-    },
-    "thresholds": {
-      "needLevel": [
-        {
-          "threshold": 75,
-          "label": "very-high",
-          "displayText": "There is a very high chance your team could benefit from neuro-leadership training"
         },
         {
-          "threshold": 60,
-          "label": "high",
-          "displayText": "There is a high chance your team could benefit from neuro-leadership training"
-        },
-        {
-          "threshold": 40,
+          "threshold": 70,
           "label": "medium",
-          "displayText": "There is a moderate chance your team could benefit from neuro-leadership training"
+          "sections": {
+            "current_state": {
+              "title": "Current State Analysis",
+              "narrative": {
+                "intro": "There is emerging awareness of neuroscience principles, but their application is sporadic and informal. Leaders and teams sometimes overlook critical brain‑based strategies that could optimize performance.",
+                "main_text": "Some leaders integrate cognitive load management, while others remain unaware of its importance, leading to stress and reduced focus. Emotion regulation techniques are rarely practiced, causing emotional triggers to influence decisions. Communication often lacks neuroscience‑informed framing, reducing message retention. Motivational strategies based on reward pathways are underutilized, impacting team engagement. Without a common framework, teams struggle to leverage neuroscience insights effectively.",
+                "conclusion": "A targeted Neuro‑Leadership Lab program would help establish a shared brain‑based leadership framework."
+              }
+            },
+            "impact": {
+              "title": "Impact",
+              "description": "This inconsistency contributes to the following organizational dynamics:",
+              "points": [
+                "Fluctuating decision quality under pressure",
+                "Missed opportunities for clear and memorable communication",
+                "Lowered team motivation and focus",
+                "Uneven emotional resilience across teams"
+              ]
+            },
+            "next_steps": {
+              "title": "Next Steps",
+              "description": "To address these gaps and build a unified approach, consider the following actions:",
+              "points": [
+                "Schedule Neuro‑Leadership Lab workshops for key teams",
+                "Integrate neuroscience assessments into development plans",
+                "Offer behavioral coaching on brain‑based techniques",
+                "Conduct follow‑up sessions to reinforce learning"
+              ]
+            }
+          }
+        },
+        {
+          "threshold": 50,
+          "label": "high",
+          "sections": {
+            "current_state": {
+              "title": "Current State Analysis",
+              "narrative": {
+                "intro": "Employees frequently struggle to connect neuroscience concepts with leadership challenges. Cognitive biases and emotional triggers often go unrecognized, leading to suboptimal outcomes.",
+                "main_text": "Decision‑making is hindered by unmanaged stress and visibility of cognitive load. Emotional regulation techniques are absent or rarely used, causing reactive leadership behaviors. Teams communicate without leveraging brain‑based clarity strategies, resulting in misunderstandings. Reward and motivation frameworks are not intentionally designed, leading to varying engagement levels. Overall, the lack of neuroscience‑informed practices has tangible impacts on performance and culture.",
+                "conclusion": "It is highly recommended to introduce a structured Neuro‑Leadership Lab to address these gaps."
+              }
+            },
+            "impact": {
+              "title": "Impact",
+              "description": "This gap in neuro‑leadership practices manifests as:",
+              "points": [
+                "Frequent decision fatigue and burnout",
+                "Communication breakdowns and misunderstandings",
+                "Lack of consistent engagement strategies",
+                "Reduced emotional resilience across teams"
+              ]
+            },
+            "next_steps": {
+              "title": "Next Steps",
+              "description": "To build foundational neuroscience skills, implement the following:",
+              "points": [
+                "Launch Neuro‑Leadership Lab across departments",
+                "Pair workshops with coaching for managers",
+                "Develop internal resources on brain function and leadership",
+                "Embed neuro‑leadership techniques in onboarding and performance frameworks"
+              ]
+            }
+          }
         },
         {
           "threshold": 25,
-          "label": "low",
-          "displayText": "There is a low chance your team could benefit from neuro-leadership training"
-        },
-        {
-          "threshold": 0,
-          "label": "very-low",
-          "displayText": "There is a very low chance your team could benefit from neuro-leadership training"
-        }
-      ],
-      "recommendationLevel": [
-        {
-          "threshold": 75,
-          "label": "very-high",
-          "displayText": "High Priority"
-        },
-        {
-          "threshold": 60,
-          "label": "high",
-          "displayText": "Medium Priority"
-        },
-        {
-          "threshold": 40,
-          "label": "medium",
-          "displayText": "Moderate Priority"
-        },
-        {
-          "threshold": 25,
-          "label": "low",
-          "displayText": "Low Priority"
-        },
-        {
-          "threshold": 0,
-          "label": "very-low",
-          "displayText": "Very Low Priority"
+          "label": "critical",
+          "sections": {
+            "current_state": {
+              "title": "Current State Analysis",
+              "narrative": {
+                "intro": "There is a significant absence of neuroscience‑informed leadership practices across the organization. Teams operate without understanding brain dynamics, leading to stress, miscommunication, and disengagement.",
+                "main_text": "Leaders are unaware of cognitive load principles, resulting in inconsistent task management and overload. Emotional regulation is absent, contributing to tension and conflict. Communication lacks structure to optimize attention and retention, diminishing message impact. Motivation and reward strategies are not leveraged, reducing team engagement and innovation. Without neuroscience‑guided practices, the organization experiences ongoing performance and cultural challenges.",
+                "conclusion": "An urgent, organization‑wide Neuro‑Leadership Lab intervention is needed to transform leadership effectiveness."
+              }
+            },
+            "impact": {
+              "title": "Impact",
+              "description": "This critical gap contributes to severe organizational issues, including:",
+              "points": [
+                "High levels of stress and burnout",
+                "Chronic miscommunication and conflict",
+                "Low morale and disengagement",
+                "Slow decision‑making and innovation"
+              ]
+            },
+            "next_steps": {
+              "title": "Next Steps",
+              "description": "To urgently address these challenges, prioritize the following actions:",
+              "points": [
+                "Implement Neuro‑Leadership Lab training company‑wide",
+                "Facilitate small‑group neuroscience workshops",
+                "Assign Neuro‑Leadership champions to drive adoption",
+                "Align training outcomes with behavior and performance metrics"
+              ]
+            }
+          }
         }
       ]
-    },
-    "summaries": [
-      {
-        "threshold": 75,
-        "text": "Your leadership team would significantly benefit from neuro-leadership training. Current approaches show opportunities for substantial improvement in brain-aware leadership practices."
-      },
-      {
-        "threshold": 60,
-        "text": "Your leadership team shows clear need for neuro-leadership development. Training would help enhance decision-making, emotional intelligence, and team engagement."
-      },
-      {
-        "threshold": 40,
-        "text": "Your leadership team demonstrates moderate need for neuro-leadership training. This would help refine existing practices and introduce new evidence-based approaches."
-      },
-      {
-        "threshold": 25,
-        "text": "Your leadership team shows some effective practices but could benefit from additional neuro-leadership insights to optimize performance."
-      },
-      {
-        "threshold": 0,
-        "text": "Your leadership team already demonstrates strong alignment with neuroscience-based leadership principles. Training on this is really not needed."
-      }
-    ]
-  },
-  "thankYou": {
-    "title": "Thank You for Completing the Neuro-Leadership Assessment!",
-    "message": "Based on your responses, we can provide insights about how neuroscience-based leadership training could benefit your organization. Understanding how the brain works can dramatically improve leadership effectiveness and team performance.",
-    "nextSteps": "We'll analyze your responses and send you personalized recommendations about how neuro-leadership training could address your specific needs. A specialist may reach out to discuss tailored training options.",
-    "buttonText": "Explore Neuro-Leadership Training",
-    "buttonLink": "https://www.brainiup.com/neuro-leadership"
-  },
-  "scorecards": [
-    {
-      "id": "conflict-views",
-      "scorecardInfo": {
-        "title": "Conflict Views",
-        "shortDescription": "Evaluate if your team would benefit from conflict resolution training and mediation techniques",
-        "category": "Workplace Communication",
-        "visibility": true
-      }
     }
-  ]
-}
+  }
+  

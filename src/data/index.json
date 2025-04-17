@@ -1,82 +1,29 @@
-{
-  "/*": "IMPORTANT: This index file must only contain: version, last_updated, assessments list, and scorecards list. All assessment details should be in their own files. DO NOT add documentation, templates, or other metadata here.",
-  "version": "1.0.0",
-  "last_updated": "2024-04-04",
-  "assessments": [
-    {
-      "id": "agile-leadership",
-      "title": "Agile Leadership Assessment",
-      "description": "Evaluate your organization's agile leadership capabilities",
-      "category": "Leadership Development"
-    },
-    {
-      "id": "neuro-leadership",
-      "title": "NeuroLeadership Assessment",
-      "description": "Analyze leadership capabilities through neuroscience principles",
-      "category": "Leadership Development"
-    },
-    {
-      "id": "discover-work",
-      "title": "DISC Work Style Assessment",
-      "description": "Discover your natural work style and communication preferences",
-      "category": "Personal Development"
-    },
-    {
-      "id": "conflict-views",
-      "title": "Conflict Management Assessment",
-      "description": "Understand and improve your conflict resolution approach",
-      "category": "Team Development"
-    },
-    {
-      "id": "innovation-capability",
-      "title": "Innovation Capability Assessment",
-      "description": "Evaluate your organization's innovation readiness and capabilities",
-      "category": "Organizational Development"
-    }
-  ],
+{  
   "scorecards": [
     {
-      "id": "agile-leadership",
-      "scorecardInfo": {
-        "title": "Agile Leadership",
-        "shortDescription": "Master the mindset and practices needed to lead in fast-paced, constantly changing environments",
-        "category": "Leadership Development",
-        "visibility": true
-      }
-    },
-    {
-      "id": "neuro-leadership",
-      "scorecardInfo": {
-        "title": "Neuro-Leadership Assessment",
-        "shortDescription": "Evaluate if your leadership team would benefit from neuroscience-based leadership training",
-        "category": "Leadership Development",
-        "visibility": true
-      }
-    },
-    {
       "id": "discover-work",
       "scorecardInfo": {
-        "title": "DISC Work Style Assessment",
-        "shortDescription": "Evaluate if DISC training would benefit your team's communication and collaboration",
+        "title": "DiSC Training Assessment",
+        "shortDescription": "Evaluate if DiSC training would benefit your team's communication and collaboration",
         "category": "Personal Development",
         "visibility": true
       }
     },
     {
-      "id": "conflict-views",
+      "id": "ai-ethics",
       "scorecardInfo": {
-        "title": "Conflict Management Assessment",
-        "shortDescription": "Evaluate if your team would benefit from conflict resolution training and mediation techniques",
-        "category": "Team Development",
+        "title": "AI Ethics Assessment",
+        "shortDescription": "Evaluate if AI Ethics training would benefit your team's communication and collaboration",
+        "category": "Personal Development",
         "visibility": true
       }
     },
     {
-      "id": "innovation-capability",
-      "scorecardInfo": {
-        "title": "Innovation Capability Assessment",
-        "shortDescription": "Measure of organizational innovation and creative problem-solving",
-        "category": "Organizational Development",
+      "id": "neuro-leadership",
+        "scorecardInfo": {
+          "title": "Neuro-Leadership Assessment",
+        "shortDescription": "Evaluate if Neuro-Leadership training would benefit your team's communication and collaboration",
+        "category": "Personal Development",
         "visibility": true
       }
     }

@@ -1,51 +1,10 @@
 {
   "id": "discover-work",
   "version": "1.0.0",
-  "last_updated": "2024-04-04",
+  "last_updated": "2025-04-15",
   "intro": {
-      "title": "DISC Work Style Assessment",
-      "subtitle": "Discover your natural work style and communication preferences",
-      "instructions": {
-        "title": "How to Complete This Assessment",
-        "steps": [
-          "Answer each question based on your natural tendencies",
-          "Consider how you typically behave, not how you think you should",
-          "Focus on your workplace behaviors and communication style",
-          "Select the option that best describes your usual approach"
-        ]
-      },
-    "columns": [
-      {
-        "title": "DISC Framework",
-        "content": "Understanding behavioral styles to improve workplace communication and effectiveness"
-      },
-      {
-        "title": "Assessment Areas",
-        "points": [
-          {
-            "icon": "users",
-            "text": "Communication Style",
-            "description": "How you interact and share information with others"
-          },
-          {
-            "icon": "target",
-            "text": "Work Preferences",
-            "description": "Your natural approach to tasks and projects"
-          },
-          {
-            "icon": "lightbulb",
-            "text": "Decision Making",
-            "description": "How you evaluate options and make choices"
-          },
-          {
-            "icon": "heart",
-            "text": "Team Dynamics",
-            "description": "Your role and contributions in team settings"
-          }
-        ]
-      }
-    ],
-    "consentText": "I understand this assessment will help identify my DISC work style preferences",
+    "title": "Would your employees benefit from DISC training?",
+    "subtitle": "Answer 12 quick questions to find out if DISC training would benefit your employees' communication and collaboration",
     "buttonText": "Start Assessment",
     "nextRoute": "/survey/discover-work"
   },
@@ -53,528 +12,456 @@
     "items": [
       {
         "id": "question-1",
-        "category": "Communication",
-        "text": "How often do team members express frustration about how others communicate?",
+        "text": "Employees adapt their communication style based on who they are interacting with.",
         "number": 1,
         "type": "single_choice",
         "options": [
           {
-            "text": "Frequently - multiple times per week",
+            "text": "Not at all",
             "scores": {
-              "Communication": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Often - at least once per week",
+            "text": "Rarely true",
             "scores": {
-              "Communication": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Sometimes - a few times per month",
+            "text": "Sometimes true",
             "scores": {
-              "Communication": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Rarely - less than once per month",
-            "scores": {
-              "Communication": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "Never - team members understand and adapt to different communication styles",
+            "text": "Often true",
             "scores": {
-              "Communication": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
       },
       {
         "id": "question-2",
-        "category": "Conflict",
-        "text": "How do team members typically respond to disagreements?",
+        "text": "Employees are aware of how their behavior impacts others in the workplace.",
         "number": 2,
         "type": "single_choice",
         "options": [
           {
-            "text": "Avoid confrontation or become aggressive",
+            "text": "Not at all",
             "scores": {
-              "Conflict": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Struggle to find common ground",
+            "text": "Rarely true",
             "scores": {
-              "Conflict": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Try to compromise but often feel unsatisfied",
+            "text": "Sometimes true",
             "scores": {
-              "Conflict": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Generally resolve issues through discussion",
-            "scores": {
-              "Conflict": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "View disagreements as opportunities for growth",
+            "text": "Often true",
             "scores": {
-              "Conflict": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
       },
       {
         "id": "question-3",
-        "category": "Work Styles",
-        "text": "How well do team members adapt their work approach to different situations?",
+        "text": "Conflicts between employees are typically resolved constructively and respectfully.",
         "number": 3,
         "type": "single_choice",
         "options": [
           {
-            "text": "Stick rigidly to their preferred style regardless of situation",
+            "text": "Not at all",
             "scores": {
-              "Work Styles": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Find it difficult to adjust their approach",
+            "text": "Rarely true",
             "scores": {
-              "Work Styles": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Make some effort to adapt but struggle",
+            "text": "Sometimes true",
             "scores": {
-              "Work Styles": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Generally adapt well to different situations",
-            "scores": {
-              "Work Styles": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "Easily adjust their approach based on the situation and people involved",
+            "text": "Often true",
             "scores": {
-              "Work Styles": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
       },
       {
         "id": "question-4",
-        "category": "Decision Making",
-        "text": "How do team members approach decision-making?",
+        "text": "Employees are comfortable giving and receiving feedback across personality differences.",
         "number": 4,
         "type": "single_choice",
         "options": [
           {
-            "text": "Make decisions without considering others' perspectives",
+            "text": "Not at all",
             "scores": {
-              "Decision Making": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Rely heavily on their own style without adapting",
+            "text": "Rarely true",
             "scores": {
-              "Decision Making": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Try to consider different approaches but struggle",
+            "text": "Sometimes true",
             "scores": {
-              "Decision Making": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Generally consider multiple perspectives",
-            "scores": {
-              "Decision Making": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "Effectively balance different decision-making styles",
+            "text": "Often true",
             "scores": {
-              "Decision Making": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
       },
       {
         "id": "question-5",
-        "category": "Team Dynamics",
-        "text": "How do team members respond to different personality types?",
+        "text": "Collaboration across departments or teams happens smoothly and without repeated misunderstandings.",
         "number": 5,
         "type": "single_choice",
         "options": [
           {
-            "text": "Frequently clash with those who have different styles",
+            "text": "Not at all",
             "scores": {
-              "Team Dynamics": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Often misunderstand or misinterpret others' behaviors",
+            "text": "Rarely true",
             "scores": {
-              "Team Dynamics": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Sometimes struggle to work with different styles",
+            "text": "Sometimes true",
             "scores": {
-              "Team Dynamics": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Generally work well with different personality types",
-            "scores": {
-              "Team Dynamics": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "Effectively leverage different personality strengths",
+            "text": "Often true",
             "scores": {
-              "Team Dynamics": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
       },
       {
         "id": "question-6",
-        "category": "Leadership",
-        "text": "How do leaders adapt their style to different team members?",
+        "text": "Employees can clearly identify each other's work styles and preferences.",
         "number": 6,
         "type": "single_choice",
         "options": [
           {
-            "text": "Use a one-size-fits-all approach regardless of individual needs",
+            "text": "Not at all",
             "scores": {
-              "Leadership": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Struggle to adjust their leadership style",
+            "text": "Rarely true",
             "scores": {
-              "Leadership": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Make some effort to adapt but often miss the mark",
+            "text": "Sometimes true",
             "scores": {
-              "Leadership": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Generally adjust their approach based on the situation",
-            "scores": {
-              "Leadership": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "Effectively adapt their leadership style to each individual",
+            "text": "Often true",
             "scores": {
-              "Leadership": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
       },
       {
         "id": "question-7",
-        "category": "Feedback",
-        "text": "How do team members give and receive feedback?",
+        "text": "New team members quickly understand and integrate into existing communication dynamics.",
         "number": 7,
         "type": "single_choice",
         "options": [
           {
-            "text": "Feedback often causes tension or is ignored",
+            "text": "Not at all",
             "scores": {
-              "Feedback": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Struggle to adapt feedback style to the recipient",
+            "text": "Rarely true",
             "scores": {
-              "Feedback": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Try to adjust feedback style but often miss the mark",
+            "text": "Sometimes true",
             "scores": {
-              "Feedback": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Generally provide feedback in a way that works for the recipient",
-            "scores": {
-              "Feedback": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "Effectively adapt feedback style to each individual's preferences",
+            "text": "Often true",
             "scores": {
-              "Feedback": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
       },
       {
         "id": "question-8",
-        "category": "Adaptability",
-        "text": "How do team members handle change?",
+        "text": "Workplace disagreements are more often due to strategy differences than personality clashes.",
         "number": 8,
         "type": "single_choice",
         "options": [
           {
-            "text": "Resist change and struggle to adapt",
+            "text": "Not at all",
             "scores": {
-              "Adaptability": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Find it difficult to adjust to new situations",
+            "text": "Rarely true",
             "scores": {
-              "Adaptability": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Make some effort to adapt but often struggle",
+            "text": "Sometimes true",
             "scores": {
-              "Adaptability": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Generally adapt well to changes",
-            "scores": {
-              "Adaptability": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "Easily adjust their approach to new situations",
+            "text": "Often true",
             "scores": {
-              "Adaptability": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
       },
       {
         "id": "question-9",
-        "category": "Innovation",
-        "text": "How do team members approach new ideas?",
+        "text": "Employees are self-aware and able to reflect on their own work and interpersonal style.",
         "number": 9,
         "type": "single_choice",
         "options": [
           {
-            "text": "Stick to familiar approaches and resist new ideas",
+            "text": "Not at all",
             "scores": {
-              "Innovation": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Often dismiss ideas that don't match their style",
+            "text": "Rarely true",
             "scores": {
-              "Innovation": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Consider new ideas but struggle to implement them",
+            "text": "Sometimes true",
             "scores": {
-              "Innovation": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Generally open to different approaches",
-            "scores": {
-              "Innovation": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "Effectively balance different approaches to innovation",
+            "text": "Often true",
             "scores": {
-              "Innovation": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
       },
       {
         "id": "question-10",
-        "category": "Trust",
-        "text": "How do team members build trust with different personality types?",
+        "text": "Employees proactively seek to understand coworkers who are very different from them.",
         "number": 10,
         "type": "single_choice",
         "options": [
           {
-            "text": "Struggle to build trust with those who have different styles",
+            "text": "Not at all",
             "scores": {
-              "Trust": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Find it difficult to understand others' trust-building needs",
+            "text": "Rarely true",
             "scores": {
-              "Trust": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Try to build trust but often miss the mark",
+            "text": "Sometimes true",
             "scores": {
-              "Trust": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Generally build trust effectively across different styles",
-            "scores": {
-              "Trust": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "Easily build trust by adapting to different styles",
+            "text": "Often true",
             "scores": {
-              "Trust": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
       },
       {
         "id": "question-11",
-        "category": "Motivation",
-        "text": "How do team members respond to different motivational approaches?",
+        "text": "The organization has a common vocabulary for discussing behavior and communication differences.",
         "number": 11,
         "type": "single_choice",
         "options": [
           {
-            "text": "Only respond to one type of motivation",
+            "text": "Not at all",
             "scores": {
-              "Motivation": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Struggle to understand what motivates others",
+            "text": "Rarely true",
             "scores": {
-              "Motivation": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Try different approaches but often miss the mark",
+            "text": "Sometimes true",
             "scores": {
-              "Motivation": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Generally adapt their motivational approach",
-            "scores": {
-              "Motivation": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "Effectively motivate others by understanding their style",
+            "text": "Often true",
             "scores": {
-              "Motivation": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
       },
       {
         "id": "question-12",
-        "category": "Accountability",
-        "text": "How do team members hold others accountable?",
+        "text": "There is a shared understanding of how diverse behavioral styles contribute to team success.",
         "number": 12,
         "type": "single_choice",
         "options": [
           {
-            "text": "Use a one-size-fits-all approach to accountability",
+            "text": "Not at all",
             "scores": {
-              "Accountability": 5,
-              "disc_need": 5
+              "disc_need": 0
             }
           },
           {
-            "text": "Struggle to adapt accountability approach",
+            "text": "Rarely true",
             "scores": {
-              "Accountability": 4,
-              "disc_need": 4
+              "disc_need": 1
             }
           },
           {
-            "text": "Try different approaches but often ineffective",
+            "text": "Sometimes true",
             "scores": {
-              "Accountability": 3,
-              "disc_need": 3
-            }
-          },
-          {
-            "text": "Generally adapt accountability style",
-            "scores": {
-              "Accountability": 2,
               "disc_need": 2
             }
           },
           {
-            "text": "Effectively hold others accountable by adapting to their style",
+            "text": "Often true",
             "scores": {
-              "Accountability": 1,
-              "disc_need": 1
+              "disc_need": 3
+            }
+          },
+          {
+            "text": "Consistently true",
+            "scores": {
+              "disc_need": 4
             }
           }
         ]
@@ -585,386 +472,306 @@
   },
   "basic_scoring": {
     "primaryCategory": "disc_need",
-    "maxScorePerQuestion": 5,
-    "summaries": [
+    "maxScorePerQuestion": 4,
+    "overview_thresholds": {
+      "needPercentage": [
+        {
+          "threshold": 100,
+          "label": "not-needed",
+          "displayText": "Employees consistently demonstrate strong behavioral alignment, adaptability, and self-awareness."
+        },
+        {
+          "threshold": 85,
+          "label": "low",
+          "displayText": "Employees generally align with best practices, showing good communication and collaboration habits."
+        },
+        {
+          "threshold": 70,
+          "label": "medium",
+          "displayText": "Behavioral alignment is inconsistent, with noticeable differences in communication and work styles among employees."
+        },
+        {
+          "threshold": 50,
+          "label": "very",
+          "displayText": "Employees often face misunderstandings or friction due to behavioral differences and lack of a shared framework."
+        },
+        {
+          "threshold": 25,
+          "label": "critical",
+          "displayText": "There is a widespread lack of alignment in behavior, communication, and collaboration practices among employees."
+        }
+      ],
+      "priorityLevel": [
+        {
+          "threshold": 100,
+          "label": "not-needed",
+          "displayText": "Not needed"
+        },
+        {
+          "threshold": 85,
+          "label": "low",
+          "displayText": "Low"
+        },
+        {
+          "threshold": 70,
+          "label": "medium",
+          "displayText": "Moderate"
+        },
+        {
+          "threshold": 50,
+          "label": "high",
+          "displayText": "High"
+        },
+        {
+          "threshold": 25,
+          "label": "critical",
+          "displayText": "Urgent"
+        }
+      ]
+    },
+    "recommendations_summaries": {
+      "summary": [
+        {
+          "threshold": 100,
+          "text": "This training may not be necessary at this time, unless used for reinforcement or onboarding new employees."
+        },
+        {
+          "threshold": 85,
+          "text": "The DiSCover Work training can add value as a tool for refinement or specific teams."
+        },
+        {
+          "threshold": 70,
+          "text": "The DiSCover Work training would help reinforce consistency and improve team dynamics."
+        },
+        {
+          "threshold": 50,
+          "text": "DiSCover Work is highly recommended to build a shared language and improve collaboration."
+        },
+        {
+          "threshold": 25,
+          "text": "The DiSCover Work training is urgently needed to reduce friction, improve teamwork, and establish psychological safety."
+        }
+      ],
+      "recommendations": [
+        {
+          "threshold": 100,
+          "recommendations": [
+            "Use DiSCover Work selectively for new hires to maintain alignment.",
+            "Offer peer-led sessions to keep DISC language and concepts active in daily work.",
+            "Encourage informal knowledge sharing around behavioral strengths.",
+            "Monitor team dynamics during major changes (e.g., restructuring, new leadership)."
+          ]
+        },
+        {
+          "threshold": 85,
+          "recommendations": [
+            "Run a focused DiSCover Work session for specific teams with interpersonal friction.",
+            "Use DISC profiles in coaching conversations or development plans.",
+            "Integrate DISC principles into feedback or performance review frameworks.",
+            "Include DISC as part of your talent development pathway for high potentials."
+          ]
+        },
+        {
+          "threshold": 70,
+          "recommendations": [
+            "Schedule a DiSCover Work workshop for teams showing varied behavioral alignment.",
+            "Build shared vocabulary around DISC into internal communication guidelines.",
+            "Incorporate DISC principles in team charters or collaboration norms.",
+            "Encourage managers to discuss DISC insights in 1-on-1s or retrospectives."
+          ]
+        },
+        {
+          "threshold": 50,
+          "recommendations": [
+            "Launch a company-wide DISC initiative, starting with DiSCover Work training.",
+            "Facilitate team-specific sessions to address communication misalignments.",
+            "Assign DISC champions or ambassadors in each department to reinforce concepts.",
+            "Embed DISC language into onboarding, leadership programs, and performance tools."
+          ]
+        },
+        {
+          "threshold": 25,
+          "recommendations": [
+            "Implement DiSCover Work training as a priority across all departments.",
+            "Pair training with structured follow-up (e.g., coaching, check-ins, behavior-based KPIs).",
+            "Create a shared behavior and communication framework based on DISC outcomes.",
+            "Monitor team engagement and collaboration metrics to track post-training impact."
+          ]
+        }
+      ]
+    }
+  },
+  "extended_scoring": {
+    "thresholds": [
       {
-        "threshold": 75,
-        "text": "Your DISC profile indicates significant opportunities for improving workplace communication and effectiveness."
+        "threshold": 100,
+        "label": "not-needed",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Employees show a high degree of behavioral alignment across the organization. Interactions are smooth, respectful, and grounded in mutual understanding.",
+              "main_text": "Communication styles are well-calibrated, and employees demonstrate consistent self-awareness in how they show up at work. Teams collaborate with ease, adapting naturally to different personalities and working preferences. Conflicts are rare and usually resolved constructively. Newcomers integrate quickly into established communication norms, and feedback flows in a healthy, balanced manner. This environment reflects a mature culture with well-established behavioral norms.",
+              "conclusion": "Employees are already practicing what the training teaches, suggesting a solid behavioral foundation."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "This strong behavioral alignment likely contributes the following:",
+            "points": [
+              "High team cohesion",
+              "Reduced interpersonal conflict",
+              "Faster onboarding and team integration",
+              "Strong psychological safety"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "While no immediate intervention is needed, consider this:",
+            "points": [
+              "Use DiSCover Work as a refresher or onboarding tool for new employees",
+              "Offer optional coaching to deepen behavioral insights",
+              "Launch a DISC-based mentoring program for peer development",
+              "Create internal content that reinforces DISC principles across teams"
+            ]
+          }
+        }
       },
       {
-        "threshold": 60,
-        "text": "Your assessment shows clear areas where DISC-based development would enhance your workplace interactions."
+        "threshold": 85,
+        "label": "low",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Employees generally align with behavioral best practices, with only minor inconsistencies. Most teams function well in day-to-day collaboration.",
+              "main_text": "Communication across the organization tends to be respectful and productive, with a shared willingness to understand different working styles. While most interactions are smooth, some employees may still rely on their default behavior under pressure, creating occasional friction. These moments are typically managed informally, but they point to opportunities for deeper behavioral alignment. Team leads often play a key role in smoothing over misunderstandings, and informal norms have developed over time. With more structure, the organization could turn good habits into great ones.",
+              "conclusion": "Employees are on the right track but would benefit from structured reinforcement."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "This partial alignment likely contributes the following:",
+            "points": [
+              "Generally smooth collaboration",
+              "Occasional interpersonal friction",
+              "Slower integration of new team members",
+              "Minor miscommunications in cross-team work"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "While alignment is strong, consider this:",
+            "points": [
+              "Offer targeted DiSCover Work sessions for selected teams",
+              "Integrate DISC concepts into leadership development programs",
+              "Provide optional behavioral coaching to support team leads",
+              "Use DISC data to inform feedback and performance conversations"
+            ]
+          }
+        }
       },
       {
-        "threshold": 40,
-        "text": "You demonstrate moderate understanding of DISC principles with room for enhanced application."
+        "threshold": 70,
+        "label": "medium",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Behavioral alignment exists in parts of the organization but is not consistent across all teams. Different approaches to communication and collaboration are creating uneven experiences.",
+              "main_text": "Some employees are highly self-aware and adapt their behavior well, while others rely heavily on their natural style, especially in stressful or ambiguous situations. This leads to communication gaps, missed signals, and occasional team friction. While employees often have good intentions, they may lack the tools or shared vocabulary to navigate personality differences effectively. Without a unifying behavioral framework, small misunderstandings can escalate or be left unresolved. These inconsistencies can erode trust and impact cross-functional collaboration.",
+              "conclusion": "The organization would benefit from a shared model that helps normalize and navigate different behavioral styles."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "This inconsistency likely contributes the following:",
+            "points": [
+              "Mixed collaboration quality",
+              "Confusion around feedback and intent",
+              "Hesitancy in giving or receiving input",
+              "Misaligned work expectations between employees"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "While teams are functioning, consider this:",
+            "points": [
+              "Schedule DiSCover Work workshops for cross-functional teams",
+              "Incorporate DISC assessments into individual development plans",
+              "Provide behavioral coaching for people managers",
+              "Run follow-up sessions to reinforce DISC language and applications"
+            ]
+          }
+        }
+      },
+      {
+        "threshold": 50,
+        "label": "very",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Employees frequently experience challenges in working together due to behavioral differences. There is no consistent approach to communication or collaboration.",
+              "main_text": "Misunderstandings and misinterpretations are common, particularly in high-stakes or cross-departmental contexts. Feedback may be avoided or poorly received, and teams struggle to build the psychological safety needed for innovation and performance. Managers often act as buffers, but without a shared framework, they are left to navigate issues reactively. Employees may default to siloed behavior or withdraw from collaboration rather than work through interpersonal tensions. These dynamics impact productivity, morale, and speed of execution.",
+              "conclusion": "A clear intervention is needed to create shared understanding and rebuild trust within and between teams."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "This behavioral gap likely contributes the following:",
+            "points": [
+              "Frequent misunderstandings or passive conflict",
+              "Delayed decision-making and feedback loops",
+              "Lack of trust or psychological safety",
+              "Reduced team performance and innovation"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "While employees are showing effort, consider this:",
+            "points": [
+              "Roll out DiSCover Work across all teams as a foundation",
+              "Pair training with coaching for key influencers or managers",
+              "Develop internal guidelines based on DISC principles",
+              "Introduce DISC in onboarding and performance frameworks"
+            ]
+          }
+        }
       },
       {
         "threshold": 25,
-        "text": "You show good DISC awareness but could benefit from advanced application techniques."
-      },
-      {
-        "threshold": 0,
-        "text": "You demonstrate strong DISC understanding and effective application in workplace situations."
-      }
-    ],
-    "recommendations": {
-      "base": [
-        "Understand the four DISC styles and their key characteristics",
-        "Practice active listening techniques to better understand different communication preferences",
-        "Develop adaptability in your approach to different work and communication styles"
-      ],
-      "very-high": [
-        "Complete a comprehensive DISC training program with your team",
-        "Identify your primary DISC style and understand how it influences your work approach",
-        "Learn specific strategies to communicate effectively with each DISC style",
-        "Create team agreements for communication based on different style needs"
-      ],
-      "high": [
-        "Participate in a focused DISC workshop with your team members",
-        "Develop a style-based communication plan for your team",
-        "Practice recognizing different behavioral styles in workplace interactions",
-        "Set up regular reflection sessions to improve style adaptability"
-      ],
-      "medium": [
-        "Refresh your understanding of DISC principles through targeted resources",
-        "Practice adapting your communication approach with different team members",
-        "Identify specific situations where style conflicts occur and develop strategies",
-        "Create opportunities to leverage diverse styles on your team"
-      ],
-      "low": [
-        "Fine-tune your already effective style adaptation techniques",
-        "Help others on your team recognize and adapt to different styles",
-        "Apply advanced DISC concepts to complex team situations",
-        "Document best practices for style-based communication in your team"
-      ],
-      "very-low": [
-        "Mentor others in recognizing and adapting to different behavioral styles",
-        "Explore advanced applications of DISC in challenging workplace scenarios",
-        "Lead style-based communication improvement initiatives",
-        "Develop customized style adaptation strategies for your specific work context"
-      ]
-    },
-    "theme": {
-      "primary": "bg-green-600",
-      "secondary": "bg-green-100",
-      "text": "text-green-600",
-      "hover": "hover:bg-green-700",
-      "border": "border-green-200"
-    },
-    "report_structure": {
-      "title": "DISC Work Style Development Report",
-      "description": "A comprehensive analysis of your work style and communication preferences based on DISC principles",
-      "sections": {
-        "critical_focus": {
-          "type": "category_recommendations",
-          "title": "Priority Focus Areas",
-          "description": "These areas require immediate attention for improvement",
-          "threshold": 75,
-          "recommendationLevel": "high",
-          "items": [
-            {
-              "title": "Prioritize disc need through targeted interventions",
-              "description": "Focus on developing specific skills and behaviors in this area",
-              "severity": "high",
-              "actions": [
-                "Identify key areas requiring immediate attention",
-                "Develop targeted intervention strategies",
-                "Implement structured improvement plans"
-              ]
+        "label": "critical",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "There is widespread behavioral misalignment, and communication across the organization lacks cohesion. Employees are often left to navigate collaboration without support.",
+              "main_text": "Teams are frequently in conflict or operating in silos, and interactions are marked by misunderstandings, defensiveness, or disengagement. Feedback rarely flows smoothly, and employees often avoid tough conversations. New hires struggle to integrate, and cultural fragmentation is evident across departments. In the absence of a common framework, even well-intentioned collaboration becomes challenging. This environment creates significant friction and slows down collective progress.",
+              "conclusion": "An urgent, organization-wide intervention is needed to restore alignment and support effective teamwork."
             }
-          ]
-        },
-        "development_opportunities": {
-          "type": "category_recommendations",
-          "title": "Development Opportunities",
-          "description": "These areas present opportunities for improvement",
-          "minThreshold": 40,
-          "maxThreshold": 74,
-          "recommendationLevel": "medium",
-          "items": [
-            {
-              "title": "Enhance disc need through targeted interventions",
-              "description": "Implement structured development plans in this area",
-              "severity": "medium",
-              "actions": [
-                "Create development roadmap",
-                "Set measurable improvement goals",
-                "Track progress and adjust plans"
-              ]
-            }
-          ]
-        },
-        "implementation_strategy": {
-          "type": "static_recommendations",
-          "title": "Implementation Strategy",
-          "description": "A structured approach to improving your work style effectiveness",
-          "recommendations": [
-            "Identify your dominant DISC style patterns and understand your natural behavioral tendencies",
-            "Practice adapting your communication to different styles and learn to flex your approach",
-            "Develop strategies for managing stress and conflict",
-            "Create action plans for leveraging your strengths",
-            "Establish feedback loops for continuous improvement"
-          ],
-          "items": [
-            {
-              "title": "Identify your dominant DISC style patterns",
-              "description": "Understand your natural behavioral tendencies",
-              "steps": [
-                "Complete DISC assessment",
-                "Review results with specialist",
-                "Create personal development plan"
-              ]
-            },
-            {
-              "title": "Practice adapting your communication to different styles",
-              "description": "Learn to flex your communication approach",
-              "steps": [
-                "Study different DISC styles",
-                "Practice adaptation techniques",
-                "Get feedback on effectiveness"
-              ]
-            },
-            {
-              "title": "Develop strategies for managing stress and conflict",
-              "description": "Build resilience and conflict resolution skills",
-              "steps": [
-                "Identify stress triggers",
-                "Learn coping strategies",
-                "Practice conflict resolution"
-              ]
-            },
-            {
-              "title": "Create action plans for leveraging your strengths",
-              "description": "Maximize your natural style advantages",
-              "steps": [
-                "List key strengths",
-                "Identify application areas",
-                "Develop action plans"
-              ]
-            },
-            {
-              "title": "Establish feedback loops for continuous improvement",
-              "description": "Create systems for ongoing development",
-              "steps": [
-                "Set up regular check-ins",
-                "Gather feedback",
-                "Adjust development plans"
-              ]
-            }
-          ]
-        },
-        "support_resources": {
-          "type": "static_recommendations",
-          "title": "Support Resources",
-          "description": "Tools and resources to support your work style development journey",
-          "recommendations": [
-            "DISC Style Guide and Reference Materials - Comprehensive guides for understanding DISC styles",
-            "Communication Style Adaptation Tools - Resources for improving communication flexibility",
-            "Work Style Assessment Toolkit - Tools for ongoing style assessment and development",
-            "Behavioral Pattern Recognition Guide - Guide for identifying and responding to different styles",
-            "Style-based Conflict Resolution Resources - Materials for resolving style-based conflicts"
-          ],
-          "items": [
-            {
-              "title": "DISC Style Guide and Reference Materials",
-              "description": "Comprehensive guides for understanding DISC styles"
-            },
-            {
-              "title": "Communication Style Adaptation Tools",
-              "description": "Resources for improving communication flexibility"
-            },
-            {
-              "title": "Work Style Assessment Toolkit",
-              "description": "Tools for ongoing style assessment and development"
-            },
-            {
-              "title": "Behavioral Pattern Recognition Guide",
-              "description": "Guide for identifying and responding to different styles"
-            },
-            {
-              "title": "Style-based Conflict Resolution Resources",
-              "description": "Materials for resolving style-based conflicts"
-            }
-          ]
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "This misalignment likely contributes the following:",
+            "points": [
+              "High conflict frequency or avoidance",
+              "Low employee morale and engagement",
+              "Lack of shared accountability",
+              "Poor onboarding experiences and slow team formation"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "While issues are present, consider this:",
+            "points": [
+              "Implement DiSCover Work as a foundational training across the organization",
+              "Follow up with small-group coaching and facilitated alignment sessions",
+              "Embed DISC into all people development initiatives",
+              "Create an internal DISC integration plan led by HR or L&D"
+            ]
+          }
         }
-      }
-    },
-    "questionRecommendations": {
-      "Category Name": {
-        "high": "${Replace with high priority recommendation for this category}",
-        "medium": "${Replace with medium priority recommendation for this category}",
-        "low": "${Replace with low priority recommendation for this category}"
-      },
-      "Another Category": {
-        "high": "${Replace with high priority recommendation for this category}",
-        "medium": "${Replace with medium priority recommendation for this category}",
-        "low": "${Replace with low priority recommendation for this category}"
-      },
-      "primary_category": {
-        "high": "${Replace with high priority recommendation for primary category}",
-        "medium": "${Replace with medium priority recommendation for primary category}",
-        "low": "${Replace with low priority recommendation for primary category}"
-      },
-      "category_1": {
-        "high": "",
-        "medium": "",
-        "low": ""
-      },
-      "category_example": {
-        "high": "High priority recommendation example for this category",
-        "medium": "Medium priority recommendation example for this category",
-        "low": "Low priority recommendation example for this category"
-      },
-      "another_category": {
-        "high": "Another high priority recommendation example",
-        "medium": "Another medium priority recommendation example",
-        "low": "Another low priority recommendation example"
-      },
-      "primary_score": {
-        "high": "Primary high priority recommendation for overall assessment",
-        "medium": "Primary medium priority recommendation for overall assessment",
-        "low": "Primary low priority recommendation for overall assessment"
-      },
-      "category_2": {
-        "high": "",
-        "medium": "",
-        "low": ""
-      },
-      "category_3": {
-        "high": "",
-        "medium": "",
-        "low": ""
-      },
-      "Communication Style": {
-        "high": "Focus on developing awareness of different communication styles and practicing adaptability in various workplace situations.",
-        "medium": "Enhance your understanding of DISC styles and work on flexible communication approaches.",
-        "low": "Fine-tune your already effective communication style and help others develop their adaptability."
-      },
-      "Work Preferences": {
-        "high": "Develop strategies to work effectively with different DISC styles and adapt your approach based on the situation.",
-        "medium": "Build on your existing work style while incorporating flexibility for different team dynamics.",
-        "low": "Share your effective work strategies while continuing to enhance adaptability."
-      }
-    },
-    "thresholds": {
-      "needLevel": [
-        {
-          "threshold": 75,
-          "label": "very-high",
-          "displayText": "There is a very high chance your team could benefit from DISC training"
-        },
-        {
-          "threshold": 60,
-          "label": "high",
-          "displayText": "There is a high chance your team could benefit from DISC training"
-        },
-        {
-          "threshold": 40,
-          "label": "medium",
-          "displayText": "There is a moderate chance your team could benefit from DISC training"
-        },
-        {
-          "threshold": 25,
-          "label": "low",
-          "displayText": "There is a low chance your team could benefit from DISC training"
-        },
-        {
-          "threshold": 0,
-          "label": "very-low",
-          "displayText": "There is a very low chance your team could benefit from DISC training"
-        }
-      ],
-      "recommendationLevel": [
-        {
-          "threshold": 75,
-          "label": "very-high",
-          "displayText": "High Priority"
-        },
-        {
-          "threshold": 60,
-          "label": "high",
-          "displayText": "Medium Priority"
-        },
-        {
-          "threshold": 40,
-          "label": "medium",
-          "displayText": "Moderate Priority"
-        },
-        {
-          "threshold": 25,
-          "label": "low",
-          "displayText": "Low Priority"
-        },
-        {
-          "threshold": 0,
-          "label": "very-low",
-          "displayText": "Very Low Priority"
-        }
-      ]
-    }
- 
-  },
-  "thankYou": {
-    "title": "Thank You for Completing the DISC Assessment!",
-    "message": "We've captured your natural work style preferences and will provide insights to help you communicate more effectively and work more productively with others.",
-    "nextSteps": "We'll analyze your responses and provide personalized recommendations for leveraging your DISC style. A specialist may contact you to discuss development opportunities.",
-    "buttonText": "Explore DISC Training",
-    "buttonLink": "https://www.brainiup.com/disc-training"
-  },
-  "scorecards": [
-    {
-      "id": "conflict-views",
-      "scorecardInfo": {
-        "title": "Conflict Views",
-        "shortDescription": "Evaluate if your team would benefit from conflict resolution training and mediation techniques",
-        "category": "Workplace Communication",
-        "visibility": true
-      }
-    }
-  ],
-  "manager_development_report": {
-    "development_areas": [
-      "Team Communication and Collaboration",
-      "Leadership Development",
-      "Performance Management",
-      "Skill Enhancement"
-    ],
-    "priorities": [
-      {
-        "title": "Team Communication Enhancement",
-        "description": "Improve team communication patterns and effectiveness",
-        "actions": [
-          "Implement regular team meetings with clear agendas",
-          "Create communication guidelines",
-          "Set up feedback channels"
-        ]
-      },
-      {
-        "title": "Leadership Skills Development",
-        "description": "Strengthen leadership capabilities across the team",
-        "actions": [
-          "Identify potential leaders",
-          "Provide leadership training",
-          "Create mentorship programs"
-        ]
-      }
-    ],
-    "implementation_steps": [
-      {
-        "title": "Short-term Actions",
-        "description": "Immediate steps to begin the development process",
-        "timeline": "1-3 months"
-      },
-      {
-        "title": "Medium-term Goals",
-        "description": "Establish core development programs",
-        "timeline": "3-6 months"
-      },
-      {
-        "title": "Long-term Strategy",
-        "description": "Create sustainable development culture",
-        "timeline": "6-12 months"
       }
     ]
   }

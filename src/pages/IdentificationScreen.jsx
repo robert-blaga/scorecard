@@ -1,11 +1,10 @@
-import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import UserIdentification from '../components/UserIdentification';
+import { useLocation, useNavigate } from "react-router-dom";
+import UserIdentification from "../components/reports/extended_report/identification/IdentificationParent";
 
 export default function IdentificationScreen() {
   const navigate = useNavigate();
   const location = useLocation();
-  
+
   // Get complete survey data from location state
   const sessionData = {
     scorecardId: location.state?.scorecardId,
@@ -14,24 +13,24 @@ export default function IdentificationScreen() {
       scores: location.state?.results?.scores || {},
       totalScore: location.state?.results?.totalScore,
       interpretation: location.state?.results?.interpretation,
-      recommendations: location.state?.results?.recommendations || []
-    }
+      recommendations: location.state?.results?.recommendations || [],
+    },
   };
 
-  console.log('Identification Screen - Survey Data:', sessionData);
+  console.log("Identification Screen - Survey Data:", sessionData);
 
   const handleComplete = (formData) => {
     // Navigate to the extended report with all data
     if (sessionData.scorecardId) {
-      navigate(`/extended-report/${sessionData.scorecardId}`, { 
-        state: { 
+      navigate(`/extended-report/${sessionData.scorecardId}`, {
+        state: {
           ...sessionData,
-          userData: formData
+          userData: formData,
         },
-        replace: true 
+        replace: true,
       });
     } else {
-      navigate('/library', { replace: true });
+      navigate("/library", { replace: true });
     }
   };
 
@@ -40,8 +39,8 @@ export default function IdentificationScreen() {
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
         <div className="text-gray-600 mb-4">No survey data found.</div>
-        <button 
-          onClick={() => navigate('/library')}
+        <button
+          onClick={() => navigate("/library")}
           className="text-deep-purple hover:text-deep-purple-600"
         >
           Return to Library
@@ -52,10 +51,10 @@ export default function IdentificationScreen() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
-      <UserIdentification 
-        onComplete={handleComplete} 
+      <UserIdentification
+        onComplete={handleComplete}
         sessionData={sessionData}
       />
     </div>
   );
-} 
+}

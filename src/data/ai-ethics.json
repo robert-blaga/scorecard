@@ -1,0 +1,423 @@
+{
+  "id": "ai-ethics",
+  "version": "1.0.0",
+  "last_updated": "2025-04-17",
+  "intro": {
+    "title": "Would your employees benefit from an AI Ethics Simulation?",
+    "subtitle": "Answer 12 quick questions to see if a gamified, AI‑driven one‑day simulation on AI ethics would benefit your employees",
+    "buttonText": "Start Assessment",
+    "nextRoute": "/survey/ai-ethics"
+  },
+  "questions": {
+    "items": [
+      {
+        "id": "question-1",
+        "text": "Employees understand the ethical implications of AI models used in their projects.",
+        "number": 1,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-2",
+        "text": "Employees can identify potential bias in datasets and model outcomes.",
+        "number": 2,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-3",
+        "text": "Employees apply privacy and data‑protection principles when handling sensitive information.",
+        "number": 3,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-4",
+        "text": "Employees evaluate AI decisions for fairness and transparency before deployment.",
+        "number": 4,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-5",
+        "text": "Employees are familiar with industry standards and regulations related to AI ethics.",
+        "number": 5,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-6",
+        "text": "Employees document ethical risk assessments for AI projects.",
+        "number": 6,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-7",
+        "text": "Employees engage in cross‑functional discussions on ethical AI decision‑making.",
+        "number": 7,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-8",
+        "text": "Employees challenge AI outputs that appear discriminatory or harmful.",
+        "number": 8,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-9",
+        "text": "Employees consider the impact of AI on affected stakeholders.",
+        "number": 9,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-10",
+        "text": "Employees propose mitigation strategies for identified ethical risks.",
+        "number": 10,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-11",
+        "text": "Employees reflect on past AI decisions to learn and improve ethics practices.",
+        "number": 11,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-12",
+        "text": "Employees proactively seek training on emerging AI ethics challenges.",
+        "number": 12,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
+          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Consistently true", "scores": { "ethics_need": 4 } }
+        ]
+      }
+    ],
+    "submitButtonText": "Submit Assessment",
+    "nextRoute": "/thank-you/ai-ethics-simulation"
+  },
+  "basic_scoring": {
+    "primaryCategory": "ethics_need",
+    "maxScorePerQuestion": 4,
+    "overview_thresholds": {
+      "needPercentage": [
+        { "threshold": 100, "label": "not-needed", "displayText": "Employees consistently demonstrate strong AI ethics awareness and decision‑making." },
+        { "threshold": 85,  "label": "low",        "displayText": "Employees show good AI ethics habits but with minor gaps." },
+        { "threshold": 70,  "label": "medium",     "displayText": "Awareness of AI ethics is uneven, leading to inconsistent practices." },
+        { "threshold": 50,  "label": "very",       "displayText": "Several teams lack foundational AI ethics understanding." },
+        { "threshold": 25,  "label": "critical",   "displayText": "There is a significant lack of AI ethics awareness and practice." }
+      ],
+      "priorityLevel": [
+        { "threshold": 100, "label": "not-needed", "displayText": "Not needed" },
+        { "threshold": 85,  "label": "low",        "displayText": "Low" },
+        { "threshold": 70,  "label": "medium",     "displayText": "Moderate" },
+        { "threshold": 50,  "label": "high",       "displayText": "High" },
+        { "threshold": 25,  "label": "critical",   "displayText": "Urgent" }
+      ]
+    },
+    "recommendations_summaries": {
+      "summary": [
+        { "threshold": 100, "text": "AI ethics simulation would serve as reinforcement rather than foundational training." },
+        { "threshold": 85,  "text": "A targeted simulation can refine existing AI ethics practices." },
+        { "threshold": 70,  "text": "The simulation will help standardize ethics decision‑making across teams." },
+        { "threshold": 50,  "text": "A company‑wide AI ethics simulation is recommended to build a common framework." },
+        { "threshold": 25,  "text": "An urgent, organization‑wide simulation is needed to establish critical AI ethics foundations." }
+      ],
+      "recommendations": [
+        {
+          "threshold": 100,
+          "recommendations": [
+            "Use the simulation as a refresher for experienced teams",
+            "Share best practices from high‑performing groups",
+            "Encourage peer coaching sessions on AI ethics",
+            "Monitor ethical metrics during new AI projects"
+          ]
+        },
+        {
+          "threshold": 85,
+          "recommendations": [
+            "Run small‑group simulations focused on identified gaps",
+            "Integrate ethics checkpoints into project workflows",
+            "Offer optional deep‑dive workshops on specific ethics topics",
+            "Establish ethics champions in each team"
+          ]
+        },
+        {
+          "threshold": 70,
+          "recommendations": [
+            "Schedule full‑day AI ethics simulations for cross‑functional teams",
+            "Embed ethics decision frameworks into development guidelines",
+            "Provide follow‑up coaching for project leads",
+            "Run periodic review sessions on ethics incidents and learnings"
+          ]
+        },
+        {
+          "threshold": 50,
+          "recommendations": [
+            "Launch company‑wide AI ethics simulation as a priority",
+            "Pair training with hands‑on risk assessment exercises",
+            "Develop internal ethics guidelines based on simulation outcomes",
+            "Integrate ethics checkpoints into performance metrics"
+          ]
+        },
+        {
+          "threshold": 25,
+          "recommendations": [
+            "Implement mandatory AI ethics simulation for all teams",
+            "Follow up with targeted coaching and facilitated debriefs",
+            "Embed ethics standards into recruitment and onboarding",
+            "Create an oversight committee to monitor ethics compliance"
+          ]
+        }
+      ]
+    }
+  },
+  "extended_scoring": {
+    "thresholds": [
+      {
+        "threshold": 100,
+        "label": "not-needed",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Employees demonstrate comprehensive understanding of AI ethics principles across projects. Their decisions consistently align with ethical guidelines and transparent practices.",
+              "main_text": "Team members identify potential ethical risks before deployment and proactively discuss bias mitigation strategies. They routinely conduct fairness audits and privacy impact assessments for all AI initiatives. Documentation of ethical decision processes is thorough and accessible to stakeholders. Cross‑functional collaboration with legal and compliance teams ensures accountability at every stage. Ethical considerations are embedded into project planning and review meetings. The organization exhibits a mature, proactive approach to AI ethics.",
+              "conclusion": "AI ethics simulation would serve as reinforcement rather than foundational training."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "This ethical maturity likely contributes the following:",
+            "points": [
+              "High stakeholder trust",
+              "Low incidence of bias or privacy lapses",
+              "Efficient regulatory compliance",
+              "Strong brand reputation"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "To maintain excellence in AI ethics, consider:",
+            "points": [
+              "Offer advanced scenario‑based simulations",
+              "Rotate ethics champions across teams",
+              "Update ethics guidelines with emerging standards",
+              "Host quarterly ethics review panels"
+            ]
+          }
+        }
+      },
+      {
+        "threshold": 85,
+        "label": "low",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Employees generally adhere to AI ethics guidelines, though some gaps appear under complex scenarios. The organization has basic frameworks but lacks consistent follow‑through.",
+              "main_text": "Most teams conduct preliminary bias checks, but deeper fairness audits are sporadic. Privacy protocols are understood yet not uniformly applied, leading to occasional oversights. Documentation of ethical decisions varies in detail and accessibility. Stakeholder consultations occur but are not embedded in all project phases. Training sessions are infrequent, resulting in uneven retention of ethics best practices. Overall, processes exist but require reinforcement to become routine.",
+              "conclusion": "A targeted AI ethics simulation could strengthen these practices."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "These partial practices likely contribute the following:",
+            "points": [
+              "Generally compliant projects",
+              "Intermittent ethics oversights",
+              "Slower issue resolution",
+              "Mixed stakeholder feedback"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "To elevate consistency, consider:",
+            "points": [
+              "Run focused simulations on high‑risk scenarios",
+              "Integrate ethics modules into team meetings",
+              "Provide documentation templates for ethical reviews",
+              "Assign ethics mentors for key projects"
+            ]
+          }
+        }
+      },
+      {
+        "threshold": 70,
+        "label": "medium",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Understanding of AI ethics principles is mixed across teams. Some projects implement guidelines rigorously while others overlook key safeguards.",
+              "main_text": "Certain groups perform bias detection only when prompted, leading to reactive rather than proactive mitigation. Data privacy measures are inconsistently enforced, creating potential compliance risks. Ethical risk assessments are documented irregularly and often without stakeholder input. Collaboration between technical and legal teams is ad hoc, resulting in fragmented accountability. Training sessions exist but lack hands‑on, scenario‑based components, limiting practical application. This patchwork approach undermines overall AI ethics posture.",
+              "conclusion": "The organization needs a shared, immersive simulation to normalize ethics practices."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "This inconsistency likely contributes the following:",
+            "points": [
+              "Variable project quality",
+              "Regulatory compliance risks",
+              "Delayed ethics escalations",
+              "Inconsistent stakeholder trust"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "To build a unified approach, consider:",
+            "points": [
+              "Schedule cross‑functional ethics simulations",
+              "Embed ethics checkpoints into code reviews",
+              "Offer scenario‑based follow‑up workshops",
+              "Develop standardized ethics documentation"
+            ]
+          }
+        }
+      },
+      {
+        "threshold": 50,
+        "label": "high",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "There are significant inconsistencies in AI ethics awareness and application. Teams frequently encounter challenges in identifying and mitigating ethical risks.",
+              "main_text": "Bias and fairness checks are often skipped or treated as a low priority, increasing risk of discriminatory outcomes. Privacy and data protection protocols are poorly understood, leading to potential legal exposure. Ethical decision‑making processes are seldom documented, resulting in opaque practices. Cross‑team communication on ethics issues is limited, leaving many risks unaddressed. Training is theoretical with little opportunity for hands‑on practice, reducing retention. This fragmented state undermines trust in AI outputs.",
+              "conclusion": "A comprehensive one‑day simulation is highly recommended to establish core ethics competencies."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "These gaps likely contribute the following:",
+            "points": [
+              "Frequent ethics escalations",
+              "Potential legal and reputational risks",
+              "Slow decision‑making due to unclear processes",
+              "Low stakeholder confidence"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "To address critical needs, consider:",
+            "points": [
+              "Launch mandatory AI ethics simulation for all teams",
+              "Pair training with real‑world risk assessment exercises",
+              "Assign accountability leads in each department",
+              "Integrate ethics outcomes into performance reviews"
+            ]
+          }
+        }
+      },
+      {
+        "threshold": 25,
+        "label": "critical",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Employees lack sufficient understanding of AI ethics principles and processes. Decisions often ignore key considerations like bias, transparency, and privacy.",
+              "main_text": "AI projects routinely move forward without ethical impact assessments, risking harmful outcomes. Teams are unaware of or disregard industry regulations, exposing the organization to legal penalties. Data handling practices frequently violate privacy standards, creating vulnerability to breaches. There is no structured forum for discussing ethics, leading to siloed and ad‑hoc practices. Training is non‑existent or purely theoretical, with no simulation or practical application. This environment creates systemic risk and undermines organizational integrity.",
+              "conclusion": "An urgent, organization‑wide AI ethics simulation is required to establish foundational competencies."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "This lack of ethics infrastructure likely contributes the following:",
+            "points": [
+              "High risk of biased or harmful AI outcomes",
+              "Regulatory non‑compliance and fines",
+              "Erosion of public and stakeholder trust",
+              "Operational disruptions due to ethics incidents"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "To mitigate critical risks, consider:",
+            "points": [
+              "Implement mandatory one‑day AI ethics simulation immediately",
+              "Follow up with targeted coaching and facilitated debriefs",
+              "Establish an ethics oversight committee",
+              "Integrate ethics standards into all AI project charters"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
