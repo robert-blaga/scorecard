@@ -53,7 +53,7 @@ const SingleChoice = ({
                   w-5 h-5 rounded-full border-2 flex items-center justify-center
                   ${selectedValue === index 
                     ? 'border-white' 
-                    : 'border-deep-purple group-hover:border-charcoal'
+                    : 'border-gray-200 group-hover:border-charcoal'
                   }
                   transition-colors duration-200
                 `}>
@@ -61,7 +61,7 @@ const SingleChoice = ({
                     w-2.5 h-2.5 rounded-full
                     ${selectedValue === index 
                       ? 'bg-white' 
-                      : 'bg-deep-purple group-hover:bg-charcoal'
+                      : 'bg-white group-hover:bg-charcoal'
                     }
                     transition-colors duration-200
                   `}/>
