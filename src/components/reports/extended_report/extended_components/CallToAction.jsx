@@ -121,7 +121,7 @@ const CallToAction = ({
                 )}
               </button>
               <a
-                href="https://brainiup.com/contact"
+                href={scorecardData.contactUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group rounded-lg bg-white px-6 py-3 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white flex items-center gap-2"
@@ -144,6 +144,7 @@ CallToAction.propTypes = {
     intro: PropTypes.shape({
       title: PropTypes.string.isRequired,
     }),
+    contactUrl: PropTypes.string.isRequired,
   }).isRequired,
   displayText: PropTypes.string.isRequired,
   priorityLevel: PropTypes.string.isRequired,

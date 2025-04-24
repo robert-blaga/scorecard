@@ -658,7 +658,7 @@ export default function Home() {
               >
                 <div className="flex items-center gap-2">
                   <Globe2 className="w-5 h-5" />
-                  <span className="text-sm font-medium">Brainiup</span>
+                  <span className="text-sm font-medium">Learning Technology</span>
                 </div>
               </button>
 

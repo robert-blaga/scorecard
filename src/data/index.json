@@ -26,6 +26,15 @@
         "category": "Personal Development",
         "visibility": true
       }
+    },
+    {
+      "id": "compliance",
+      "scorecardInfo": {
+        "title": "Compliance Assessment",
+        "shortDescription": "Evaluate if Compliance training would benefit your team's communication and collaboration",
+        "category": "Personal Development",
+        "visibility": true
+      }
     }
   ]
 }

@@ -1,5 +1,6 @@
 {
   "id": "ai-ethics",
+  "contactUrl": "https://brainiup.com/contact",
   "version": "1.0.0",
   "last_updated": "2025-04-17",
   "intro": {
@@ -16,10 +17,10 @@
         "number": 1,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       },
@@ -29,10 +30,10 @@
         "number": 2,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       },
@@ -42,10 +43,10 @@
         "number": 3,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       },
@@ -55,10 +56,10 @@
         "number": 4,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       },
@@ -68,10 +69,10 @@
         "number": 5,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       },
@@ -81,10 +82,10 @@
         "number": 6,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       },
@@ -94,10 +95,10 @@
         "number": 7,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       },
@@ -107,10 +108,10 @@
         "number": 8,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       },
@@ -120,10 +121,10 @@
         "number": 9,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       },
@@ -133,10 +134,10 @@
         "number": 10,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       },
@@ -146,10 +147,10 @@
         "number": 11,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       },
@@ -159,10 +160,10 @@
         "number": 12,
         "type": "single_choice",
         "options": [
-          { "text": "Not at all",        "scores": { "ethics_need": 0 } },
-          { "text": "Rarely true",       "scores": { "ethics_need": 1 } },
-          { "text": "Sometimes true",    "scores": { "ethics_need": 2 } },
-          { "text": "Often true",        "scores": { "ethics_need": 3 } },
+          { "text": "Not at all", "scores": { "ethics_need": 0 } },
+          { "text": "Rarely true", "scores": { "ethics_need": 1 } },
+          { "text": "Sometimes true", "scores": { "ethics_need": 2 } },
+          { "text": "Often true", "scores": { "ethics_need": 3 } },
           { "text": "Consistently true", "scores": { "ethics_need": 4 } }
         ]
       }
@@ -175,27 +176,66 @@
     "maxScorePerQuestion": 4,
     "overview_thresholds": {
       "needPercentage": [
-        { "threshold": 100, "label": "not-needed", "displayText": "Employees consistently demonstrate strong AI ethics awareness and decision‑making." },
-        { "threshold": 85,  "label": "low",        "displayText": "Employees show good AI ethics habits but with minor gaps." },
-        { "threshold": 70,  "label": "medium",     "displayText": "Awareness of AI ethics is uneven, leading to inconsistent practices." },
-        { "threshold": 50,  "label": "very",       "displayText": "Several teams lack foundational AI ethics understanding." },
-        { "threshold": 25,  "label": "critical",   "displayText": "There is a significant lack of AI ethics awareness and practice." }
+        {
+          "threshold": 100,
+          "label": "not-needed",
+          "displayText": "Employees consistently demonstrate strong AI ethics awareness and decision‑making."
+        },
+        {
+          "threshold": 85,
+          "label": "low",
+          "displayText": "Employees show good AI ethics habits but with minor gaps."
+        },
+        {
+          "threshold": 70,
+          "label": "medium",
+          "displayText": "Awareness of AI ethics is uneven, leading to inconsistent practices."
+        },
+        {
+          "threshold": 50,
+          "label": "very",
+          "displayText": "Several teams lack foundational AI ethics understanding."
+        },
+        {
+          "threshold": 25,
+          "label": "critical",
+          "displayText": "There is a significant lack of AI ethics awareness and practice."
+        }
       ],
       "priorityLevel": [
-        { "threshold": 100, "label": "not-needed", "displayText": "Not needed" },
-        { "threshold": 85,  "label": "low",        "displayText": "Low" },
-        { "threshold": 70,  "label": "medium",     "displayText": "Moderate" },
-        { "threshold": 50,  "label": "high",       "displayText": "High" },
-        { "threshold": 25,  "label": "critical",   "displayText": "Urgent" }
+        {
+          "threshold": 100,
+          "label": "not-needed",
+          "displayText": "Not needed"
+        },
+        { "threshold": 85, "label": "low", "displayText": "Low" },
+        { "threshold": 70, "label": "medium", "displayText": "Moderate" },
+        { "threshold": 50, "label": "high", "displayText": "High" },
+        { "threshold": 25, "label": "critical", "displayText": "Urgent" }
       ]
     },
     "recommendations_summaries": {
       "summary": [
-        { "threshold": 100, "text": "AI ethics simulation would serve as reinforcement rather than foundational training." },
-        { "threshold": 85,  "text": "A targeted simulation can refine existing AI ethics practices." },
-        { "threshold": 70,  "text": "The simulation will help standardize ethics decision‑making across teams." },
-        { "threshold": 50,  "text": "A company‑wide AI ethics simulation is recommended to build a common framework." },
-        { "threshold": 25,  "text": "An urgent, organization‑wide simulation is needed to establish critical AI ethics foundations." }
+        {
+          "threshold": 100,
+          "text": "AI ethics simulation would serve as reinforcement rather than foundational training."
+        },
+        {
+          "threshold": 85,
+          "text": "A targeted simulation can refine existing AI ethics practices."
+        },
+        {
+          "threshold": 70,
+          "text": "The simulation will help standardize ethics decision‑making across teams."
+        },
+        {
+          "threshold": 50,
+          "text": "A company‑wide AI ethics simulation is recommended to build a common framework."
+        },
+        {
+          "threshold": 25,
+          "text": "An urgent, organization‑wide simulation is needed to establish critical AI ethics foundations."
+        }
       ],
       "recommendations": [
         {

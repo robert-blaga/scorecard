@@ -356,7 +356,7 @@ const ExtendedReportPDF = ({
       <Page size="A4" style={styles.coverPage}>
         {/* Header */}
         <View style={styles.coverHeader}>
-          <Text>BRAINIUP - Extended Scorecard</Text>
+          <Text>Learning Technology - Extended Scorecard</Text>
         </View>
 
         {/* Center Content */}
@@ -379,7 +379,7 @@ const ExtendedReportPDF = ({
 
         {/* Footer */}
         <View style={styles.coverFooter}>
-          <Text>contact@brainiup.com • www.brainiup.com</Text>
+          <Text>contact@brainiup.com • contact@teamlearn.ai</Text>
         </View>
       </Page>
 
@@ -664,9 +664,9 @@ const ExtendedReportPDF = ({
           <Text style={styles.contactTitle}>Get in Touch</Text>
 
           {/* Contact Information */}
-          <Text style={styles.contactInfo}>Email: contact@brainiup.com</Text>
+          <Text style={styles.contactInfo}>Email: contact@brainiup.com & contact@teamlearn.ai</Text>
           <Text style={styles.contactInfo}>Phone: +40 756 048 571</Text>
-          <Text style={styles.contactInfo}>Website: www.brainiup.com</Text>
+          <Text style={styles.contactInfo}>Website: www.brainiup.com & www.teamlearn.ai</Text>
         </View>
 
         {/* Training Topics */}

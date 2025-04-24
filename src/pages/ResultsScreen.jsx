@@ -18,6 +18,7 @@ const ResultsScreen = () => {
   const [priorityText, setPriorityText] = useState(null);
   const [recommendationSummary, setRecommendationSummary] = useState(null);
   const [recommendations, setRecommendations] = useState([]);
+  const [scorecardData, setScorecardData] = useState(null);
 
   // Debug current route
   console.log("Current route info:", {
@@ -47,6 +48,8 @@ const ResultsScreen = () => {
         if (!scorecardData) {
           throw new Error("Failed to load scorecard data");
         }
+
+        setScorecardData(scorecardData);
 
         // Process the results using our scoring service
         const processedResults = calculateScores(answers, scorecardData);
@@ -162,9 +165,7 @@ const ResultsScreen = () => {
             <div className="rounded-xl">
               <button
                 className="w-full flex items-center justify-center space-x-2 bg-gray-500 text-white px-6 py-4 rounded-xl hover:bg-gray-700 transition-colors group"
-                onClick={() =>
-                  window.open("https://brainiup.com/contact", "_blank")
-                }
+                onClick={() => window.open(scorecardData.contactUrl, "_blank")}
               >
                 <span>Get Consultation</span>
                 <MessageSquare className="w-4 h-4 group-hover:transform group-hover:translate-x-1 transition-transform" />

@@ -1,0 +1,463 @@
+{
+  "id": "compliance",
+  "contactUrl": "https://teamlearn.ai/contact",
+  "version": "1.0.0",
+  "last_updated": "2025-04-24",
+  "intro": {
+    "title": "Would your company benefit from an update to the way compliance training is conducted?",
+    "subtitle": "Answer 12 quick questions to see if a scenario-based, AI‑driven approach to compliance training could improve engagement, reduce risk, and save time for your organization.",
+    "buttonText": "Start Assessment",
+    "nextRoute": "/survey/compliance"
+  },
+  "questions": {
+    "items": [
+      {
+        "id": "question-1",
+        "text": "Employees are engaged and motivated during compliance training sessions.",
+        "number": 1,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-2",
+        "text": "Compliance training is seen as relevant and valuable by employees.",
+        "number": 2,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-3",
+        "text": "Employees complete compliance training on time without frequent reminders.",
+        "number": 3,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-4",
+        "text": "Compliance incidents rarely occur due to lack of awareness or understanding.",
+        "number": 4,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-5",
+        "text": "Updating compliance training materials is quick and straightforward.",
+        "number": 5,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-6",
+        "text": "Training content is regularly updated to reflect new regulations or company policies.",
+        "number": 6,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-7",
+        "text": "Employees collaborate or discuss real-world compliance scenarios during training.",
+        "number": 7,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-8",
+        "text": "The organization uses interactive or gamified elements in compliance training.",
+        "number": 8,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-9",
+        "text": "AI or technology is leveraged to personalize or enhance compliance learning.",
+        "number": 9,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-10",
+        "text": "Feedback from employees is used to improve compliance training content.",
+        "number": 10,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-11",
+        "text": "Tracking and reporting on compliance training completion is efficient and automated.",
+        "number": 11,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      },
+      {
+        "id": "question-12",
+        "text": "Employees can easily access support or mentorship during compliance training.",
+        "number": 12,
+        "type": "single_choice",
+        "options": [
+          { "text": "Not at all", "scores": { "compliance_need": 0 } },
+          { "text": "Rarely true", "scores": { "compliance_need": 1 } },
+          { "text": "Sometimes true", "scores": { "compliance_need": 2 } },
+          { "text": "Often true", "scores": { "compliance_need": 3 } },
+          { "text": "Consistently true", "scores": { "compliance_need": 4 } }
+        ]
+      }
+    ],
+    "submitButtonText": "Submit Assessment",
+    "nextRoute": "/thank-you/compliance-simulation"
+  },
+  "basic_scoring": {
+    "primaryCategory": "compliance_need",
+    "maxScorePerQuestion": 4,
+    "overview_thresholds": {
+      "needPercentage": [
+        {
+          "threshold": 100,
+          "label": "not-needed",
+          "displayText": "Your compliance training is highly effective, engaging, and up-to-date."
+        },
+        {
+          "threshold": 85,
+          "label": "low",
+          "displayText": "Compliance training is strong, with minor opportunities for improvement."
+        },
+        {
+          "threshold": 70,
+          "label": "medium",
+          "displayText": "Engagement and effectiveness are inconsistent across teams."
+        },
+        {
+          "threshold": 50,
+          "label": "high",
+          "displayText": "Significant gaps exist in compliance training engagement or process."
+        },
+        {
+          "threshold": 25,
+          "label": "critical",
+          "displayText": "Compliance training is outdated, ineffective, or not widely adopted."
+        }
+      ],
+      "priorityLevel": [
+        {
+          "threshold": 100,
+          "label": "not-needed",
+          "displayText": "Not needed"
+        },
+        { "threshold": 85, "label": "low", "displayText": "Low" },
+        { "threshold": 70, "label": "medium", "displayText": "Moderate" },
+        { "threshold": 50, "label": "high", "displayText": "High" },
+        { "threshold": 25, "label": "critical", "displayText": "Urgent" }
+      ]
+    },
+    "recommendations_summaries": {
+      "summary": [
+        {
+          "threshold": 100,
+          "text": "Your compliance training program is a model of best practice. Consider sharing your approach with others."
+        },
+        {
+          "threshold": 85,
+          "text": "A few targeted updates or enhancements could further strengthen your compliance training."
+        },
+        {
+          "threshold": 70,
+          "text": "A modern, engaging approach could help standardize compliance understanding and reduce risk."
+        },
+        {
+          "threshold": 50,
+          "text": "A comprehensive update to your compliance training is recommended to address key gaps."
+        },
+        {
+          "threshold": 25,
+          "text": "An urgent overhaul of compliance training is needed to ensure legal and ethical standards are met."
+        }
+      ],
+      "recommendations": [
+        {
+          "threshold": 100,
+          "recommendations": [
+            "Continue to monitor and update training as regulations evolve",
+            "Share best practices with other departments or organizations",
+            "Encourage peer-led compliance discussions",
+            "Leverage advanced analytics to maintain high engagement"
+          ]
+        },
+        {
+          "threshold": 85,
+          "recommendations": [
+            "Introduce gamified or interactive elements to boost engagement",
+            "Solicit regular feedback from employees to fine-tune content",
+            "Pilot AI-driven case studies for advanced teams",
+            "Automate reminders and tracking for even higher completion rates"
+          ]
+        },
+        {
+          "threshold": 70,
+          "recommendations": [
+            "Adopt a gamified, AI-driven platform like TeamLearn",
+            "Update training content to reflect real-world scenarios",
+            "Facilitate collaborative problem-solving sessions",
+            "Implement dynamic content updates for regulatory changes"
+          ]
+        },
+        {
+          "threshold": 50,
+          "recommendations": [
+            "Launch a company-wide compliance training refresh",
+            "Pair training with hands-on, scenario-based exercises",
+            "Automate tracking and reporting to reduce admin burden",
+            "Establish compliance champions in each team"
+          ]
+        },
+        {
+          "threshold": 25,
+          "recommendations": [
+            "Implement mandatory, interactive compliance training immediately",
+            "Leverage AI agents to update and personalize content rapidly",
+            "Create a feedback loop for continuous improvement",
+            "Establish oversight to monitor compliance incidents and training impact"
+          ]
+        }
+      ]
+    }
+  },
+  "extended_scoring": {
+    "thresholds": [
+      {
+        "threshold": 100,
+        "label": "not-needed",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Your compliance training program is highly effective, engaging, and up-to-date. Employees are motivated, complete training on time, and understand the importance of compliance.",
+              "main_text": "Training materials are regularly updated, and employees actively participate in collaborative, real-world scenarios. Technology and analytics are leveraged to personalize learning and track progress. Feedback is routinely gathered and used to improve the program. The organization demonstrates a culture of compliance and continuous improvement.",
+              "conclusion": "Your compliance training is a model of best practice. Consider sharing your approach with others."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "This excellence in compliance training likely results in:",
+            "points": [
+              "High completion rates and engagement",
+              "Low incidence of compliance breaches",
+              "Efficient adaptation to regulatory changes",
+              "Strong organizational reputation"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "To maintain your high standards, consider:",
+            "points": [
+              "Continue to monitor and update training as regulations evolve",
+              "Share best practices with other departments or organizations",
+              "Encourage peer-led compliance discussions",
+              "Leverage advanced analytics to maintain high engagement"
+            ]
+          }
+        }
+      },
+      {
+        "threshold": 85,
+        "label": "low",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Your compliance training is effective, but there are minor gaps in engagement or content relevance. Most employees complete training on time, but some require reminders.",
+              "main_text": "Training materials are updated, but not always as quickly as needed. Interactive or gamified elements are limited, and feedback is not always acted upon. There is room to further personalize and modernize the experience.",
+              "conclusion": "A few targeted updates or enhancements could further strengthen your compliance training."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "These minor gaps may result in:",
+            "points": [
+              "Occasional delays in completion",
+              "Missed opportunities for engagement",
+              "Slightly increased risk of compliance incidents",
+              "Slower adaptation to regulatory changes"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "To address these gaps, consider:",
+            "points": [
+              "Introduce gamified or interactive elements to boost engagement",
+              "Solicit regular feedback from employees to fine-tune content",
+              "Pilot AI-driven case studies for advanced teams",
+              "Automate reminders and tracking for even higher completion rates"
+            ]
+          }
+        }
+      },
+      {
+        "threshold": 70,
+        "label": "medium",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Engagement and effectiveness of compliance training are inconsistent across teams. Some employees value the training, while others see it as a checkbox exercise.",
+              "main_text": "Training content is sometimes outdated, and updates are slow to implement. Collaboration and real-world problem solving are limited. Technology is underutilized, and tracking completions is time-consuming.",
+              "conclusion": "A modern, engaging approach could help standardize compliance understanding and reduce risk."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "This inconsistency may lead to:",
+            "points": [
+              "Variable compliance across teams",
+              "Increased risk of incidents",
+              "Administrative burden for tracking and reminders",
+              "Missed opportunities for learning and improvement"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "To improve consistency and impact, consider:",
+            "points": [
+              "Adopt a gamified, AI-driven platform like TeamLearn",
+              "Update training content to reflect real-world scenarios",
+              "Facilitate collaborative problem-solving sessions",
+              "Implement dynamic content updates for regulatory changes"
+            ]
+          }
+        }
+      },
+      {
+        "threshold": 50,
+        "label": "high",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Significant gaps exist in compliance training engagement or process. Many employees require frequent reminders, and training is often seen as irrelevant.",
+              "main_text": "Content updates are slow, and incidents occur due to lack of awareness. There is little collaboration or use of technology, and tracking completions is largely manual.",
+              "conclusion": "A comprehensive update to your compliance training is recommended to address key gaps."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "These gaps may result in:",
+            "points": [
+              "Frequent compliance incidents",
+              "High administrative burden",
+              "Low engagement and completion rates",
+              "Difficulty adapting to new regulations"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "To address these issues, consider:",
+            "points": [
+              "Launch a company-wide compliance training refresh",
+              "Pair training with hands-on, scenario-based exercises",
+              "Automate tracking and reporting to reduce admin burden",
+              "Establish compliance champions in each team"
+            ]
+          }
+        }
+      },
+      {
+        "threshold": 25,
+        "label": "critical",
+        "sections": {
+          "current_state": {
+            "title": "Current State Analysis",
+            "narrative": {
+              "intro": "Compliance training is outdated, ineffective, or not widely adopted. Employees are disengaged, and incidents occur due to lack of knowledge or care.",
+              "main_text": "Training content is rarely updated, and there is no system for feedback or improvement. Technology is not used, and tracking is manual and error-prone. The organization is at significant risk of compliance failures.",
+              "conclusion": "An urgent overhaul of compliance training is needed to ensure legal and ethical standards are met."
+            }
+          },
+          "impact": {
+            "title": "Impact",
+            "description": "This lack of effective training may result in:",
+            "points": [
+              "High risk of compliance breaches",
+              "Legal and financial penalties",
+              "Reputational damage",
+              "Operational disruptions"
+            ]
+          },
+          "next_steps": {
+            "title": "Next Steps",
+            "description": "To mitigate these risks, consider:",
+            "points": [
+              "Implement mandatory, interactive compliance training immediately",
+              "Leverage AI agents to update and personalize content rapidly",
+              "Create a feedback loop for continuous improvement",
+              "Establish oversight to monitor compliance incidents and training impact"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
