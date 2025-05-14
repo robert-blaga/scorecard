@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "last_updated": "2025-04-17",
   "intro": {
-    "title": "Would your employees benefit from an AI Ethics Simulation?",
-    "subtitle": "Answer 12 quick questions to see if a gamified, AI‑driven one‑day simulation on AI ethics would benefit your employees",
+    "title": "Is your company ready for AI?",
+    "subtitle": "Answer 12 quick questions to see if AI ethics should be a priority for your company",
     "buttonText": "Start Assessment",
     "nextRoute": "/survey/ai-ethics"
   },
